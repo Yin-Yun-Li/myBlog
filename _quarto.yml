@@ -16,11 +16,8 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, brand]
-      dark: [darkly, brand]
+      light: [cosmo]
+      dark: [darkly] 
     css: styles.css
     toc: true
     html-math-method: mathjax
-
-
-
