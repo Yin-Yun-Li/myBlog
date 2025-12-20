@@ -1,0 +1,14 @@
+meta:
+  name: "YinYun's Log"
+
+color:
+  palette:
+    primary: "#7e909a"
+    accent: "#7e909a" 
+
+typography:
+  fonts:
+    - family: "Noto Serif TC"
+      source: google
+  base: "Noto Serif TC"
+  headings: "Noto Serif TC"

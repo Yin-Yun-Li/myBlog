@@ -3,21 +3,24 @@ project:
   output-dir: docs
 
 website:
-  title: "myBlog"
+  title: YinYun's Blog
   site-url: "https://yinyunli.github.io/myBlog/"
   navbar:
+    background: none
     left:
       - href: index.qmd
-        text: Home
-      - about.qmd
+        text: 首頁
+      - href: about.qmd
+        text: 關於
 
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: [cosmo, brand]
+      dark: [darkly, brand]
     css: styles.css
     toc: true
+    html-math-method: mathjax
 
 
 
