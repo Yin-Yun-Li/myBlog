@@ -74,8 +74,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script>
 
-  // 放在 head 裡的最前面
-
   (function() {
 
     const savedTheme = localStorage.getItem("quarto-color-scheme");
@@ -86,21 +84,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+    // 立即漆上底色，這是防閃白最快的一步
+
+    document.documentElement.style.backgroundColor = isDark ? "#1a1a1a" : "#ffffff";
+
+    
+
+    // 如果是深色模式，立即為 html 加上類別，防止 CSS 載入延遲
+
     if (isDark) {
 
-      // 1. 立即修改 HTML 背景色（最快的方式）
+      document.documentElement.classList.add('quarto-dark');
 
-      document.documentElement.style.backgroundColor = "#1a1a1a";
+    } else {
 
-      // 2. 注入一塊臨時的 CSS 到 head 中，強制所有元素在載入前背景都是黑的
-
-      const style = document.createElement('style');
-
-      style.innerHTML = `html, body { background-color: #1a1a1a !important; color: #d1d1d1; }`;
-
-      style.id = 'early-dark-mode-fix';
-
-      document.head.appendChild(style);
+      document.documentElement.classList.add('quarto-light');
 
     }
 
