@@ -74,9 +74,9 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script>
 
-  (function() {
+  // 放在 head 裡的最前面
 
-    // 1. 立即判斷當前模式
+  (function() {
 
     const savedTheme = localStorage.getItem("quarto-color-scheme");
 
@@ -86,17 +86,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-    // 2. 趕在瀏覽器畫出第一筆前，直接修改 HTML 標籤的底色
-
-    // 這比載入 CSS 快得多，能有效減少顏色落差
-
     if (isDark) {
+
+      // 1. 立即修改 HTML 背景色（最快的方式）
 
       document.documentElement.style.backgroundColor = "#1a1a1a";
 
-    } else {
+      // 2. 注入一塊臨時的 CSS 到 head 中，強制所有元素在載入前背景都是黑的
 
-      document.documentElement.style.backgroundColor = "#ffffff";
+      const style = document.createElement('style');
+
+      style.innerHTML = `html, body { background-color: #1a1a1a !important; color: #d1d1d1; }`;
+
+      style.id = 'early-dark-mode-fix';
+
+      document.head.appendChild(style);
 
     }
 
