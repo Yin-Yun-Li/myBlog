@@ -19,6 +19,7 @@ format:
       light: cosmo
       dark: darkly
     color-scheme: auto
+    include-in-header: header.html
     css: styles.css
     toc: true
     html-math-method: mathjax

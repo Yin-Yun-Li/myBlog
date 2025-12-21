@@ -72,6 +72,37 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  (function() {
+
+    // 1. 立即判斷當前模式
+
+    const savedTheme = localStorage.getItem("quarto-color-scheme");
+
+    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    const isDark = savedTheme === "dark" || (!savedTheme && systemDark);
+
+
+
+    // 2. 趕在瀏覽器畫出第一筆前，直接修改 HTML 標籤的底色
+
+    // 這比載入 CSS 快得多，能有效減少顏色落差
+
+    if (isDark) {
+
+      document.documentElement.style.backgroundColor = "#1a1a1a";
+
+    } else {
+
+      document.documentElement.style.backgroundColor = "#ffffff";
+
+    }
+
+  })();
+
+</script>
 
 
 <link rel="stylesheet" href="styles.css">

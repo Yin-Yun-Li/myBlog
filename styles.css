@@ -1,63 +1,58 @@
+/* --- 1. 基礎穩定設定 --- */
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  background-color: #1a1a1a;
+  /* 背景顏色不寫死，交給 header.html 裡的 JS 腳本根據模式決定 */
 }
-
-@media (prefers-color-scheme: light) {
-  html {
-    background-color: #ffffff;
-  }
-}
-
 
 body {
   line-height: 1.8;
   text-align: justify;
-  background-color: #1a1a1a;   /* 預設黑色 */
-  color: #d1d1d1;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  /* 初始背景設為透明，繼承 HTML 腳本塗上的顏色 */
+  background-color: transparent !important;
+  color: #d1d1d1; /* 預設為深色模式文字顏色 */
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-
-/* 修正 YinYun's 空格：強制使用系統字體，避開 Playfair 的 Bug */
+/* 修正 YinYun's 空格與字體 */
 .navbar-brand, .navbar-title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   letter-spacing: -0.01em !important;
   font-weight: 700 !important;
 }
 
-/* 固定導覽列規格，防止切換跳動 */
+/* 固定導覽列規格 */
 .navbar {
   min-height: 60px !important;
   padding: 0.5rem 1rem !important;
 }
 
-/* --- 2. 淺色模式：上灰藍下白 --- */
+/* --- 2. 淺色模式：上灰藍下白 (修正前模樣) --- */
 body.quarto-light {
-  background-color: #ffffff !important; /* 下面內容區：純白 */
-  color: #4a4a4a;
+  background-color: #ffffff !important;
+  color: #4a4a4a !important;
 }
 
 body.quarto-light .navbar {
-  background-color: #7e909a !important; /* 上面導覽列：莫蘭迪灰藍 */
+  background-color: #7e909a !important; /* 莫蘭迪灰藍 */
 }
 
-/* 確保淺色模式導覽列文字是白的 */
+/* 確保淺色模式導覽列文字、按鈕是白的 */
 body.quarto-light .navbar-title, 
 body.quarto-light .nav-link,
-body.quarto-light .quarto-color-scheme-toggle {
+body.quarto-light .quarto-color-scheme-toggle,
+body.quarto-light .quarto-search-toggle {
   color: #ffffff !important;
 }
 
 /* --- 3. 深色模式：上藍下黑 --- */
 body.quarto-dark {
-  background-color: #1a1a1a !important; /* 下面內容區：極深黑 */
-  color: #d1d1d1;
+  background-color: #1a1a1a !important;
+  color: #d1d1d1 !important;
 }
 
 body.quarto-dark .navbar {
-  background-color: #333644 !important; /* 上面導覽列：莫蘭迪深藍 */
+  background-color: #333644 !important; /* 莫蘭迪深藍 */
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -67,17 +62,13 @@ body.quarto-dark .nav-link {
   color: #e0e0e0 !important;
 }
 
-/* --- 4. 連結與 Hover 效果 (移除綠色，底線與文字同色) --- */
-/* 導覽列標題與連結：要有白底線，字不變淡 */
-.navbar-brand:hover, 
-.navbar-title:hover,
-.nav-link:hover {
+/* --- 4. 連結與細節 --- */
+.navbar-brand:hover, .navbar-title:hover, .nav-link:hover {
   text-decoration: underline !important;
   text-decoration-color: white !important;
   opacity: 1 !important;
 }
 
-/* 文章內一般連結：移除綠色，使用灰藍色 */
 a {
   color: #7e909a;
   text-decoration: none;
@@ -89,8 +80,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
-/* 移除標題底下的線 */
 h1, h2, .title {
   color: #7e909a;
   border-bottom: none !important;
