@@ -4,14 +4,17 @@
     const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const isDark = savedTheme === "dark" || (!savedTheme && systemDark);
 
-    // 立即漆上底色，這是防閃白最快的一步
+    // 1. 立即把 html 底漆漆黑/白 (這發生在 body 出現前)
     document.documentElement.style.backgroundColor = isDark ? "#1a1a1a" : "#ffffff";
     
-    // 如果是深色模式，立即為 html 加上類別，防止 CSS 載入延遲
-    if (isDark) {
-      document.documentElement.classList.add('quarto-dark');
-    } else {
-      document.documentElement.classList.add('quarto-light');
-    }
+    // 2. 注入一段臨時 CSS 鎖定初期顏色，不等 styles.css 下載完就生效
+    const style = document.createElement('style');
+    style.innerHTML = `
+      html, body { 
+        background-color: ${isDark ? "#1a1a1a" : "#ffffff"} !important; 
+        transition: none !important; 
+      }
+    `;
+    document.head.appendChild(style);
   })();
 </script>

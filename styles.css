@@ -2,30 +2,25 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  /* 根據腳本預設底色，防止跳轉瞬間閃白 */
-  background-color: #1a1a1a; 
-}
-
-html.quarto-light {
-  background-color: #ffffff !important;
 }
 
 body {
   line-height: 1.8;
   text-align: justify;
-  /* 關鍵 1：初始狀態不要有 transition，防止顏色「漸變」產生閃白 */
-  transition: none !important; 
+  /* 初始背景設為透明，讓 header.html 的底漆透出來 */
   background-color: transparent !important;
   color: #d1d1d1;
+  /* 重要：跳轉瞬間禁用動畫，防止背景顏色緩慢加載導致閃白 */
+  transition: none !important; 
 }
 
-/* 關鍵 2：只有當 Quarto 的類別掛載後，才恢復平滑切換效果 */
-body.quarto-light,
+/* 當 Quarto 主題類別加載完成後，恢復平滑切換動畫 */
+body.quarto-light, 
 body.quarto-dark {
   transition: background-color 0.15s ease, color 0.15s ease !important;
 }
 
-/* 修正字體 */
+/* 修正 YinYun's 字體與標題間距 */
 .navbar-brand, .navbar-title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   letter-spacing: -0.01em !important;
@@ -37,17 +32,17 @@ body.quarto-dark {
   padding: 0.5rem 1rem !important;
 }
 
-/* --- 2. 淺色模式：上灰藍下白 --- */
+/* --- 2. 淺色模式：上灰藍下白 (還原原本樣貌) --- */
 body.quarto-light {
   background-color: #ffffff !important;
   color: #4a4a4a !important;
 }
 
 body.quarto-light .navbar {
-  background-color: #7e909a !important;
+  background-color: #7e909a !important; /* 莫蘭迪灰藍 */
 }
 
-/* 確保淺色模式導覽列文字、按鈕是白的 */
+/* 修正：確保搜尋按鈕與功能圖示在淺色模式下清晰可見 (白色) */
 body.quarto-light .navbar-title, 
 body.quarto-light .nav-link,
 body.quarto-light .quarto-color-scheme-toggle,
@@ -64,10 +59,11 @@ body.quarto-dark {
 }
 
 body.quarto-dark .navbar {
-  background-color: #333644 !important;
+  background-color: #333644 !important; /* 莫蘭迪深藍 */
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
+/* 確保深色模式圖示顏色一致 */
 body.quarto-dark .navbar-title, 
 body.quarto-dark .nav-link,
 body.quarto-dark .bi {
@@ -75,16 +71,26 @@ body.quarto-dark .bi {
 }
 
 /* --- 4. 連結與細節 --- */
-.navbar-brand:hover, .navbar-title:hover, .nav-link:hover {
+.navbar-brand:hover, 
+.navbar-title:hover, 
+.nav-link:hover {
   text-decoration: underline !important;
   text-decoration-color: white !important;
+  opacity: 1 !important;
 }
 
 a {
   color: #7e909a;
   text-decoration: none;
+  transition: 0.2s;
 }
 
+a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+/* 移除標題下方的裝飾線 */
 h1, h2, .title {
   color: #7e909a;
   border-bottom: none !important;
