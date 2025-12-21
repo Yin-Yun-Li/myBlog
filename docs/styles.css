@@ -7,9 +7,11 @@ html {
 body {
   line-height: 1.8;
   text-align: justify;
-  /* 平滑切換深淺色 */
+  background-color: #1a1a1a;   /* 預設黑色 */
+  color: #d1d1d1;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 /* 修正 YinYun's 空格：強制使用系統字體，避開 Playfair 的 Bug */
 .navbar-brand, .navbar-title {
