@@ -16,8 +16,10 @@ website:
 format:
   html:
     theme:
-      light: [cosmo]
-      dark: [darkly] 
+      light: cosmo
+      dark: darkly
+    color-scheme: auto
     css: styles.css
     toc: true
     html-math-method: mathjax
+    theme-color: "#1a1a1a"

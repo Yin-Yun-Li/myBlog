@@ -1,8 +1,15 @@
-/* --- 1. 基礎穩定設定 --- */
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  background-color: #1a1a1a;
 }
+
+@media (prefers-color-scheme: light) {
+  html {
+    background-color: #ffffff;
+  }
+}
+
 
 body {
   line-height: 1.8;
