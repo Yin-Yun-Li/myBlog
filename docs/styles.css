@@ -2,15 +2,21 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  /* 背景顏色不寫死，交給 header.html 裡的 JS 腳本根據模式決定 */
+  /* 移除背景顏色，讓 header.html 的腳本完全接管第一時間的底漆 */
 }
 
 body {
   line-height: 1.8;
   text-align: justify;
-  /* 初始背景設為透明，繼承 HTML 腳本塗上的顏色 */
   background-color: transparent !important;
-  color: #d1d1d1; /* 預設為深色模式文字顏色 */
+  color: #d1d1d1;
+  /* 重要：跳轉瞬間不要有動畫，否則顏色會慢慢變黑，導致中間出現白色空檔 */
+  transition: none; 
+}
+
+/* 只有當主題類別 (light/dark) 確定加載後，才開啟顏色切換動畫 */
+body.quarto-light, 
+body.quarto-dark {
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
