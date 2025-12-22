@@ -5,6 +5,7 @@ project:
 website:
   title: YinYun's Blog
   site-url: "https://yinyunli.github.io/myBlog/"
+  search: true 
   navbar:
     background: none
     left:
@@ -12,6 +13,9 @@ website:
         text: 首頁
       - href: about.qmd
         text: 關於
+
+
+
 
 format:
   html:

@@ -2,4 +2,4 @@
 title: "About This Site"
 ---
 
-這是我的個人網誌，主要紀錄人生的雜想、生活的隨筆，或是學習的心得與筆記。此站與[學術版的網站](https://yin-yun-li.github.io/yinyunli.github.io/)是分開的場域，雖然學習內容可能有相關，但這裡會是我murmur的地方。
+這是我的個人網誌，主要紀錄人生的雜想、生活的隨筆，或是學習的心得與筆記。此站與[學術版的網站](https://yin-yun-li.github.io/)是分開的場域，雖然學習內容可能有相關，但這裡會是我murmur的地方。

@@ -1,3 +1,15 @@
 ---
 title: "該寫些什麼呢？"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true     
+  fields: [date, title, categories] 
+  field-display-names:
+    title: "標題"
+    date: "日期"
+    categories: "分類"
+page-layout: article      
 ---
+

@@ -4,23 +4,29 @@ html {
   scroll-behavior: smooth;
 }
 
+
 body {
   line-height: 1.8;
-  text-align: justify;
-  /* 初始背景設為透明，讓 header.html 的底漆透出來 */
+  /* 徹底解決字距拉大問題：改用靠左對齊 */
+  text-align: left; 
   background-color: transparent !important;
   color: #d1d1d1;
-  /* 重要：跳轉瞬間禁用動畫，防止背景顏色緩慢加載導致閃白 */
   transition: none !important; 
 }
 
-/* 當 Quarto 主題類別加載完成後，恢復平滑切換動畫 */
+/* 確定主題加載後才開啟顏色切換動畫 */
 body.quarto-light, 
 body.quarto-dark {
   transition: background-color 0.15s ease, color 0.15s ease !important;
 }
 
-/* 修正 YinYun's 字體與標題間距 */
+/* 內容區塊寬度統一：讓首頁與 About 頁面標題對齊 */
+#quarto-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 導覽列規格 */
 .navbar-brand, .navbar-title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   letter-spacing: -0.01em !important;
@@ -32,17 +38,36 @@ body.quarto-dark {
   padding: 0.5rem 1rem !important;
 }
 
-/* --- 2. 淺色模式：上灰藍下白 (還原原本樣貌) --- */
+/* --- 2. 修正 TOC 目錄顏色 (關鍵：移除綠色) --- */
+#quarto-toc-column .nav-link {
+  color: #7e909a !important; /* 莫蘭迪灰藍 */
+  transition: color 0.2s ease;
+  opacity: 0.8;
+}
+
+/* 深色模式下的目錄顏色優化 */
+body.quarto-dark #quarto-toc-column .nav-link {
+  color: #a0acb5 !important;
+}
+
+#quarto-toc-column .nav-link:hover,
+#quarto-toc-column .nav-link.active {
+  color: #ffffff !important;
+  opacity: 1;
+  border-left-color: #7e909a !important;
+}
+
+/* --- 3. 淺色模式：上灰藍下白 --- */
 body.quarto-light {
   background-color: #ffffff !important;
   color: #4a4a4a !important;
 }
 
 body.quarto-light .navbar {
-  background-color: #7e909a !important; /* 莫蘭迪灰藍 */
+  background-color: #7e909a !important;
 }
 
-/* 修正：確保搜尋按鈕與功能圖示在淺色模式下清晰可見 (白色) */
+/* 確保淺色模式下所有圖示與連結為白色 */
 body.quarto-light .navbar-title, 
 body.quarto-light .nav-link,
 body.quarto-light .quarto-color-scheme-toggle,
@@ -52,31 +77,32 @@ body.quarto-light .bi {
   opacity: 1 !important;
 }
 
-/* --- 3. 深色模式：上藍下黑 --- */
+/* --- 4. 深色模式：上藍下黑 --- */
 body.quarto-dark {
   background-color: #1a1a1a !important;
   color: #d1d1d1 !important;
 }
 
 body.quarto-dark .navbar {
-  background-color: #333644 !important; /* 莫蘭迪深藍 */
+  background-color: #333644 !important;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* 確保深色模式圖示顏色一致 */
 body.quarto-dark .navbar-title, 
 body.quarto-dark .nav-link,
 body.quarto-dark .bi {
   color: #e0e0e0 !important;
 }
 
-/* --- 4. 連結與細節 --- */
-.navbar-brand:hover, 
-.navbar-title:hover, 
-.nav-link:hover {
+/* 移除深色模式內文連結的預設綠色 */
+body.quarto-dark a {
+  color: #a0acb5;
+}
+
+/* --- 5. 連結、標題與 Listing 列表細節 --- */
+.navbar-brand:hover, .navbar-title:hover, .nav-link:hover {
   text-decoration: underline !important;
   text-decoration-color: white !important;
-  opacity: 1 !important;
 }
 
 a {
@@ -90,8 +116,20 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 移除標題下方的裝飾線 */
 h1, h2, .title {
   color: #7e909a;
   border-bottom: none !important;
+}
+
+/* 隱藏 Listing 列表中不需要的資訊 (作者與摘要) */
+.listing-author, .listing-description {
+  display: none !important;
+}
+
+/* 分類標籤樣式優化 */
+.quarto-listing-category {
+  background-color: rgba(126, 144, 154, 0.15) !important;
+  color: #7e909a !important;
+  border: none !important;
+  border-radius: 4px !important;
 }
