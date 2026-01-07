@@ -1,7 +1,8 @@
 ---
 title: "聯準會與通膨"
 author: "YinYun Li"
-date: "2025-01-05"
+date: "2026-01-05"
+categories: ["貨幣政策"]
 ---
 
 
