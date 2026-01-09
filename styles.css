@@ -26,16 +26,32 @@ body.quarto-dark {
   margin: 0 auto;
 }
 
-/* 導覽列規格 */
+/* 導覽列規格 (微調加大版) */
 .navbar-brand, .navbar-title {
+  /* 維持你喜歡的原始字體設定 */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   letter-spacing: -0.01em !important;
   font-weight: 700 !important;
+  
+  /* [修改] 字體略為加大 (標準約 1.2rem -> 改為 1.5rem) */
+  font-size: 1.6rem !important; 
 }
 
 .navbar {
-  min-height: 60px !important;
-  padding: 0.5rem 1rem !important;
+  /* [修改] 高度略為加高 (原本 60px -> 改為 85px) */
+  /* 這樣背景色就會往下延伸一些 */
+  min-height: 85px !important; 
+  
+  /* [修改] 上下留白稍微增加，讓文字垂直置中更舒適 */
+  padding-top: 0.8rem !important;
+  padding-bottom: 0.8rem !important;
+  padding-left: 1rem !important; 
+  padding-right: 1rem !important;
+}
+
+/* [新增] 右邊選項 (Home, About) 也按比例微調，才不會標題大、選項太小 */
+.navbar-nav .nav-link {
+  font-size: 1.1rem !important; 
 }
 
 /* --- 2. 修正 TOC 目錄顏色 (關鍵：移除綠色) --- */
