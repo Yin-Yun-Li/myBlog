@@ -9,7 +9,7 @@ body {
   line-height: 1.8;
   /* 徹底解決字距拉大問題：改用靠左對齊 */
   text-align: left; 
-  font-size: 14px;
+  font-size: 16px;
   background-color: transparent !important;
   color: #d1d1d1;
   transition: none !important; 
