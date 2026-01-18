@@ -9,6 +9,7 @@ body {
   line-height: 1.8;
   /* 徹底解決字距拉大問題：改用靠左對齊 */
   text-align: left; 
+  font-size: 14px;
   background-color: transparent !important;
   color: #d1d1d1;
   transition: none !important; 
@@ -54,7 +55,7 @@ body.quarto-dark {
   font-size: 1.1rem !important; 
 }
 
-/* --- 2. 修正 TOC 目錄顏色 (關鍵：移除綠色) --- */
+/* --- 2. 修正 TOC 目錄顏色  --- */
 #quarto-toc-column .nav-link {
   color: #7e909a !important; /* 莫蘭迪灰藍 */
   transition: color 0.2s ease;
@@ -148,4 +149,22 @@ h1, h2, .title {
   color: #7e909a !important;
   border: none !important;
   border-radius: 4px !important;
+}
+
+
+/* --- 6. 標題大小分開控制 (請貼在最下方) --- */
+
+/* 1. 文章最上面的【主標題】 (Title) */
+/* 這裡設定你要的「更大」 */
+header .title, h1.title {
+  font-size: 2.5rem !important;   /* 約 40px (最大) */
+  line-height: 1.2 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* 2. 內文中的【# 章節標題】 (H1) */
+/* 使用 :not(.title) 語法，確保這行只會影響內文，不會影響主標題 */
+h1:not(.title) {
+  font-size: 1.8rem !important;   /* 約 29px (比主標題小，建立層次感) */
+  margin-top: 2rem !important;
 }

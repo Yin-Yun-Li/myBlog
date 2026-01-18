@@ -24,7 +24,7 @@ date: "2025-12-23"
 
 社會科學關心causality，在某些情境下可以被定義為treatment effect，資料上沒辦法直接看到反事實的部分，意即沒辦法直接求出treatment effect，這時候就需要仰賴一些identification assumption去測量這個效果。所謂的identification，就是當樣本數趨近無限大時，可以"正確"recover 我們關心的參數。當我們確定效果可以被識別後，這時候才進入統計估計(estimation)與檢定的環節。
 
-簡單來說，因果推論主要走過的流程就是 $\text{definition} \rightarrow \text{identification} \rightarrow \text{estimation}$。當然這只是很粗略的介紹，很多名詞沒有被明確的定義，如果修過計量經濟學，然後來到這個營隊上課，加起來可能會聽了5,6輪左右，所以如果很熟因果推論的可能會有點小失望或無聊，倒不是因為本身就知道這些東西，而是大部分的內容就是蜻蜓點水的帶過，作為接觸不只一次的學習者來說，會更渴望知道背後更多的細節。
+簡單來說，因果推論主要走過的流程就是 "definition $\rightarrow$ identification $\rightarrow$ estimation"。當然這只是很粗略的介紹，很多名詞沒有被明確的定義，如果修過計量經濟學，然後來到這個營隊上課，加起來可能會聽了5,6輪左右，所以如果很熟因果推論的可能會有點小失望或無聊，倒不是因為本身就知道這些東西，而是大部分的內容就是蜻蜓點水的帶過，作為接觸不只一次的學習者來說，會更渴望知道背後更多的細節。
 
 舉例來說，這次因果推論的課程，內容涵蓋的identification strategy主要有random assignment, CIA, instrumental variable, regression discontinuity。很多老師都很喜歡講IV, 初學者一定會從同質性(homogeneous)的treatment effect出發，接著開始考慮異質性(heterogeneous) treatment effect，就像是在做實驗的時候，研究者給受試者treatment，後者會選擇要不要接受(compliance)，這時就需要額外的假設去估計所謂的local average treatment effect。這些東西是最基礎的計量經濟學內容，每次聽不同的人講都會有不同的詮釋與理解方式，不過如果IV想要再多學一點點，或許應該多加一點延伸的題材，比如Heckman selection model或是Generalized Methods of Moments(GMM)，這些都是我還沒真的學過或弄懂，但一直聽到的名詞。
 
