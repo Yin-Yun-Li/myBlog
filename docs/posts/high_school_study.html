@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="YinYun Li">
-<meta name="dcterms.date" content="2025-12-23">
+<meta name="dcterms.date" content="2026-01-19">
 
-<title>ISSM Reflection – YinYun’s Blog</title>
+<title>跨不去的坎 – YinYun’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,35 +114,6 @@ ul.task-list li input[type="checkbox"] {
 
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -351,21 +322,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
-  <li><a href="#coursework" id="toc-coursework" class="nav-link" data-scroll-target="#coursework">Coursework</a>
-  <ul class="collapse">
-  <li><a href="#causal-inference" id="toc-causal-inference" class="nav-link" data-scroll-target="#causal-inference">Causal Inference</a></li>
-  <li><a href="#introduction-to-data-science" id="toc-introduction-to-data-science" class="nav-link" data-scroll-target="#introduction-to-data-science">Introduction to Data Science</a></li>
-  <li><a href="#categorical-data-analysis" id="toc-categorical-data-analysis" class="nav-link" data-scroll-target="#categorical-data-analysis">Categorical data analysis</a></li>
-  <li><a href="#text-analysis-dimension-reduction" id="toc-text-analysis-dimension-reduction" class="nav-link" data-scroll-target="#text-analysis-dimension-reduction">Text analysis / Dimension Reduction</a></li>
-  <li><a href="#machine-learning-social-network" id="toc-machine-learning-social-network" class="nav-link" data-scroll-target="#machine-learning-social-network">Machine Learning / Social Network</a></li>
-  <li><a href="#causal-inference-and-machine-learning" id="toc-causal-inference-and-machine-learning" class="nav-link" data-scroll-target="#causal-inference-and-machine-learning">Causal Inference and Machine Learning</a></li>
-  <li><a href="#agent-based-modelling" id="toc-agent-based-modelling" class="nav-link" data-scroll-target="#agent-based-modelling">Agent-Based Modelling</a></li>
-  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others">Others</a></li>
-  </ul></li>
-  <li><a href="#presentation" id="toc-presentation" class="nav-link" data-scroll-target="#presentation">Presentation</a></li>
-  <li><a href="#proposal" id="toc-proposal" class="nav-link" data-scroll-target="#proposal">Proposal</a></li>
-  <li><a href="#recap" id="toc-recap" class="nav-link" data-scroll-target="#recap">Recap</a></li>
+  <li><a href="#日暮思懷" id="toc-日暮思懷" class="nav-link active" data-scroll-target="#日暮思懷">日暮思懷</a></li>
+  <li><a href="#靜夜思懷" id="toc-靜夜思懷" class="nav-link" data-scroll-target="#靜夜思懷">靜夜思懷</a></li>
   </ul>
 </nav>
     </div>
@@ -375,9 +333,10 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ISSM Reflection</h1>
+<h1 class="title">跨不去的坎</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">學習</div>
+    <div class="quarto-category">高中</div>
+    <div class="quarto-category">人生</div>
   </div>
   </div>
 
@@ -395,7 +354,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 23, 2025</p>
+      <p class="date">January 19, 2026</p>
     </div>
   </div>
   
@@ -407,96 +366,52 @@ window.Quarto = {
 </header>
 
 
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>這個營隊的前身是政治學計量方法研習營，主要招收政治系的學生，直到2023年更名為社會科學計量方法研習營，招生對象拓展至整個社會科學領域 （經濟、社會、法律、心理……）。</p>
-<p>我看了一下過往的<a href="https://www.issm.com.tw/event/camp">營隊主題</a>，無非是圍繞在因果推論、類別資料分析、跨時或跨層次的資料分析，今年則是首度以資料科學作為主題，但課程內容與過往某些題材是有呼應的。不過如果之後想報名的，可以研究一下課表看自己想學的是什麼，再決定報名也不遲。</p>
-<p>那我為什麼報名呢？好像也沒什麼強烈的動機。有兩個朋友傳了連結給我，也在另一個朋友的貼文看到這則資訊，看著課名也猜不出具體想傳授的內容，反正報名也無須負擔任何成本，就簡單寫了一些文件完成手續。</p>
-<p>當初收到錄取通知的時候，還跟參加過這個營隊的學長聊過，結論是到這個營隊主要還是去交朋友的，這項資訊在我心中形塑了對ISSM沒有特別期待的prior belief，畢竟我沒有那麼喜歡社交。但我就是那種選上的課程就不會想退掉的人，所以最後還是選擇來中研院三周，想說認識一些新的概念或他人的研究也不錯。而事後看來這趟也算是不虛此行。</p>
+<p>前兩天大學學測。距離上次大考已過了五年，有時候都會回去想，當時的我是不是在考試這條賽道上輸得很徹底？在大學階段似乎扳回一城，這樣算是成功嗎？不如把當初為了要投稿班刊而寫的文章貼出來<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>，看一下當時的文筆多矯情(誤)。</p>
+<section id="日暮思懷" class="level1">
+<h1>日暮思懷</h1>
+<p>書寫於2022/11/1。</p>
+<blockquote class="blockquote">
+<p>Life is full of trials and tribulations. All of us have mixed feelings about this three-year journey. On the one hand, success brought us to the point of ecstasy. On the other hand, failure threw us into the depth of disappointment. These bittersweet experiences not only provide us with some food for reflection, but they also strenghten our mindset. If we can keep thinking positive in the future, and try to practice self-kindness when we feel tired, we will rise above hurdles, overcome the ordeals, and fulfill our dreams .</p>
+</blockquote>
+<p>信步於落日餘暉灑落的校園，一面靜靜感受周遭的喧擾，一面任腦中思緒如水般不斷流淌著，悲喜交錯之間，隱約勾勒出三年來點滴的回憶。</p>
+<p>三年前，懷著一顆初生之犢不畏虎的勇氣，踏入這所夢寐以求的校園，雖說臉龐顯得青澀與懵懂，但內心早已稍稍縱容自己，在課業之餘，也接觸了許多的社團活動。在這大大小小的活動中，經歷時如酒般濃烈；回首來看卻如佳茗般，甘甜中卻帶點一種說不出的苦澀。一方面，這些活動著實豐富了三年高中的生活，填補生命中原本可能留存的空虛與遺憾；另一方面，卻是幾度心神憔悴，萌生了逃避與退意。</p>
+<p>走在語資這條路上，可說是蜿蜒曲折。起初，是因為國中課業上的傾向與腦中閃過的那股衝動，讓我選擇踏入以語文領域專長的班級，想藉由豐富的資源，期許自己能成為一位語文領域的佼佼者。然而，因為外務的疲勞轟炸下，逐漸迷失了自己的方向，涉獵地過於廣泛，卻忽略了專注於當下。</p>
+<p>在一升二的轉折點，我猶豫了十幾天，想著在這個班的價值，與未來兩年的去留，不斷地衡量在文理兩方面的成績，不知道是否應該追尋外人看好的理組之路，於是漸漸遺忘了那曾經為什麼想來到這個班的原因了。</p>
+<p>經過多次討論與深思熟慮後，我決定留在這個班級。然而，外務再度使我迷失自己，幾度想遇見當初的自己，卻仍無法擺脫多重的壓力與羈絆，只能勉強度過了高二。即便如此，在痛苦的過程中，仍享有美好的時光，跟伙伴一起完成一篇巨量的深度報導，磨難的過程也有了美好的收穫，至少獲得了聽眾的掌聲與朋友的讚譽，這也令我心滿意足了。</p>
+<p>來到高三時，確實應當全心往自己的目標邁進，然而腦袋在此時卻又在莫名其妙的打轉。明明已經走在文組這條路上，卻在幾度夜闌人靜的深夜，躺在床上的我，將雙眸投射在無底的黑暗深淵，想著自己的出路，並質疑著自己的抉擇是否正確；也有幾次不太想上課，面對著教學的內容與老師們，我想要遺棄這一切。</p>
+<p>但，這不過是拋棄了自己。</p>
+<p>學測前幾度的鬱悶與不順心，換得了考場上的失利。這樣的結局令我無地自容，同時也徹底地提醒了我：相信自己，就是走在該走的道路上。也因為一次的考試，我學會了忠於自己原本的選擇，並真正體認到，身邊的同學，將是我前進的目標，即使以往不曾察覺，但至少我省悟了。</p>
+<p>於是，在高中生活的最後的189天裡，我的心境回到最平靜的狀態，看似枯燥乏味的講義、書籍與考卷，我卻甘之如飴，能心無旁騖的接下這下挑戰，並逐步走到最後。</p>
+<p>謀事在人，成事在天。不斷的拚命，想要成就自己，卻還是差了那麼一點。月色灑在窗前的書桌與成堆的書卷，熱淚從臉龐滾落、濺滿了衣裳。我明白，現實，不如美好想像。但我不明白，這樣算是成功了嗎？還是應該否定自我的努力，承認自己依舊突破不了那道高牆呢？這個問題懸而未決，將伴著我，走向往後的人生旅程。</p>
+<p>這三年，算得上精彩嗎？我是否過分執著於某些事情，忽視身旁的朋友，忘卻自己的初衷?在球場上，我能馳騁與放縱；在教室裡，我卻膽怯與拘謹。與人相處的每個當下，有欣喜、悲痛、愛慕、憎恨等錯綜複雜的情緒，逐漸交織出真實的自己，但哪一個又能代表我呢？除了自己，又有誰，能夠找到我呢？人常常走了太遠，卻找不回自己，因此我們需要有些許憑藉，沉澱自己紛亂的內心，找出那個塵封已久的答案。</p>
+<p>如果生命是無心的故事，所以流逝；那麼故事便是多情的生命，所以長存。文字能夠串起過往的故事，記錄生命中的酸甜；高中三年的點滴，將鐫刻於生命中重要的扉頁，不曾抹滅。</p>
+<p>直至雙腳踢到了遠方滾來的籃球，這才發覺，雖身在球場，心裡早已重溫了高中三年：一路上的跌跌撞撞，從懵懂無知到成熟老練，由天真無邪到憂愁滿懷。</p>
+<p>晚霞仍在天一涯，卻已閃著數點星光。回首望向這片校園，腦海浮現許多帶不走的回憶，我強忍著淚水，揮手告別，悄然無聲地離去。</p>
 </section>
-<section id="coursework" class="level2">
-<h2 class="anchored" data-anchor-id="coursework">Coursework</h2>
-<section id="causal-inference" class="level3">
-<h3 class="anchored" data-anchor-id="causal-inference">Causal Inference</h3>
-<p>前面提到今年的主題是資料科學，其中有很大一部份在講因果推論(causal inference)。我是經濟系大學部的學生，在參加營隊前已經修過最基礎的統計與計量經濟學，也略懂因果推論的架構(Angrist’s Mostly Harmless Econometrics)，但我想這樣就足夠應付營隊裡面跟causal inference有關的課程（當然還是有些例外），畢竟這個營隊沒有涉及太多的數學推導。</p>
-<p>我所學的causal inference，是從potential outcome framework出發(比如Roy model)，理解反事實推論是整個因果推論最本質的難題(the fundamental problem of causal inference)。</p>
-<p>社會科學關心causality，在某些情境下可以被定義為treatment effect，資料上沒辦法直接看到反事實的部分，意即沒辦法直接求出treatment effect，這時候就需要仰賴一些identification assumption去測量這個效果。所謂的identification，就是當樣本數趨近無限大時，可以”正確”recover 我們關心的參數。當我們確定效果可以被識別後，這時候才進入統計估計(estimation)與檢定的環節。</p>
-<p>簡單來說，因果推論主要走過的流程就是 “definition <span class="math inline">\(\rightarrow\)</span> identification <span class="math inline">\(\rightarrow\)</span> estimation”。當然這只是很粗略的介紹，很多名詞沒有被明確的定義，如果修過計量經濟學，然後來到這個營隊上課，加起來可能會聽了5,6輪左右，所以如果很熟因果推論的可能會有點小失望或無聊，倒不是因為本身就知道這些東西，而是大部分的內容就是蜻蜓點水的帶過，作為接觸不只一次的學習者來說，會更渴望知道背後更多的細節。</p>
-<p>舉例來說，這次因果推論的課程，內容涵蓋的identification strategy主要有random assignment, CIA, instrumental variable, regression discontinuity。很多老師都很喜歡講IV, 初學者一定會從同質性(homogeneous)的treatment effect出發，接著開始考慮異質性(heterogeneous) treatment effect，就像是在做實驗的時候，研究者給受試者treatment，後者會選擇要不要接受(compliance)，這時就需要額外的假設去估計所謂的local average treatment effect。這些東西是最基礎的計量經濟學內容，每次聽不同的人講都會有不同的詮釋與理解方式，不過如果IV想要再多學一點點，或許應該多加一點延伸的題材，比如Heckman selection model或是Generalized Methods of Moments(GMM)，這些都是我還沒真的學過或弄懂，但一直聽到的名詞。</p>
-<p>但整體而言，我認為營隊的這些課程，某方面讓我回憶過往所學，某方面又拓展了新的知識領域，更重要的是可以拿到素材，在未來需要的時刻可以用上，或者閒來無事（好像沒有這種時候？）時可以拿起來把玩。以下容我以流水帳的帶過這些內容：</p>
+<section id="靜夜思懷" class="level1">
+<h1>靜夜思懷</h1>
+<p>書寫於2026/1/18。</p>
+<p>時隔四年重新看了前段的文字，想要補充一些細節。從小，我的家人並沒有限制我學習的方向，不像某些家庭強迫小孩要考醫學系、電機系。我覺得在國中時期，自己好像比較擅長文科，可能是讀起來比較容易上手，總能取得比較高的分數，也可以更直白地說，我非常會背誦，所以自然能掌握這些內容。另一方面，我小時候非常喜歡中國史，對於文史的熱忱延伸至對應的課內知識，在研讀的過程就感到特別開心。</p>
+<p>這樣的熱情或許可以延續至高一上，日子久了，很難不被理組掛帥的校園氛圍影響。雖然都待在語資的環境，我還是會有意無意地被灌輸「重數理、輕人文」的觀念，地點就在尊賢街上的水利大樓<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>。</p>
+<p>國小的時候有被送去安親班，國中後就決定自己讀書不需依靠補習，輔以國三的加強班，讓我順利考上第一志願。不過在被高一上的數學考試所摧殘後，我就不太相信學校老師的教法，開始去補習。我當時遇到的補習班數學老師，評價上毀譽參半，從榜單來看確實成果豐碩，他的教學方法與風格頗有一套，感覺當時就是被他的魔力吸引，甚至著迷，開始有些自以為是的學習數學，而漸漸忽略學校老師的教學。然而，他的一些偏激的發言卻讓人不予苟同，甚至被他中傷。我的同學或許只是氣憤之下就離開了這間補習班，但我因為相信他的教學而選擇留下，只是就要一直承受他對文組的歧視性發言，這也對我的心情造成很多負面的影響：我逐漸淡忘了自己在語資的初衷是什麼，甚至到了高三時還覺得自己是不是走錯了路，當初應該轉組的。此外，我開始對學校老師的教學感到焦躁與不滿(不僅是數學科)，因為我沒辦法用一套自己的學習框架去理解老師的思維，那我心中就存在著一種對學校老師的不信任，陷入了一種認為只有靠自己才能解決的無底深淵。</p>
+<p>事後來看，我承認那段時間，被補習班影響太多以致於心中怨念太深，沒有一顆堅定沉穩地心去考學測，那結果一定只能是慘敗<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>。就連有補習班支援的數學，在考場的那個當下，我就預料到結果將會是全面崩盤，毫無懸念直接去指考。曾經以為靠著補習就能征服一切的不可一世，轉瞬間形成無止盡的懊悔與悲痛。花了很多時間檢討自己的不是，到底什麼原因走到了今天這步。或許真的就如我想像地一樣，過度依賴補習、心中存在著對自我選擇的雜念、對學校老師與知識的不敬，才造就今日的失敗。所以在考完的一兩個月，我花了一些時間跟自己的心對話，既然待在了語資，就該無悔地持續往前走，而非躊躇不前甚至懷疑過往的抉擇；面對各科，我都應該要放下身段好好學習，不是永遠照著自己的邏輯思考這些知識，而是更應該仰賴老師們的智慧，有關他們如何理解這些知識的技巧或思維，都是必須經過學習養成的。也因此，我的社會科在指考校正回歸；英文與數學看起來好像不錯，但我覺得那不是我應該有的表現，至於國文就更無言以對了。想當初自己也是國文科的佼佼者，為何進入高中後，跟國文科漸行漸遠，無論學測與指考，都考了差不多糟糕的分數。我都開始懷疑，是不是自己其實根本不是擅長語文的人<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>？</p>
+<p>面對高中那個極度糾結的自己，我想安撫他，告訴他那個階段的煩惱根本不是煩惱，或者說不值得煩惱。假設遠光放長一點，知道自己在大學階段是在學什麼與做些什麼，我還會如此在意自己是不是文組的身分嗎？我還會很在意為什麼當初沒選考自然嗎？</p>
+<p>我甚至認為當時的那些煩擾是瑣碎(trivial)且愚蠢的，縱使自己有選考自然的念頭，卻沒辦法轉化為堅持的勇氣與決心，並付諸實踐，反而是回頭過來責備自己把未來的道路縮死了，覺得對自己的學習不負責任，進而影響考試的心態。當然，沒有人知道未來會發生什麼事情，對18歲的人來說這一切都太過於遙遠，考高分變成那個階段唯一的目標，當分數夠高，理想校系任憑自己選擇。我當然沒有經歷過那段奢侈的過程，只是我花了很多時間彌補當時的執迷不悟，包裝成今日好像很優秀的樣子。</p>
+<p>這段過去帶給我複雜的感受，因為它讓我痛苦過，卻也讓我格外珍惜走到今天是多麼不容易的事。從萬丈深淵從新爬至地平面，起步前行，彼時跨不去的坎根本不值一提，只要稍微轉向，繞過它並學習與它平和相處，日子一久，也就釋懷了。</p>
+
+
 </section>
-<section id="introduction-to-data-science" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-to-data-science">Introduction to Data Science</h3>
-<p>講了一些原理性的內容，老實說聽的時候挺無聊的，還好老師有寫一些github pages document 跟一些 sample code，算是非常豐富的學習資源。</p>
-</section>
-<section id="categorical-data-analysis" class="level3">
-<h3 class="anchored" data-anchor-id="categorical-data-analysis">Categorical data analysis</h3>
-<p>這是某些年度計量營的主題，其實本質上就是在講 logistic regression。想當自己當初修民意調查的時候為了跑 ordered logistic 還自己跑去了研究一番，所以聽下來整個脈絡是清楚的，只是最後好像還是沒辦法腦袋很清晰地去詮釋係數代表的意義，必須要停下來想一想、動筆推一推，用 odd ratio 的變化去解釋。</p>
-</section>
-<section id="text-analysis-dimension-reduction" class="level3">
-<h3 class="anchored" data-anchor-id="text-analysis-dimension-reduction">Text analysis / Dimension Reduction</h3>
-<p>不太知道未來甚麼時候會需要用到文本分析，但在半天維度縮減的課程中，林澤民老師用紅樓夢80/40回的作者爭議作為案例，用PCA去看前後部分寫作的差異，算是滿有趣的。至於技術上的細節，我想等修完線性代數再來研究。</p>
-</section>
-<section id="machine-learning-social-network" class="level3">
-<h3 class="anchored" data-anchor-id="machine-learning-social-network">Machine Learning / Social Network</h3>
-<p>這兩堂課沒什麼關聯，只是因為前者是楊睿中老師授課、後者則是謝志昇老師，在系上甚至還沒有修過他們兩個人的課，當初很可能是因為看到兩個經濟系的老師所以決定要來這個營隊的XD</p>
-<p>先講ML。我對機器學習是非常陌生的，我只有學過傳統計量經濟學，主要仰賴 parametric identification，且經濟學家關心的是社會現象可以被某種 mechanism 或 causality 解釋。相對而言，ML比較偏向 non-parametric identification，對於給定的資料去看能不能做出好的預測，也就是說詮釋並非重要的角色。什麼regression trees, random forest &amp; neural network, 希望之後可以補起來，或者有人要跟我討論也是可以。</p>
-<p>至於社會網絡，我猜想或許我之後會想修謝志昇的課吧 !? 這東西跟傳統經濟學的架構好像有些不太一樣，也可能是我沒有深入了解的緣故，因為我不知道要如何在社會網絡下刻劃一個人的偏好，與他人的互動如何影響他的選擇，一切對現在的我來說都滿抽象的。</p>
-</section>
-<section id="causal-inference-and-machine-learning" class="level3">
-<h3 class="anchored" data-anchor-id="causal-inference-and-machine-learning">Causal Inference and Machine Learning</h3>
-<p>周翔——本次營隊最大魔王。Regression estimator跟inverse probability estimator 因為冠銘有教所以也算是複習，doubly robust estimator 概念上就是前兩種的混合所以也很好理解，只是跨到機器學習的那塊就有點似懂非懂了。</p>
-<p>第二天講到了連續型的treatment，以及周翔擅長的mediation analysis，似乎社會學很喜歡用，我希望有機會能弄懂。</p>
-<p>周翔甚至擔任了一場keynote speech的講者，講了一篇他發表的paper，主題是如何衡量不平等這件事情。他先說了傳統分解方法 (KOB method)的侷限，再提出一個prescriptive的方法，從既有的資料去做一些實驗看哪種分配方式比較公平（如果我沒有理解錯的話?）</p>
-<p>聽完的感想就是，雖然他是Harvard社會學系的教授，他講了半天都在講方法論的東西，甚至還看到他有發過期刊是關於一些方法的推廣，很好奇為什麼不是他不是方法論的學者，或者從經濟系的角度來說為什麼他不是計量經濟學家……</p>
-</section>
-<section id="agent-based-modelling" class="level3">
-<h3 class="anchored" data-anchor-id="agent-based-modelling">Agent-Based Modelling</h3>
-<p>還沒搞懂ABM跟賽局之間的關係。雖然上課的模型比較偏向流行病學的研究，但看到一些差/微分方程的圖，直接想起修古媽賽局時演化賽局這個主題，包含計算replicator equation，找到一個穩定的rest point，最後還要去證明這些候選點在特定的情況下會是演化穩定策略(evolutionary stable strategy)。雖然沒辦法直接連結賽局與ABM，但感受到兩者間存在某種關聯，在上課的那個當下就快要跳起來了，因為感到特別興奮。</p>
-</section>
-<section id="others" class="level3">
-<h3 class="anchored" data-anchor-id="others">Others</h3>
-<p>當然還有一些很棒的課程與老師，只是沒什麼特別的心得好寫的，重點是能不能把這些素材吸收完才是重點。</p>
-<p>比如任教於Madison的Adelin講授的Survey Experiments, Hebert談了computational social science，並與資料科學做結合；還有一天請了四位客座講師，討論了如何從資料走向研究。</p>
-<p>葉高華老師的纏足研究中，找遺漏變數的方法實在太酷了；至於data-driven本身是好是壞，我想應該很難否認適時「偷窺」data來尋找靈感這件事情，剩下的就等我累積一些東西再來思考這個哲學層次上的問題吧！</p>
-<p>林明仁老師也就不用說了，每次上他的經原就在聽故事一樣，這次又講了他常常掛在嘴邊的evidence-based policy的內容，每次聽完都能重新感受林老師說故事的風采與能力。</p>
-</section>
-</section>
-<section id="presentation" class="level2">
-<h2 class="anchored" data-anchor-id="presentation">Presentation</h2>
-<p>無庸置疑，學習新知是營隊的第一收穫，我認為這營隊第二個有意義的地方在於要提一個研究主題。雖然我當初填表單的時候是沒有想要上台發表的意願，但最後知道每個人都必須上台後，就開始苦思冥想要做甚麼題目。（所以說當初為什麼表單要問這一題？）</p>
-<p>果然我最大的罩門還是問不出一個好問題。有想過要做家庭托育跟年金改革，但感覺在三周的時間內沒辦法轉換成一個可行的研究設計。看了一下當初寄出去的研究興趣寫著：</p>
-<p>（家庭托育）當政府提供不同的托育方案，對於已婚卻沒有小孩的家庭，會如何影響他們的生育決策？對於必須照顧幼齡兒童的雙薪家庭而言，在小孩出生後，應該如何安排照顧？準公共托育實施後，父母親的勞動供給與家庭內部分工會有甚麼改變？我想試圖建構一個家庭決策模型，利用實際資料回答上述的問題。</p>
-<p>（年金）自2023年起，初任公教人員不再適用原先退撫基金制度，轉為以個人專戶決定退休金的確定提撥制。我想從這項變革出發，延伸探討公私部門的薪資結構與退休金制度差異，如何影響個人的職涯選擇與工作動機。</p>
-<p>這些都是重要的問題，但處理起來太過複雜，再加上現在的我孤陋寡聞，可能必須想一些更簡單的題目，但結論就是沒有想到，如果不是可以抱團，我可能現在也還沒想到題目。</p>
-</section>
-<section id="proposal" class="level2">
-<h2 class="anchored" data-anchor-id="proposal">Proposal</h2>
-<p>C原本的提議是想做女性生育對勞動或薪資的影響，由於這會有selection的問題，所以最理想的做法就是去找 IV。只能說 IV 是可遇不可求的，你心中想的所有IV，很可能別人都想過了，而且要說服別人我們找的 IV是符合一些假設的，感覺就要經過一番論戰。加上一些原因，我認為這個題目或許很難用我們現在會的工具去分析的，所以不太想要做這個題目。</p>
-<p>C後來又想到看義務役役期改革對薪資的影響，一開始是想說第一份薪資，但後來修正為看某一個歲數的薪資，從人力資本的角度來看算是有故事的，假如兩個相似的個體，一個當一年兵，一個當4個月的兵，假如當兵後進入勞動市場所花的時間相同，那麼累積到25歲時，感覺上當4個月的兵薪資成長比較高。而政府這項兵役改革的斷點定在出生年1994，理論上就可以設計一個regression discontinuity。我們拿了 repeated cross-sectional的survey data 看看有沒有所謂的斷點產生，但資料點真的是少得可憐（樣本數、出生年沒有細緻到月），根本沒辦法看到跳升的感覺。而且如果硬跑一個RD卻發現共線性的問題，我自己想了半天也想不出來，結果到前一天跟C討論才發現這是survey data的問題。唉！雖然我懂共線性，但在那個當下真的完全沒想到survey data會有這種問題（以及是我們的dependent variable 是 wage at the specific age）。</p>
-<p>既然看不到任何初步的結果，我們上台也只講了：</p>
-<ol type="1">
-<li>此處的RDD沒辦法用於survey data，可能需要行政資料。</li>
-<li>硬跑一個event study說服大家latter cohort在某歲數的薪資是有上升的趨勢 (這裡感謝指導的助教 Y)。</li>
-<li>寫了一個不是很好的dynamic discrete choice model（因為我只會這個），看能不能用structural model 去做政策實驗，比如可以看4個月改回1年對勞工的影響。</li>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>後來班刊因為一些原因沒有編成，所以這篇一直留在我的電腦裡。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>這是一中出校門後，走幾步路就能到達的補習大樓。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>我到現在還是不敢跟人提我的學測成績，有興趣可以來問我，你會把我輾在地上。<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>說實在的，即便高中跟著補教名師學英文，到現在還是覺得自己的英文非常破，感覺虛擲了父母不少的金錢😞。<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-<p>結果C跟我還是有拿到林繼文獎學金，相比其他人的作品實在是有點羞愧，感覺有著大學生紅利才拿獎的XD 畢竟是52名學員取16名，大部分拿獎的是碩士生或博士候選人，很多都是他們已經寫完的碩士論文，我們甚至沒有做出什麼名堂來，只能說自己滿幸運的。</p>
-<p>也感謝在營隊結識的朋友T，他想了一個很有趣的主題，關於酒駕修法對量刑的影響，我只不過是在旁邊多嘴了幾句，結果最後就被他掛名了，真是不好意思 ~~</p>
-<p>至於我多嘴了什麼呢？原本他想做RD in time，但第一周聽到這個東西似乎跟傳統的RD有點差異，跟所學有點衝突，幸好最後沒有用（講評人說如果要申請博班千萬不要用這個東西XD）；後來我又想了是不是可以跑 staggered DiD，結果實際跑過才知道這根本不是一個panel data；最後只能回到regression monkey最會的伎倆OLS，兜出一個有趣的法實證故事。</p>
-</section>
-<section id="recap" class="level2">
-<h2 class="anchored" data-anchor-id="recap">Recap</h2>
-<p>總整一下，我認為在營隊學到的比想像中還多。還記得當初的prior belief是不抱太大的期待，但營隊過後形塑了完全不同的posterior belief。</p>
-<p>第一個自然是學到新的東西，需要花一些時間吸收，如果只是線上聽這個營隊的課程，一來是沒有material，二來是有些課程不會直播，我個人感覺只有實體參加這個營隊才有學習的感覺。</p>
-<p>第二個則是練習提proposal。這個是計量營，所以本質上應該是要多往方法這塊著墨。對於我這種紙上談兵的人來說，這次是真的有實際的案例去思考自己的regression有哪些犯規的地方，然後試著找出來並思考如何解決，我想這是最重要的。</p>
-<p>一個小抱怨，因為這是計量營，也就是方法論的營隊，有點不太明白為什麼很多評論者都一直圍著報告者的研究問題評論，我想能不能好好地解釋採用的方法可以identify 某種因果關係，這才是重要的吧？</p>
-<p>最後則是人脈，朋友C跟學姊Y我本來就認識，讓我這個邊緣人在營隊可以正常生活；也剛好有機會遇見T，這是非常意想不到的收穫；也感謝一起住了三周的碩四室友，聽了他許多有趣的分享。對於我這種生活圈相對狹隘的人，或許只有在一些機緣下（比如計量營），才有辦法真實感受到碩博士的想法與自己的不同，或者從某個角度來說比大學生更有層次。至於其他的人，有些是點頭之交，有些則是完全沒有搭話過的，這些弱連結在未來是不是真的有甚麼實質上的幫助，我覺得很難說，此刻可能先按下不表。</p>
-<p>所以要我推薦這個營隊嗎？我是鼓勵參加的，不過單純看個人的取向為何。比如你想學東西、或是你想交朋友。而我自己從頭到尾就只想著第一個，朋友的話隨緣就好，不過就結果來看是獲得更多額外的東西，所以整體來看是滿不賴的，是吧。</p>
-
-
-</section>
-
-</main> <!-- /main -->
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
