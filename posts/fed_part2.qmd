@@ -2,8 +2,12 @@
 title: "聯準會與金融危機"
 author: "YinYun Li"
 date: "2026-01-09"
-categories: ["貨幣政策"]
+categories: ["貨幣政策", "經濟學"]
 ---
+
+::: {.callout-note appearance="simple" icon=false}
+本文對應[柏南克談聯準會](https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq_PafAnTFt5lVkKygk0uEBPW6ULgit8RD2U883zRdk8wc3EINV)一書Ch3-Ch7。
+:::
 
 # Greenspan
 

@@ -8,7 +8,7 @@ format:
     code-fold: true
     toc: true
 date: "2026-1-26"
-categories: ["Quantitative Economics"]
+categories: ["經濟學"]
 engine: julia
 ---
 
@@ -367,8 +367,7 @@ p1 = plot(rep_matrix,
     grid = true,
     xlabel = "Time",
     ylabel = L"y_t",
-    title = "",
-    size = (800, 500)
+    title = ""
 )
 
 vline!(p1, time_points, 

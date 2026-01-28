@@ -2,9 +2,14 @@
 title: "聯準會與通膨"
 author: "YinYun Li"
 date: "2026-01-05"
-categories: ["貨幣政策"]
+categories: ["貨幣政策", "經濟學"]
 ---
 
+
+
+::: {.callout-note appearance="simple" icon=false}
+最近在讀[柏南克談聯準會](https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq_PafAnTFt5lVkKygk0uEBPW6ULgit8RD2U883zRdk8wc3EINV)這本書，主要是在講 20 世紀以來貨幣政策的行動與目標為何。從柏南克的觀點出發，再結合過往貨銀所學，故寫了一些筆記幫助自己理解聯準會的貨幣政策。本文對應書中第一部分Ch1與Ch2。
+:::
 
 最近在讀[柏南克談聯準會](https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq_PafAnTFt5lVkKygk0uEBPW6ULgit8RD2U883zRdk8wc3EINV)這本書，主要是在講20世紀以來貨幣政策的行動與目標為何，從柏南克的觀點出發，再結合過往貨銀所學，故寫了一些筆記幫助自己理解聯準會的貨幣政策。
 

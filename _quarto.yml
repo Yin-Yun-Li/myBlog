@@ -28,3 +28,6 @@ format:
     toc: true
     html-math-method: mathjax
     theme-color: "#1a1a1a"
+
+execute:
+  freeze: auto

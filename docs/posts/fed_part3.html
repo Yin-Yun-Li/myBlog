@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="YinYun Li">
-<meta name="dcterms.date" content="2026-01-05">
+<meta name="dcterms.date" content="2026-01-29">
 
-<title>聯準會與通膨 – YinYun’s Blog</title>
+<title>《柏南克談聯準會》Part3 – YinYun’s Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,40 +113,7 @@ ul.task-list li input[type="checkbox"] {
   })();
 
 </script>
-<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
 
-<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -355,17 +322,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#great-inflation" id="toc-great-inflation" class="nav-link active" data-scroll-target="#great-inflation">Great Inflation</a></li>
-  <li><a href="#the-volcker-shock" id="toc-the-volcker-shock" class="nav-link" data-scroll-target="#the-volcker-shock">The Volcker Shock</a></li>
-  <li><a href="#savings-and-loan-crisis" id="toc-savings-and-loan-crisis" class="nav-link" data-scroll-target="#savings-and-loan-crisis">Savings and Loan Crisis</a>
-  <ul class="collapse">
-  <li><a href="#利率風險" id="toc-利率風險" class="nav-link" data-scroll-target="#利率風險">利率風險</a>
-  <ul class="collapse">
-  <li><a href="#重新定價模型repricing-model" id="toc-重新定價模型repricing-model" class="nav-link" data-scroll-target="#重新定價模型repricing-model">重新定價模型(Repricing Model)</a></li>
-  <li><a href="#到期期限模型maturity-model-存續期間模型duration-model" id="toc-到期期限模型maturity-model-存續期間模型duration-model" class="nav-link" data-scroll-target="#到期期限模型maturity-model-存續期間模型duration-model">到期期限模型(Maturity Model) &amp; 存續期間模型(Duration Model)</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#pce" id="toc-pce" class="nav-link" data-scroll-target="#pce">Appendix: 物價指數的衡量</a></li>
+  <li><a href="#葉倫至鮑爾" id="toc-葉倫至鮑爾" class="nav-link active" data-scroll-target="#葉倫至鮑爾">葉倫至鮑爾</a></li>
+  <li><a href="#新冠疫情" id="toc-新冠疫情" class="nav-link" data-scroll-target="#新冠疫情">新冠疫情</a></li>
   </ul>
 </nav>
     </div>
@@ -375,7 +333,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">聯準會與通膨</h1>
+<h1 class="title">《柏南克談聯準會》Part3</h1>
   <div class="quarto-categories">
     <div class="quarto-category">貨幣政策</div>
     <div class="quarto-category">經濟學</div>
@@ -396,7 +354,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 5, 2026</p>
+      <p class="date">January 29, 2026</p>
     </div>
   </div>
   
@@ -414,185 +372,27 @@ window.Quarto = {
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>最近在讀<a href="https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq_PafAnTFt5lVkKygk0uEBPW6ULgit8RD2U883zRdk8wc3EINV">柏南克談聯準會</a>這本書，主要是在講 20 世紀以來貨幣政策的行動與目標為何。從柏南克的觀點出發，再結合過往貨銀所學，故寫了一些筆記幫助自己理解聯準會的貨幣政策。本文對應書中第一部分Ch1與Ch2。</p>
+<p>本文對應<a href="https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq_PafAnTFt5lVkKygk0uEBPW6ULgit8RD2U883zRdk8wc3EINV">柏南克談聯準會</a>一書第三部分(Ch8-Ch10)。</p>
 </div>
 </div>
 </div>
-<p>最近在讀<a href="https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq_PafAnTFt5lVkKygk0uEBPW6ULgit8RD2U883zRdk8wc3EINV">柏南克談聯準會</a>這本書，主要是在講20世紀以來貨幣政策的行動與目標為何，從柏南克的觀點出發，再結合過往貨銀所學，故寫了一些筆記幫助自己理解聯準會的貨幣政策。</p>
-<section id="great-inflation" class="level1">
-<h1>Great Inflation</h1>
-<div id="fig-pce" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: PCE物價指數與聯邦基金利率時間序列
-</figcaption>
-</figure>
-</div>
-<p><a href="#fig-pce" class="quarto-xref">Figure&nbsp;1</a> 是Federal Reserve Economic Data(FRED)提供的通膨與利率季資料，藍色實線為核心<a href="#pce">個人消費支出物價指數</a> (排除食物與能源等價格易受季節波動的項目) 的每年變化，綠色虛線則為聯邦基金利率。我認為這張圖勾勒了本書前兩章的內容，並對現代央行樹立了重要的典範。</p>
-<p>1965年左右，通膨開始持續上升，當時解釋這個現象的重要學說為菲利浦曲線。其核心觀點為，當勞動市場存在超額需求時，將推動工資的上升，也就是說勞動市場的閒置數量(失業率)與薪資成長為反向關係(薪資菲利浦)曲線。相同地，當商品市場需求強勁時，物價將會上升，進而對勞動市場有更多的需求，使得物價與失業率亦呈現反向的實證關係。</p>
-<p>在1960年總統大選適逢景氣衰退，甫選上美國總統的甘迺迪以擴張性財政政策解決失業問題，由於「短期」而言，物價與失業率存在抵換關係，執政者透過刺激總合需求帶動經濟成長，卻使得通膨變得日益嚴重，從甘迺迪、詹森，直至尼克森。為了抑制通膨且不讓經濟減緩，尼克森竟然推行薪資與物價控管的措施。然而，管制抹煞了價格傳達的市場資訊與協調機制，讓勞工、企業與家戶無法正確決策。不過，尼克森在選舉年前後沒有採用任何緊縮性政策來抑制總體需求，他在1972年連任成功。</p>
-<p>當價格控管結束後，通膨開始反彈上升，再加上石油危機與通膨心理，通膨率將持續飆升。前者作為短期供給面的外生衝擊並非最大的問題，反而是大眾對於持續上升的通膨視為常態的心理預期，將導致通膨更難管理。比如，勞工考慮到未來通膨繼續升高，於是在薪資協商時要求通膨補貼(非正式調整或是COLA<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>)，雇主沒有辦法抵抗加薪，於是將上漲成本轉移給消費者，進一步提高通膨壓力，造成工資物價雙雙上升的惡性循環(wage-price spiral)。因此，石油危機與通膨預期推翻了傳統菲利浦曲線的抵換關係，總體經濟呈現停滯性通膨(stagflation)<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>。</p>
-<p>然而，為何FED在當時沒有意識到通膨的嚴重性而想辦法應對？主要的原因在於政治亂象以及對通膨流程的錯誤看法。</p>
-<p>馬丁(William McChesney Martin)作為聯準會任期最長的主席(1951-1970)，其實非常想解決這個問題，從他的經典名言「央行是在酒會剛開始熱鬧，即把雞尾酒盆撤走的人<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>」可見一斑。馬丁採用的貨幣政策邏輯為逆景氣循環，以維持物價的穩定。在馬丁任期初期，相對受到的政治干預或壓力較小，到甘迺迪與詹森執政期間則出現了明顯的變化，當時大家覺得產出存在缺口(充分就業產出大於實際產出)，政府的目標為在不造成通膨的壓力下達到自然失業率(可見當時人們認為失業率太高，後續來看其實自然失業率被低估了)。</p>
-<p>因此，為了縮減產出缺口，甘迺迪與詹森政府採行減稅與增加軍事支出等擴張性財政政策，並任用凱因斯思維的聯準會理事，變相掣肘馬丁的行動。即便馬丁在必要時刻實施緊縮性貨幣政策，甚至與詹森槓上，在任期結束前依舊無法阻止大通膨的事態持續惡化。</p>
-<p>1970年，尼克森所任命的伯恩斯(Arthur Frank Burns)接替馬丁擔任FED主席，伯恩斯在1968年總統大選時為前者的經濟顧問，尼克森顯然想透過兩人的關係來達成自己的政治目的。1970年經濟衰退期間，為了解決失業率的問題，尼克森不斷對伯恩斯施壓，希望能有更寬鬆的銀行借貸體系以促進經濟成長，以爭取1972年大選連任<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>，不論伯恩斯是否有親口答應，當時的貨幣與財政政策確實都相對寬鬆。</p>
-<p>另一方面，伯恩斯對通膨起因的看法，也進一步推高通膨的壓力。他認為通膨是成本面的力量所造成，故透過貨幣政策這種以減緩總和需求的方式沒辦法有效打擊通膨。為了控制成本面的力量，伯恩斯反而支持價格管制的政策，這某方面也影響了尼克森的物價控制政策。</p>
-<p>然而前面幾輪的價格控管已經無法抑制通膨；即便1973年開啟一連串的升息，然而在不久就面臨經濟衰退(1973-1975)，FED就馬上結束升息，這種走走停停、頻繁於緊縮與寬鬆間切換的貨幣政策，也讓人們對FED穩定物價的能力失去信心。</p>
-<p>若依照傳統菲利浦曲線的邏輯，貨幣政策顯然必須在通膨與失業率兼做取捨，1970年代的停滯性通膨則讓聯準會陷入了進退兩難的僵局；在立法的政策辯論上，1977年修正版的聯邦準備法賦予FED的法定職責為：透過貨幣政策的管理，實現物價穩定與充分就業的雙重目標(Dual mandate)，說穿了有些政治妥協的意味在。也因為國會不容許造成失業大增的打擊通膨手段，這也限制了伯恩斯的決策。</p>
-<p>1979年伯恩斯發表了一場演說名為〈央行的苦惱〉，內容提到未能錨定人民的通膨預期，使得聯準會無法有效透過貨幣政策維持物價穩定。當自然失業率被低估時，很可能產出不是存在缺口而是過剩，央行應限制貨幣供給的成長，然而，充分就業的承諾使得聯準會無法在政治上直接採取行動打擊通膨，除非大家的共識是通膨是國內最大的經濟挑戰，而這樣的政治共識在馬丁與伯恩斯任內顯然沒有形成。</p>
+<section id="葉倫至鮑爾" class="level1">
+<h1>葉倫至鮑爾</h1>
+<p>如同葛林斯潘一樣，2014年接任柏南克之後的葉倫，需延續前任的政策方向，以及鞏固聯準會已有的成果——包含利用各種方法降低失業率，並提振過低的通膨。即便任內持續推動退場的進度，直至2016年中，葉倫僅主導一次升息，部分意外的局勢發展<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>使得FED對升息的行動更為謹慎。</p>
+<p>葉倫時代面對的一個較為廣泛的問題：菲利浦曲線是否還存在？傳統菲利浦曲線解釋1960年通膨上升原因，卻在1970年的停滯性通膨踢到鐵板。於是經濟學家對菲利浦曲線做了兩個修正：引入供給面衝擊與通膨預期<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>。1980年初，伏克爾的升息抗通膨符合傳統菲利浦曲線的預測，但在1990年代後，通膨對失業率的關係變得相對扁平：比如金融危機後，失業率大幅升至10%，通膨卻只是溫和下降；葉倫時代原本準備透過升息來避免即將過熱的景氣，卻發現通膨率依舊低於目標水準。</p>
+<p>另一個特徵是，若沒有重大供給衝擊，通膨經常是長時間維持穩定，這某一部分歸功於伏克爾之後，FED成功錨定大眾的通膨預期。這樣的好處是，貨幣政策者有更大的空間利用寬鬆政策因應景氣衰退，但這同時也代表通膨不再是預測經濟過熱的可靠指標，一旦通膨過高，把通膨降至目標水準的成本也會比以往更高，這對央行長期樹立的信譽有不利的影響。</p>
+<p>不過葉倫在任僅4年的時間，川普於2018年提名非經濟學背景的鮑爾接任聯準會主席。即便在政黨背景上與總統相近，但他致力於維持聯準會決策的獨立性。在鮑爾剛上任的前幾個月，川普未曾批評其主導的貨幣政策，但在五個月後，後者就開始對聯準會的升息不太滿意<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>。</p>
+<p>不過，鮑爾在2019年轉向，提到目前為止的升息政策，對成長放緩、貿易局勢惡化的經濟體來說，有點太多了，並在該年的AEA年會說明政策轉向是因應市場訊號與不斷變化的前景，根據資料做出靈活地反應，並非屈服於總統的壓力與要求。</p>
+<p>這裡稍微補充，2018年8月傑克森霍爾會議，鮑爾說明自己的貨幣政策方法，多少帶有一點不可知論的做法，也就是減少模型導向的預測與分析，偏向透過經濟資料、商界與坊間人脈的在地資訊進行風險管理，以應對經濟前景的不確定性，因此作法上近似於葛林斯潘。</p>
+<p>在2019年貿易戰、削弱的財政刺激與疲軟的經濟體，使殖利率曲線呈現倒掛的現象，而鮑爾此次降息作為一種期中調整，避免美國受貿易不確定、全球經濟減緩等影響，最後似乎也達成軟著陸的目標，至少收益曲線反轉消失。</p>
+<p>在新冠疫情前，鮑爾推行聯準會傾聽(Fed Listens)，讓央行的檢討的內容將會擴及外界，除了讓大眾理解央行政策架構的調整與實行邏輯，也能讓政策制定者理解市場參與者對聯準會與其政策看法。這個檢討過程並然涉及對於操作架構(如何實行貨幣政策)的思考。</p>
+<p>傳統貨幣政策，是透過公開市場操作控制聯邦基金利率，這屬於短缺準備金體系(scarce reserves)；但在金融危機後，聯準會早已處於充足準備金體系(ample reserves)。在準備金氾濫的情況下，出售證券收回準備金的升息方法不太可行，僅能利用超額準備金付息與附賣回交易來升息。而在2019年1月，FOMC決定採用後者，這也代表聯準會資產負債表規模永遠比過往大，並存在未來可能重新啟用QE的選項。</p>
 </section>
-<section id="the-volcker-shock" class="level1">
-<h1>The Volcker Shock</h1>
-<p>在如此黯淡的經濟前景下，伏克爾被卡特任命為新的聯準會主席<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>。伏克爾在伯恩斯時期擔任紐約聯邦準備銀行的總裁，按慣例亦為FOMC的副主席，在卡特選任新任主席的過程，伏克爾一再強調自己會大舉使用緊縮性貨幣政策打擊通膨，即便付出的代價很高(失業率、經濟成長減緩、政治成本)。副總統孟岱爾曾說 ，(伏克爾堅持緊縮貨幣政策) 最終確實掃除通膨，卻也把我們掃出白宮。那麼為何卡特支持？當聯準會已失去打擊通膨的可信度，要怎麼讓人民相信通膨非降不可，且聯準會一定會做到？即便沒辦法確認卡特真實的想法，但伏克爾本身作為鷹派的聲譽，更可能恢復聯準會打擊通膨的信譽，故成為終結大通膨時代的不二人選。</p>
-<p>1979年10月6日FOMC的週六會議，伏克爾提出一種新的貨幣政策管理方法，將貨幣成長視為操作目標，也就是控制貨幣數量、讓利率(價格)自由浮動。從貨幣主義的觀點來看，貨幣成長與通膨緊密相連，或許比起傳統選定目標利率的政策更有效控制通膨。問題是貨幣成長與通膨的關聯可能不夠穩健，比如不同的支付與交易形式要如何計入貨幣供給，實務上不容易衡量，此政策實行兩三年後便重新以利率作為操作目標<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>，不過，這個暫時性的政策也揭示了央行決心以打擊通膨作為貨幣政策的最終目標。</p>
-<p>伏克爾的高利率政策，使得通膨率從1979年雙位數降至1982年的5%以下，卻造成沉重的代價。第一是1980年、1981-1982的兩次經濟衰退，內部的經濟疲軟使石油與大宗商品價格下跌，減少拉丁美洲債務國的收入；第二則是高利率吸引外國投資者，強勢的美元讓某些開發中國家難以償還以美元計價的債務，提供資金的美國銀行則面臨潛在的違約風險；最後則是爆發美國國內的儲貸危機(savings and loan crisis)。在國會聽證會時，伏克爾面臨巨大的政治壓力與威脅，幸運的是卡特與雷根皆沒有直接干涉伏克爾的決策，某種程度上也是認可通膨是目前最大的敵人。</p>
-<p>1990年9月，伏克爾在華盛頓發表了一場演說，題目為〈央行的勝利？〉強調好的經濟表現需要低通膨，低通膨則需要靈活獨立的央行趁早因應。他為此創了一個詞，稱央行是掌控通膨的「獨家專門戶」(the only game in town)。再者，央行必須有足夠的公信力，與堅持對抗通膨的決心，以錨定人民的通膨預期。央行若要有公信力，就必須在執行貨幣政策時有合理的獨立性，不受政治壓力所影響。伏克爾的決心與行動，不僅終結大通膨，更奠定後續數十年穩健的經濟成長(Great Moderation)。</p>
-</section>
-<section id="savings-and-loan-crisis" class="level1">
-<h1>Savings and Loan Crisis</h1>
-<p>1930年代，聯邦法院對儲貸業與銀行設定存款利息上限，以防止存款機構以高利率吸引存戶。伏克爾任內為打擊通膨使短期利率飆升，使存戶領出存款轉向他處尋求更高報酬。1980年「存款機構解除管制與貨幣控制法案」逐步解除存款利率限制，允許銀行以更高的利率留住存戶。此外，該法案也將存款保險保額上限提高，此舉降低存款人監督銀行的誘因，加深銀行的道德風險。不過當時儲貸機構淨值已然惡化，1982年的「存款機構法案」准許儲貸機構進行高風險的投資，讓這些業者沒有謹慎投資的動機。</p>
-<p>從更宏觀的來說，當時的金融創新使傳統營業項目獲利減少，迫使銀行業選擇更高風險的投資計畫，儲貸機構的經理人卻沒有專業知識管理風險、銀行獲取資訊的速度也跟不上放款的速度，複雜的業務讓主管機關沒有資源與能力監督，而採取監理寬容的態度，為儲貸危機點燃火苗。</p>
-<section id="利率風險" class="level2">
-<h2 class="anchored" data-anchor-id="利率風險">利率風險</h2>
-<p>由於銀行的資產與負債存在期限錯配的問題，且通常資產期限遠高於負債。從流量的角度而言，利率變動影響銀行的利息支出與收入，進一步影響淨利息所得與利潤；就存量而言，利率變化將改變資產與負債的市值，進而影響銀行倒閉的風險。我們分別用兩種簡單的模型來說明：</p>
-<section id="重新定價模型repricing-model" class="level3">
-<h3 class="anchored" data-anchor-id="重新定價模型repricing-model">重新定價模型(Repricing Model)</h3>
-<p>比如，當負債期限短於資產期限，銀行在負債到期時，必須以新的利率籌措資金，此為再融資風險(refinancing risk)；當負債期限比資產期限長時，當資產到期時，銀行必須拿獲得的現金尋找再投資的機會，此為再投資風險(reinvestment risk)。</p>
-<p>假設A銀行想知道利率上升1個百分點，未來一年利息所得的變化。 我們就存A銀行的資產負債表中篩選出對利率敏感的資產與負債，比如1年到期消費貸款，或30年期但每6個月調整利率的房貸。其中，活期存款不列入利率敏感性負債。接著，我們計算利潤變動=利率變動量<span class="math inline">\(\times\)</span> GAP，GAP為融資缺口，定義為「對利率敏感資產 <span class="math inline">\(-\)</span> 對利率敏感負債」。伏克爾的緊縮性貨幣政策，使得淨利息所得滑落(畢竟大部分的抵押貸款就短期而言，屬於非利率敏感資產)。</p>
-</section>
-<section id="到期期限模型maturity-model-存續期間模型duration-model" class="level3">
-<h3 class="anchored" data-anchor-id="到期期限模型maturity-model-存續期間模型duration-model">到期期限模型(Maturity Model) &amp; 存續期間模型(Duration Model)</h3>
-<p>由於一般的銀行都是借短貸長，到期期限缺口(maturity gap)為資產與負債到期期限的差距，若缺口越長，利率變動對淨值影響越大，容易變成負值而無力償還；即使資產與負債的期限完全相同，到期之前的利息支出與收入存在時間點的差異，使銀行無法消除利率風險。</p>
-<p>定義有價證券的存續期間為 <span class="math display">\[
-D = \frac{\sum_{t=1}^{T}PV_t\times t}{\sum_{t=1}^{T}PV_t}
-\]</span></p>
-<p>分母為<span class="math inline">\(T\)</span>期到期有價證券的現值，分子則是以第<span class="math inline">\(t\)</span>年拿到的現值做加權平均。</p>
-<p>另外存續期間可表示為價格對利率變動的彈性 <span class="math display">\[
-D = -\frac{dP/P}{dr/(1+r)},
-\]</span></p>
-<p>移項可得 <span class="math display">\[
-dP = -D\frac{dr}{1+r}P.
-\]</span></p>
-<p>伏克爾的高利率政策，使得資產項的價格滑落遠大於負債項，儲貸機構償債能力不足則成為當時的金融受害者。</p>
-</section>
-</section>
-</section>
-<section id="pce" class="level1">
-<h1>Appendix: 物價指數的衡量</h1>
-<p>物價指數主要有不同算法，第一種是CPI，定義為</p>
-<p><span class="math display">\[
-    P_{t}^{L} = \frac{\sum_{i=1}^{N} P^i_t Q^i_0}{\sum_{i=1}^{N} P^i_0 Q^i_0},
-\]</span></p>
-<p>用來衡量基期商品挪移至本期消費，價格究竟改變多少？我們可以也可以將上式改寫為</p>
-<p><span class="math display">\[
-    P_{t}^{L} = \frac{\sum_{i=1}^{N} P^i_t Q^i_0}{\sum_{i=1}^{N} P^i_0 Q^i_0}
-    = \sum_{i=1}^{N} \frac{P^i_t}{P^i_0} \frac{P^i_0 Q^i_0}{\sum_{i=1}^{N} P^i_0 Q^i_0},
-\]</span></p>
-<p>表示以基期支出比重作為權數，是一種拉式指數(Laspeyres index)，刻劃兩種商品價格變化的的加權平均。因為此指標使用價格改變前的消費量，未考慮替代效果，通常會高估通膨的真實感受。</p>
-<p>實際計算時會把基期當成100，所以通常會將上式乘以100；另外，此處CPI的算法是不考慮中間期的價格滾動，稱作直接法。</p>
-<p>第二種衡量物價的方法是GDP平減：定義為 <span class="math display">\[
-    P_{t}^{P} = \frac{\sum_{i=1}^{N} P^i_t Q^i_t}{\sum_{i=1}^{N} P^i_0 Q^i_t},
-\]</span></p>
-<p>用來衡量本期商品挪移至基期消費，價格究竟改變多少？我們可以也可以將上式改寫為</p>
-<p><span class="math display">\[
-    P_{t}^{P} = \frac{\sum_{i=1}^{N} P^i_t Q^i_t}{\sum_{i=1}^{N} P^i_0 Q^i_t}
-    = \sum_{i=1}^{N} \frac{P^i_t}{P^i_0} \frac{P^i_0 Q^i_t}{\sum_{i=1}^{N} P^i_0 Q^i_t},
-\]</span></p>
-<p>表示以本期支出比重作為權數，是一種柏式指數(Paasche index)。因為此指標使用價格改變後的消費量(價格相對便宜的商品權重較多)，通常會低估通膨的真實感受。</p>
-<p>PCE價格指數試圖解決上述兩種算法的缺陷，是聯準會偏好的通膨指標。 如果採用直接法的定義(不管中間第2期)，我們可以得出費雪指數為</p>
-<p><span class="math display">\[
-    P_{t}^{F} = \sqrt{ P_t^L \times P_t^P }
-    = \sqrt{ \left( \frac{\sum_{i=1}^{N} P^i_t Q^i_0}{\sum_{i=1}^{N} P^i_0 Q^i_0} \right) \times \left( \frac{\sum_{i=1}^{N} P^i_t Q^i_t}{\sum_{i=1}^{N} P^i_0 Q^i_t} \right) }
-\]</span></p>
-<p>不過很明顯的，直接法忽略本期與基期間物價波動的資訊，故我們可用連鎖法算出PCE deflator。</p>
-<p>因此，我們先考慮Fisher link為</p>
-<p><span class="math display">\[
-    F_t = \sqrt{ \underbrace{ \frac{\sum^{N}_{i=1} P^i_t Q^i_{t-1}}{\sum^{N}_{i=1} P^i_{t-1} Q^i_{t-1}} }_{L_{t-1, t}} \times \underbrace{ \frac{\sum^{N}_{i=1} P^i_t Q^i_t}{\sum^{N}_{i=1} P^i_{t-1} Q^i_t} }_{P_{t-1, t}} },
-\]</span></p>
-<p>其中，<strong><span class="math inline">\(L_{t-1, t}\)</span></strong>是以上一期 (<span class="math inline">\(t-1\)</span>) 為基期算的拉氏指數，<strong><span class="math inline">\(P_{t-1, t}\)</span></strong>則是以本期 (<span class="math inline">\(t\)</span>) 為基期算的帕氏指數。</p>
-<p>接著我們計算chained-type price index為： <span class="math display">\[
-    P^C_t = \prod^{t}_{\tau = 1}F_\tau.
-\]</span></p>
-<p>以下表為例，在第3期若用直接法計算PCE物價指數，可得 <span class="math display">\[
-    \sqrt{1.800 \times 1.714} \approx 1.756.
-\]</span></p>
-<p>若採用連鎖法，首先計算2到3的Fisher Link(約 1.260)，可得 <span class="math display">\[
-    P^C_3 = 1.373 \times 1.260 \approx 1.730.
-\]</span></p>
-<table class="table table-striped table-hover caption-top">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-</colgroup>
-<thead>
-<tr class="header">
-<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
-<th colspan="3" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-實質 GDP
-</div></th>
-<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
-<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-連鎖價格指數
-</div></th>
-</tr>
-<tr class="even">
-<th style="text-align: center;" data-quarto-table-cell-role="th">期數</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">名目 GDP</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">基期=1</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">基期=2</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">基期=3</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">GDP Deflator</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">CPI</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">Fisher Index</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">PCE Price Index</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">$200</td>
-<td style="text-align: center;">$200</td>
-<td style="text-align: center;">$280</td>
-<td style="text-align: center;">$360</td>
-<td style="text-align: center;">1.000</td>
-<td style="text-align: center;">1.000</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">1.000</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">$350</td>
-<td style="text-align: center;">$260</td>
-<td style="text-align: center;">$350</td>
-<td style="text-align: center;">$440</td>
-<td style="text-align: center;">1.346</td>
-<td style="text-align: center;">1.400</td>
-<td style="text-align: center;">1.373</td>
-<td style="text-align: center;">1.373</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">$480</td>
-<td style="text-align: center;">$280</td>
-<td style="text-align: center;">$380</td>
-<td style="text-align: center;">$480</td>
-<td style="text-align: center;">1.714</td>
-<td style="text-align: center;">1.800</td>
-<td style="text-align: center;">1.260</td>
-<td style="text-align: center;">1.730</td>
-</tr>
-</tbody>
-</table>
+<section id="新冠疫情" class="level1">
+<h1>新冠疫情</h1>
+<p>疫情重溫了金融危機期間的痛苦記憶，如同金融危機期間金融市場的反應，短期債券賣光後開始拋售長期債券，以至於利率飆升、流動性枯竭。聯準會也如過往一樣充當最終貸放人，為附買回市場與交易商提供貸款、直接購買美國公債與MBS、與外國央行的換匯協定。</p>
+<p>與此同時，鮑爾也推行了新的貨幣政策架構——彈性平均通膨目標制 (FAIT)，操作邏輯是讓平均通膨率維持在目標附近，而非傳統方法的既往不咎，也就是忽略過去未達標或超標的部分。因此，給定近幾年通膨未達標準，FOMC會讓通膨率在一段時間內稍高於2%，允許利率維持於較低水準更久的時間。FAIT給予聯準會決策與判斷的彈性，因為沒有具體定義通膨率的平均期限、究竟高於2%多少，而彈性的代價即是增加對市場溝通的成本，以及潛在的誤解風險。</p>
+<p>不過，如果市場相信並理解這項機制，將能有效維持人民的通膨預期，在短期利率處於下限時發揮功效，央行也能更積極確保充分就業。也就是說，FOMC結束了過往先發制人的打擊通膨策略，不再以「今天的低失業率必然導致未來的高通膨」作為執行政策的假設，而平坦的菲利浦曲線與穩定通膨預期都降低了潛在的高通膨風險。</p>
 
 
 </section>
@@ -601,17 +401,9 @@ dP = -D\frac{dr}{1+r}P.
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Cost of Living Adjustment (COLA): 我們前面提到用直接法計算CPI，COLA這是從連鎖的角度來思考薪資調整。</p>
-<p>假如我們考慮第<span class="math inline">\(t\)</span>期與第<span class="math inline">\(t+1\)</span>期的CPI，且消費者只購買食物與衣服兩類商品，通膨率可寫成：</p>
-<p><span class="math display">\[
-1+\pi_t = \frac{p^C_{t+1} C_t + p^F_{t+1} F_t}{p^C_t C_t + p^F_t F_t} = \frac{ \frac{p^C_{t+1}}{p^C_t} p^C_tC_t + \frac{p^F_{t+1}}{p^F_t}p^F_{t} F_t}{y_t} = \frac{p^C_{t+1}}{p^C_t}\theta_C + \frac{p^F_{t+1}}{p^F_t}\theta_F,
-\]</span></p>
-<p>表示以上一期的支出比重作為權數，刻劃兩種商品價格變化的的加權平均，所以就是上面算的<span class="math inline">\(L_{t-1, t}\)</span>。當我們透過配合通膨調整薪資時，保證能夠買到跟上一期支出相同的商品組合，從效用的角度來說，將造成過度補償(overcompensate)。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>意即高通膨與高失業率的現象。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>The job of the central banker is to take away the punch bowl when the party is getting good.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>文獻上將這種刺激短期經濟成長以換取選票的行為稱作政治景氣循環。<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>伯恩斯後G.William Miller曾短暫任職過，後被轉調至財政部<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>控制價格的貨幣政策相對容易操控，且效果明確可觀測。<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>人民幣貶值、小衰退與英國脫歐。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>如果勞工預期通膨會持續上升，要求更高薪資維持購買力，企業於是透過提高售價獲利，形成自我實現預言。<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>據傳有研擬過換掉鮑爾的可行性，但法律上基本上並不得任意解任，以保護聯準會的不受政治侵擾的獨立性。<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
