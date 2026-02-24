@@ -1,0 +1,26 @@
+---
+title: "2026寒假"
+author: "YinYun Li"
+date: "2026-02-24"
+categories: ["大學"]
+---
+
+大五生自動創造一個寒假。
+
+其實我很常分不清放假與學期間的差別，因為我會在假期間一邊做事、一邊玩樂，前者是因為平常學期間太過忙碌，一些想學的、想讀的東西都沒有辦法接觸；後者則是為了想讓自己充電，強迫自己脫離需要動腦的學習。這樣切割自然是隨意且彈性的，是否能真正休息到還不清楚，像我現在就覺得沒有玩夠的感覺(?)。不過學習進度也沒有好到哪裡，主要就是讓自己感受到，因為多完成一些事情、多前進一小步而獲得了成就感就好了。以下流水帳紀錄寒假做的事情：
+
+1. 追劇：一時興起重看[楚漢傳奇](https://zh.wikipedia.org/zh-tw/%E6%A5%9A%E6%BC%A2%E5%82%B3%E5%A5%87)、想了解漢初（呂后專政到文帝）的歷史看了[大風歌](https://www.youtube.com/watch?v=xiYUJGkYYUA&list=PLnBroYyTpDEm1HtwhJuzbvW3DozxYf1n8)、因應十週年看[一把青](https://zh.wikipedia.org/zh-tw/%E4%B8%80%E6%8A%8A%E9%9D%92)。後者一定會另起一篇心得，真後悔小時候沒看。
+
+2. 微積分：為了預備接下來的分導二，我重新複習微3的主要內容，從多變數微分到雙重積分。接著，我開始讀[Calculus：Applications in Constrained Optimization](https://www.books.com.tw/products/0011028703?srsltid=AfmBOoqiy1hVeEyM9F3kfvDjdqjDbhRmmNC4AhlVcaIQVgSRxgzJ4cw3) Ch1~3。小時候沒修微4，發現接下來研究所可能會用到，但這個長假只把幼稚版的線性代數補完，還沒進入有條件限制的最佳化問題。
+
+3. [Quantecon](https://julia.quantecon.org/intro.html): 把Introduction to dynamics 的部分看完，並練習用Julia寫習題，Gemini 幫我解決許多原本應該會花掉3、4天的問題，這樣的依賴不知道是好是壞。
+
+4. 讀完兩本書：跟啟超借的[柏南克談聯準會](https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq6fhkQ7keXQdf5MKgk7Cwj-45RCFVJhZYkq84_b91kzyJmjzqx)，寫了三篇筆記^[可以點首頁查看。]。另外，也讀完跟振安學長借的[大義覺迷錄](https://www.books.com.tw/products/0010675613?srsltid=AfmBOopfV6f4veRXqjnmavaRFEYlLHbJXTpJn5ESZes0ueBF3bsVHGK7)，對於雍正處理曾靜案的心態與方式感到不可思議。
+
+5. 補完研究進度：學期間向韓國學生報了兩次跟KM的研究，非常心虛；寒假想辦法把之前跟老師討論的東西都弄到投影片了，希望可以開始寫一些東西。
+
+6. 出遊：中間有兩周跑到台北，趁機再去一趟故宮；前幾天跟高中同學去霧峰林家宮保第與萊園；上周跟國中同學去南投兩天，第一天九族、第二天日月潭，船、纜車與腳踏車都體驗到了，真不錯。值得幾篇遊記，如果我有空再寫。
+
+7. 最重要的，創建了這個網站~~
+
+以上就是寒假做的事情^[隱藏版：我是佛教徒，每周會定期去道場共修，念誦地藏經、阿彌陀經或大悲懺儀軌等。]，看起來好像很多，我感覺比較像是虛張聲勢。

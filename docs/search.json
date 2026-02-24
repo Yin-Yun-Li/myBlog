@@ -119,11 +119,18 @@
     "text": "Footnotes\n\n\nCost of Living Adjustment (COLA): 我們前面提到用直接法計算CPI，COLA這是從連鎖的角度來思考薪資調整。\n假如我們考慮第\\(t\\)期與第\\(t+1\\)期的CPI，且消費者只購買食物與衣服兩類商品，通膨率可寫成：\n\\[\n1+\\pi_t = \\frac{p^C_{t+1} C_t + p^F_{t+1} F_t}{p^C_t C_t + p^F_t F_t} = \\frac{ \\frac{p^C_{t+1}}{p^C_t} p^C_tC_t + \\frac{p^F_{t+1}}{p^F_t}p^F_{t} F_t}{y_t} = \\frac{p^C_{t+1}}{p^C_t}\\theta_C + \\frac{p^F_{t+1}}{p^F_t}\\theta_F,\n\\]\n表示以上一期的支出比重作為權數，刻劃兩種商品價格變化的的加權平均，所以就是上面算的\\(L_{t-1, t}\\)。當我們透過配合通膨調整薪資時，保證能夠買到跟上一期支出相同的商品組合，從效用的角度來說，將造成過度補償(overcompensate)。↩︎\n意即高通膨與高失業率的現象。↩︎\nThe job of the central banker is to take away the punch bowl when the party is getting good.↩︎\n文獻上將這種刺激短期經濟成長以換取選票的行為稱作政治景氣循環。↩︎\n伯恩斯後G.William Miller曾短暫任職過，後被轉調至財政部↩︎\n控制價格的貨幣政策相對容易操控，且效果明確可觀測。↩︎"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "該寫些什麼呢？",
+    "objectID": "posts/2026_winter.html",
+    "href": "posts/2026_winter.html",
+    "title": "2026寒假",
     "section": "",
-    "text": "語資\n\n\n\n高中\n\n人生\n\n\n\n\n\n\nFeb 21, 2026\n\n\n\n\n\n\n\n吉他社與科志\n\n\n\n高中\n\n人生\n\n\n\n\n\n\nFeb 1, 2026\n\n\n\n\n\n\n\n21世紀後的聯準會\n\n\n\n貨幣政策\n\n經濟學\n\n\n\n\n\n\nJan 29, 2026\n\n\n\n\n\n\n\nLinear State Space Model\n\n\n\n經濟學\n\n\n\n\n\n\nJan 26, 2026\n\n\n\n\n\n\n\n跨不去的坎\n\n\n\n高中\n\n人生\n\n\n\n\n\n\nJan 19, 2026\n\n\n\n\n\n\n\n大學修課反思\n\n\n\n大學\n\n學習\n\n\n\n\n\n\nJan 18, 2026\n\n\n\n\n\n\n\n聯準會與金融危機\n\n\n\n貨幣政策\n\n經濟學\n\n\n\n\n\n\nJan 9, 2026\n\n\n\n\n\n\n\n聯準會與通膨\n\n\n\n貨幣政策\n\n經濟學\n\n\n\n\n\n\nJan 5, 2026\n\n\n\n\n\n\n\nISSM Reflection\n\n\n\n學習\n\n\n\n\n\n\nDec 23, 2025\n\n\n\n\n\n\n\nOpenning\n\n\n\n\n\nDec 23, 2025\n\n\n\n\n\nNo matching items"
+    "text": "大五生自動創造一個寒假。\n其實我很常分不清放假與學期間的差別，因為我會在假期間一邊做事、一邊玩樂，前者是因為平常學期間太過忙碌，一些想學的、想讀的東西都沒有辦法接觸；後者則是為了想讓自己充電，強迫自己脫離需要動腦的學習。這樣切割自然是隨意且彈性的，是否能真正休息到還不清楚，像我現在就覺得沒有玩夠的感覺(?)。不過學習進度也沒有好到哪裡，主要就是讓自己感受到，因為多完成一些事情、多前進一小步而獲得了成就感就好了。以下流水帳紀錄寒假做的事情：\n以上就是寒假做的事情2，看起來好像很多，我感覺比較像是虛張聲勢。"
+  },
+  {
+    "objectID": "posts/2026_winter.html#footnotes",
+    "href": "posts/2026_winter.html#footnotes",
+    "title": "2026寒假",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n可以點首頁查看。↩︎\n隱藏版：我是佛教徒，每周會定期去道場共修，念誦地藏經、阿彌陀經或大悲懺儀軌等。↩︎"
   },
   {
     "objectID": "about.html",
@@ -131,6 +138,13 @@
     "title": "About This Site",
     "section": "",
     "text": "這是我的個人網誌，主要紀錄人生的雜想、生活的隨筆，或是學習的心得與筆記。此站與學術版的網站是分開的場域，雖然學習內容可能有相關，但這裡會是我murmur的地方。"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "該寫些什麼呢？",
+    "section": "",
+    "text": "2026寒假\n\n\n\n大學\n\n\n\n\n\n\nFeb 24, 2026\n\n\n\n\n\n\n\n語資\n\n\n\n高中\n\n人生\n\n\n\n\n\n\nFeb 21, 2026\n\n\n\n\n\n\n\n吉他社與科志\n\n\n\n高中\n\n人生\n\n\n\n\n\n\nFeb 1, 2026\n\n\n\n\n\n\n\n21世紀後的聯準會\n\n\n\n貨幣政策\n\n經濟學\n\n\n\n\n\n\nJan 29, 2026\n\n\n\n\n\n\n\nLinear State Space Model\n\n\n\n經濟學\n\n\n\n\n\n\nJan 26, 2026\n\n\n\n\n\n\n\n跨不去的坎\n\n\n\n高中\n\n人生\n\n\n\n\n\n\nJan 19, 2026\n\n\n\n\n\n\n\n大學修課反思\n\n\n\n大學\n\n學習\n\n\n\n\n\n\nJan 18, 2026\n\n\n\n\n\n\n\n聯準會與金融危機\n\n\n\n貨幣政策\n\n經濟學\n\n\n\n\n\n\nJan 9, 2026\n\n\n\n\n\n\n\n聯準會與通膨\n\n\n\n貨幣政策\n\n經濟學\n\n\n\n\n\n\nJan 5, 2026\n\n\n\n\n\n\n\nISSM Reflection\n\n\n\n學習\n\n\n\n\n\n\nDec 23, 2025\n\n\n\n\n\n\n\nOpenning\n\n\n\n\n\nDec 23, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/course_review.html",
