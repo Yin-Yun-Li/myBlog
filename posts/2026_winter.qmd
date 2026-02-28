@@ -15,7 +15,7 @@ categories: ["大學"]
 
 3. [Quantecon](https://julia.quantecon.org/intro.html): 把Introduction to dynamics 的部分看完，並練習用Julia寫習題，Gemini 幫我解決許多原本應該會花掉3、4天的問題，這樣的依賴不知道是好是壞。
 
-4. 讀完兩本書：跟啟超借的[柏南克談聯準會](https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq6fhkQ7keXQdf5MKgk7Cwj-45RCFVJhZYkq84_b91kzyJmjzqx)，寫了三篇筆記^[可以點首頁查看。]。另外，也讀完跟振安學長借的[大義覺迷錄](https://www.books.com.tw/products/0010675613?srsltid=AfmBOopfV6f4veRXqjnmavaRFEYlLHbJXTpJn5ESZes0ueBF3bsVHGK7)，對於雍正處理曾靜案的心態與方式感到不可思議。
+4. 讀完兩本書：跟啟超學長借的[柏南克談聯準會](https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq6fhkQ7keXQdf5MKgk7Cwj-45RCFVJhZYkq84_b91kzyJmjzqx)，寫了三篇筆記^[可以點首頁查看。]。另外，也讀完跟振安學長借的[大義覺迷錄](https://www.books.com.tw/products/0010675613?srsltid=AfmBOopfV6f4veRXqjnmavaRFEYlLHbJXTpJn5ESZes0ueBF3bsVHGK7)，對於雍正處理曾靜案的心態與方式感到不可思議。
 
 5. 補完研究進度：學期間向韓國學生報了兩次跟KM的研究，非常心虛；寒假想辦法把之前跟老師討論的東西都弄到投影片了，希望可以開始寫一些東西。
 
