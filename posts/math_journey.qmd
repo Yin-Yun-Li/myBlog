@@ -33,7 +33,7 @@ categories: ["學習", "數學"]
 
 我真正接觸純數學的訓練，應該就是大四下開始(大三的個經有一點但不多)，當時修了蔡國榮老師的初等分析與古慧雯老師(古媽)的賽局。
 
-引用自[大學修課反思](course_review.qmd)，這堂課是我第一次跟國榮相遇。我覺得可以把他的定位想成分析導論的導論，主要內容涵蓋metric space, point set topology^[你會學到 open 不等於 not closed 😎], convergence, continuity, completeness, compactness, connectedness... 整個學期下來就是在玩弄 $\varepsilon-\delta$，並學習各種證明套路(參見下圖，這是開玩笑的)。
+引用自[大學修課反思](course_review.qmd)，這堂課是我第一次跟國榮相遇。我覺得可以把他的定位想成分析導論的導論，主要內容涵蓋metric space, point set topology^[你會學到 open 不等於 not closed 😎。], convergence, continuity, completeness, compactness, connectedness... 整個學期下來就是在玩弄 $\varepsilon-\delta$，並學習各種證明套路(參見下圖，這是開玩笑的)。
 
 ![](../figures/常見證明方法.jpg){width="55%" fig-align="center" fig-alt="常見證明方法"}
 
@@ -539,7 +539,11 @@ $$
 
 大五這年，物是人非，曾經熟悉的人都離開了校園(事實上，我熟悉的人也不超過10人)。孤獨是常態，僅在開會、Office hour 與少數的飯局會開口講話。每天最常面對的人是自己，跟自己對話、請會的自己教不會的自己，而這過程當然缺少不了國榮老師、茂培老師與我最好的朋友AI。
 
-以結果論而言，我算是賭對時間修了這兩堂課，不僅學的內容很完整^[以分導來說，能教到初階的測度論(measure theory)與泛函分析(functional analysis)，不用去實分析的課堂修，是真的滿賺的。]，成績也不算太差^[分導考試有60分是來自於作業，老師都告訴你考哪一題了，考前就是進行多次的默寫練習。]。但我想這些都是其次，在分導與線代導夾擊下，真的是把一個人的極限逼出來。堅忍不拔是這一年最大的收穫，思考了數十小時依舊毫無頭緒，卻願意再花「一點點」時間思考還沒解決的問題。之前看了一篇[文章](https://www.facebook.com/chihua.wang.3/posts/pfbid0XSCNNJ48JvSbeixwt5ysG75A89c5X834fz3nD7U6oWLZWaK2oNWGMA1eGeyV9p2Xl)，雖沒有完全體會他所說的每個論點（可能是年紀還小），但我也願意相信，「既然連 $\varepsilon-\delta$ 都能學了，那這個世界，還有什麼不能學的？」
+以結果論而言，我算是賭對時間修了這兩堂課，不僅學的內容很完整[^analysis-course]，成績也不算太差[^analysis-grade]。但我想這些都是其次，在分導與線代導夾擊下，真的是把一個人的極限逼出來。堅忍不拔是這一年最大的收穫，思考了數十小時依舊毫無頭緒，卻願意再花「一點點」時間思考還沒解決的問題。之前看了一篇[文章](https://www.facebook.com/chihua.wang.3/posts/pfbid0XSCNNJ48JvSbeixwt5ysG75A89c5X834fz3nD7U6oWLZWaK2oNWGMA1eGeyV9p2Xl)，雖沒有完全體會他所說的每個論點（可能是年紀還小），但我也願意相信，「既然連 $\varepsilon-\delta$ 都能學了，那這個世界，還有什麼不能學的？」
+
+[^analysis-course]: 以分導來說，能教到初階的測度論(measure theory)與泛函分析(functional analysis)，不用去實分析的課堂修，是真的滿賺的。
+
+[^analysis-grade]: 分導考試有60分是來自於作業，老師都告訴你考哪一題了，考前就是進行多次的默寫練習。
 
 
-經研所的考驗在前頭等著，等過完大學最後一個暑假，也是時候出山了。
+經研所的考驗在前頭等著，等過完大學最後一個暑假，也是時候出山還俗了。
