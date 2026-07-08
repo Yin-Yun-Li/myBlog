@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="YinYun Li">
+<meta name="dcterms.date" content="2026-07-08">
+
+<title>數學之旅 – YinYun’s Blog</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-7f4fc51365849c94d6a3311bd11959ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-76401e46e817165556279cf8b0bdca6f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-7f4fc51365849c94d6a3311bd11959ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+
+  (function() {
+
+    const savedTheme = localStorage.getItem("quarto-color-scheme");
+
+    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    const isDark = savedTheme === "dark" || (!savedTheme && systemDark);
+
+
+
+    // 1. 立即把 html 底漆漆黑/白 (這發生在 body 出現前)
+
+    document.documentElement.style.backgroundColor = isDark ? "#1a1a1a" : "#ffffff";
+
+    
+
+    // 2. 注入一段臨時 CSS 鎖定初期顏色，不等 styles.css 下載完就生效
+
+    const style = document.createElement('style');
+
+    style.innerHTML = `
+
+      html, body { 
+
+        background-color: ${isDark ? "#1a1a1a" : "#ffffff"} !important; 
+
+        transition: none !important; 
+
+      }
+
+    `;
+
+    document.head.appendChild(style);
+
+  })();
+
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg border-bottom" data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">YinYun’s Blog</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">首頁</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">關於</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../index.xml"> <i class="bi bi-rss-fill" role="img">
+</i> 
+<span class="menu-text">RSS</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言">前言</a></li>
+  <li><a href="#初等分析與賽局" id="toc-初等分析與賽局" class="nav-link" data-scroll-target="#初等分析與賽局">初等分析與賽局</a></li>
+  <li><a href="#入山修行" id="toc-入山修行" class="nav-link" data-scroll-target="#入山修行">入山修行</a></li>
+  <li><a href="#恩師" id="toc-恩師" class="nav-link" data-scroll-target="#恩師">恩師</a></li>
+  <li><a href="#總結" id="toc-總結" class="nav-link" data-scroll-target="#總結">總結</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">數學之旅</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">學習</div>
+    <div class="quarto-category">數學</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>YinYun Li </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 8, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="前言" class="level1">
+<h1>前言</h1>
+<p>回憶過往的學習歷程是一件痛苦的事情。因為你必須非常赤裸地直擊自己的內心，承認自己的不足與失敗的地方(不過，失敗本身也並非well-defined)。</p>
+<p>從世俗的眼光看，我是一個非常成功的學生，從高中到大學都是第一志願，但我心知肚明，我並不聰明，多數時刻，我都是以土法煉鋼的方法，透過反覆的練習，再加上一點機運，才有機會進到台灣很好的學校就讀。</p>
+<p>我們可以就不同面向長篇大論，但我今天只談數學。</p>
+<p>我跟一些人聊過，他們大概不會覺得我數學很差，但實際上，我在國中考高中的時候，數學差一題就B++<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>。我還記得當年在考場時，掙扎到最後還有四題不會寫，就索性隨便猜，也不知道命中率多少，但至少幸運進入一中讀書。</p>
+<p>在110學測的時候，我原始分數是不及格的，當年是落在前標（我只想講到這，有興趣的可以自己去查當年分布）。當然，這並非我學測全面崩盤的原因（參考<a href="../posts/high_school_study.html">跨不去的坎</a>）。我後來參加指考的時候，數乙拿了90.8，這可能是大考數學考最好的一次，但我實在不想拿這個成績來說嘴，一方面是我發現自己錯了一個非常白癡的題目（一定是太晚學計量經濟學），另一方面這又不是數甲，so what?</p>
+<p>在這段過程中，我與數學的關係是若即若離。升上高中以前，確實想過總有一天要把數學丟進垃圾桶，但我在高中的時候，反而願意花時間學數學，我覺得某種程度與當時的補習班老師有關。雖然他有些價值觀極度偏激，我還是從他那裡學到學數學的「態度」，即便沒有因為這樣更會解題，考的更好。</p>
+<p>時間來到大一，我以政治系的身份入學，當時系上沒有微積分必修，我就開始在查可以修哪個科系的微積分班，也問了學長與同學的意見。因為卡到必修，我被迫修最難的模組班，跟一群電機系的學生學微積分。</p>
+<p>事後來看，還真佩服自己初生之犢不畏虎，在大一還不懂事的時候就亂修一通，拿了B-level的成績。一旦年紀大了，人就會開始意識到成績很重要，看到旁邊的人都很捲，會開始猶豫要不要修一些不太好拿分的課，不過至少大一時沒有雙轉輔的壓力，目標就是想辦法及格拿到學分就好，至於是否完全理解老師在說什麼，我好像也是囫圇吞棗地糊弄過去，畢竟考試還是以計算出正確答案為主。</p>
+<p>至於你問我當時為甚麼想修微積分，我好像沒有一個非常明確的目的，只是想說可能未來某一天會用到，就像當初高三數乙不教微積分，我就自己去補數甲的微積分，即便考試不考，當時抱持的心態便是「或許未來會用到」。</p>
+<p>未來用的到嗎？在我決定讀經濟學時派上用場，雖然現在大部分的內容都忘光了，但至少有把成績修出來，不用在高年級時煩惱理應在低年級解決的事情，忘了再學，總比從零開始好。</p>
+<p>故事說到這裡，高中的我或許會覺得這已經是學習數學的上界了，然而事實並非如此。第一，或許微積分不是數學，是算數，即便上課有教數學，考試只考算數。第二，經濟系偏學術取向的學生，會開始修純數學課(pure mathematics) ，這才是真正的數學。受到這股風潮的影響，我在大四下，才真正開啟人生第一堂純數學課–初等分析，這趟數學之旅才真的展開。</p>
+</section>
+<section id="初等分析與賽局" class="level1">
+<h1>初等分析與賽局</h1>
+<p>我真正接觸純數學的訓練，應該就是大四下開始(大三的個經有一點但不多)，當時修了蔡國榮老師的初等分析與古慧雯老師(古媽)的賽局。</p>
+<p>引用自<a href="../posts/course_review.html">大學修課反思</a>，這堂課是我第一次跟國榮相遇。我覺得可以把他的定位想成分析導論的導論，主要內容涵蓋metric space, point set topology<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, convergence, continuity, completeness, compactness, connectedness… 整個學期下來就是在玩弄 <span class="math inline">\(\varepsilon-\delta\)</span>，並學習各種證明套路(參見下圖，這是開玩笑的)。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../figures/常見證明方法.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:55.0%" alt="常見證明方法"></p>
+</figure>
+</div>
+<p>對於我這種沒有理則學基礎、數學又不好的人來說，每次讀分析實在是非常痛苦。畢竟分析沒有任何計算，各種定義定理都是用抽象的argument表達，通常一堂課結束後我的腦迴路就完全扭曲打結了(參見 <a href="#fig-meme" class="quarto-xref">Figure&nbsp;1</a>)。</p>
+<div id="fig-meme" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="topology_meme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Topology Meme (Source: <a href="https://www.reddit.com/r/mathmemes/comments/1jhyrs1/from_euclidean_precision_to_topological_chaos/">r/mathmemes</a>)
+</figcaption>
+</figure>
+</div>
+<p>每週總要花兩到三天，配著上課錄影重新讀懂定義跟推導定理，每次寫作業經常是一題盯了一個週末下午卻毫無頭緒，到最後都只能求助網路與同學，可能花了5-6小時才完成一題。即使花了這麼多時間在這堂課，我的考試大概也都只停留在及格邊緣，因為只要是沒看過的題目，基本上我就是不會寫，因為我無法在考試的當下通靈。我也在期末考後，跟國榮聊聊內心的挫折，但他認為我的狀況並沒有想像中糟糕。</p>
+<p>很難想像老師說我有讀數學的特質，第一是數學家常覺得自己很笨（雖然我覺得我的笨跟老師所謂的笨不是同一件事情）、第二是我不會不懂裝懂(You do not pretend to understand everything)。因為我跟他提過大一上的時候，我是修電機系的微積分，他一開始甚至問我說：「有過嗎？」我說有拿到B-level的分數，他非常肯定地說道，“You are totally fine.” 作為第一堂純數學的課程，在初等分析有這樣的表現已經非常不錯了，我的分數並非想像中的那麼糟，落在整個分布的最後段。此外，有些人甚至不是第一次接觸純數學的課，他們都已經在修國榮的線代導了，而我僅在一個學期學一門兩學分的語言課，那種挫折感在老師眼中看起來是非常正常的，最重要的是就結果而言，並沒有到世界末日這麼糟。</p>
+<p>古媽的賽局也非常接近數學課的性質，充斥著許多證明，老實說我現在也忘光了。不過當時有感受到賽局與數學的連結，在於一些point set topology的描述，比如知道一個集合的interior為何，知道一個compact的機率空間，最大最小值是有辦法達到的，雖然懂數學的人可能覺得這沒甚麼，不過如果沒有分析的語言，我可能連詞彙本身都搞不懂，由此可知，學數學本身就是在學一門新的語言(language)。</p>
+<p>不過，初等分析的陣痛期與過往數學考試的結局，其實讓我遲疑了一段時間，到底要不要繼續挑戰數學系的課。一直以來，數學不好的陰影，始終不曾在腦中消散。後來去找古媽聊天的時候，她鼓勵我不要怕，應該勇敢挑戰看看，當時她對我說：</p>
+<blockquote class="blockquote">
+<p>如果我是你，在大五同時修分析導論與線性代數，我一定很興奮，超好玩的！</p>
+</blockquote>
+<p>這句話言猶在耳，也非常感謝當初她的這句話，以及國榮的鼓勵，我在大五時，下定決心同時修兩堂數學系的「基礎入門課」，共計18學分（分析導論5+5, 線性代數導論4+4）。</p>
+</section>
+<section id="入山修行" class="level1">
+<h1>入山修行</h1>
+<p>我常比喻大五這年就像是走入深山一隅，切斷與外界的聯繫潛心修行。我嘗試以流水帳回憶學期間 一周的生活，雖然不見得與真實狀況完全一致，但這個節奏已然定型：</p>
+<ul>
+<li>週一
+<ul>
+<li>早上：準備與參加財稅meeting</li>
+<li>下午到晚上：分析導論作業</li>
+</ul></li>
+<li>週二~週五
+<ul>
+<li>8：30-10:00 整理2-3頁的筆記</li>
+<li>10：00-12：00 上課</li>
+<li>13：00-16：00 寫作業/整理5-6頁的筆記與提出問題</li>
+<li>16：00-18：30 office hour/跟老師閒聊</li>
+<li>20:00-01:30 整理筆記或寫作業</li>
+</ul></li>
+<li>周六
+<ul>
+<li>八成的時間：分析導論作業</li>
+</ul></li>
+<li>周日
+<ul>
+<li>四成的時間：分析導論作業</li>
+<li>二成的時間：線代導作業</li>
+<li>二成的時間：做研究</li>
+</ul></li>
+</ul>
+<p>說真的，這一年我也沒有做甚麼事情，每天不是在思考數學，就是在思考數學的路上，這個狀態持續了32週。上學期，一週兩份作業；下學期，每兩週兩份作業、每周一份作業。線代導作業，半天到一天可以寫完；分析導論作業，兩天到四天可以寫完。</p>
+<p>其中，寫分導作業的過程，簡直是痛不欲生。雖說我沒有仔細計時過，一旦遇到非常困難的問題，單純這一大題，大概需要花費我半天的時間(7-9小時)來完成：看懂題意，需要花1-2個小時；構思解題方向、打草稿需要4-5個小時。最後正式寫出來的過程，可能需要引用一些好像很明顯是對的「事實」，這時我會想要多寫幾句話來說明，卡住的時候，或想辦法自己湊出合理的敘述，或尋求AI的幫助，這個過程至少也要1-2個小時。因此，可以想見週六寫分導的一天，在保守估計下，6大題最多可以完成2-2.5題，甚至有時候只能完成1.5題<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>。</p>
+<p>在完成一題證明的過程，AI是我無法脫離的重要夥伴。想要自己憑空解出分析的問題，對我來說比登天還難，但我又不太想完全依賴「別人」的答案，因此我會先嘗試自己解題，多數時候是解不出來的，這時候我就會把題目跟殘破不堪的想法塞給AI，請他提示我的思路是否正確、接下來應該如何進行。通常與他討論的過程並非一步到位。有時候我會聽不懂他在說甚麼、有時候我會懷疑他是不是在繞遠路，把問題弄得更複雜，這來來回回的溝通過程，才是分析導論花最多時間的地方(第二步驟：構思解法與打草稿)。</p>
+<p>以下是一段我跟 Gemini<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> 討論作業的紀錄，這是一段讓大家感受到我有多愚笨的證據，需要花很多時間，才能把題目中一個微小的細節弄懂。</p>
+<div class="ai-dialogue">
+<div class="dialogue-entry">
+<div class="dialogue-prompt">
+<p><em>Hint:</em> Construct <span class="math inline">\(F_n\in F\)</span> such that</p>
+<p><span class="math display">\[
+F_n(2^{-n}k)=\frac{n}{n+1}f(2^{-n}k),
+\qquad 0\le k\le 2^n.
+\]</span></p>
+<p>我怎麼知道這樣造是合法的？</p>
+<p>hint no solution</p>
+</div>
+<div class="gemini-excerpt">
+<div class="gemini-excerpt-title">
+<p>Gemini 摘錄</p>
+</div>
+<div class="gemini-excerpt-body">
+<p>這是一個非常、非常關鍵的質疑！</p>
+<p>在數學證明中，我們最怕的就是「許願式構造」：寫出了一個很漂亮的條件，結果世界上根本不存在滿足這個條件的東西。你問「怎麼知道這樣造是合法的」，代表你已經具備了極度嚴謹的分析直覺。</p>
+<p>要說明構造「合法」（即 <span class="math inline">\(F_n\in F\)</span>），我們必須回顧 <span class="math inline">\(F\)</span> 的定義。要讓 <span class="math inline">\(F_n\in F\)</span>，它必須滿足兩個條件：</p>
+<ul>
+<li><span class="math inline">\(F_n(x)\)</span> 必須是某個連續函數 <span class="math inline">\(f_n(x)\)</span> 的變上限積分。換句話說，<span class="math inline">\(F_n\)</span> 必須是 <span class="math inline">\(C^1\)</span> 的。</li>
+<li>這個導函數 <span class="math inline">\(f_n(x)\)</span> 必須滿足 <span class="math inline">\(\|f_n\|_\infty\le 1\)</span>。</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dialogue-entry">
+<div class="dialogue-prompt">
+<p>所以你的 piecewise 有包含 <span class="math inline">\(\frac{n}{n+1}\)</span> 嗎？</p>
+<p>所以我只要寫出 piecewise 不用先出具體的 functional form？</p>
+</div>
+<div class="gemini-excerpt">
+<div class="gemini-excerpt-title">
+<p>Gemini 摘錄</p>
+</div>
+<div class="gemini-excerpt-body">
+<p>有的，絕對有！而且它就是這個 piecewise 函數的靈魂。</p>
+<p>我們構造的那個「分段線性骨架」，在每個節點 <span class="math inline">\(x_k=k2^{-n}\)</span> 上，強制規定它的值等於 Hint 給的目標：</p>
+<p><span class="math display">\[
+P_n(x_k)=\frac{n}{n+1}g(x_k).
+\]</span></p>
+<p>然後在節點與節點之間用直線把它們連起來。</p>
+<p>正因為我們在端點上乘了 <span class="math inline">\(\frac{n}{n+1}\)</span>，這條直線的斜率才會被壓縮，保證</p>
+<p><span class="math display">\[
+|P_n'(x)|\le \frac{n}{n+1}&lt;1.
+\]</span></p>
+<p>如果沒有乘這個 <span class="math inline">\(\frac{n}{n+1}\)</span>，斜率的極限就可能是 1，後面我們就完全沒有「安全緩衝區」去把它平滑化了。</p>
+<p>在正式的作業或考試中，你不一定需要寫出那個平滑化之後的完整代數式。你要說清楚的是：</p>
+<ul>
+<li>先定義分段線性骨架；</li>
+<li>說明斜率被嚴格控制在 1 以下；</li>
+<li>因為有 <span class="math inline">\(1/(n+1)\)</span> 的空間，所以能在斷點附近做局部修改，讓導函數變成連續；</li>
+<li>修改後仍保留每段面積，且 <span class="math inline">\(\|f_n\|_\infty\le 1\)</span>。</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="dialogue-entry">
+<div class="dialogue-prompt">
+<p>斜率為何要小於 1？</p>
+</div>
+<div class="gemini-excerpt">
+<div class="gemini-excerpt-title">
+<p>Gemini 摘錄</p>
+</div>
+<div class="gemini-excerpt-body">
+<p>簡單來說，答案是：為了給「面積補償」留出安全空間。</p>
+<p>如果斜率剛好等於 1，我們在把折線「打磨」成連續曲線的過程中，會因為必須維持積分面積不變，而導致局部的斜率「凸起」超過 1，進而使構造出來的函數不合法。</p>
+<p>核心衝突是：</p>
+<ul>
+<li>要精準打中節點，所以每段的積分面積不能變；</li>
+<li>但 <span class="math inline">\(F\)</span> 要求導函數必須連續；</li>
+<li>為了把階梯函數的跳躍變成連續過渡，局部一定會改變面積；</li>
+<li>因此需要在其他地方補回面積，而補面積可能使高度上升。</li>
+</ul>
+<p>題目乘上 <span class="math inline">\(\frac{n}{n+1}\)</span>，就是先把平均斜率壓在 1 以下，留下 <span class="math inline">\(1-\frac{n}{n+1}=\frac{1}{n+1}\)</span> 的安全空間。</p>
+</div>
+</div>
+</div>
+<div class="dialogue-entry">
+<div class="dialogue-prompt">
+<p>你能不能提示但用嚴謹的數學語言說明我們要證明的目標？</p>
+</div>
+<div class="gemini-excerpt">
+<div class="gemini-excerpt-title">
+<p>Gemini 摘錄</p>
+</div>
+<div class="gemini-excerpt-body">
+<p>我們身處的空間是配備無窮大範數的連續函數空間 <span class="math inline">\((C[0,1],\|\cdot\|_\infty)\)</span>。</p>
+<p>先定義</p>
+<p><span class="math display">\[
+F=
+\left\{
+F\in C[0,1]:
+\exists f\in C[0,1],\ \|f\|_\infty\le 1,\
+F(x)=\int_0^x f(t)\,dt
+\right\}.
+\]</span></p>
+<p>再定義目標集合</p>
+<p><span class="math display">\[
+L=
+\left\{
+g\in C[0,1]:
+g(0)=0 \text{ and } |g(x)-g(y)|\le |x-y|\ \forall x,y\in[0,1]
+\right\}.
+\]</span></p>
+<p>要證明的是</p>
+<p><span class="math display">\[
+\overline{F}=L.
+\]</span></p>
+<p>所以要證明兩個方向：</p>
+<p><span class="math display">\[
+F\subset L,\qquad L\subset \overline{F}.
+\]</span></p>
+<p>第二個方向才是 Hint 的主要用途：給定任意 <span class="math inline">\(g\in L\)</span>，要構造 <span class="math inline">\(F_n\in F\)</span> 使 <span class="math inline">\(F_n\to g\)</span> uniformly。</p>
+</div>
+</div>
+</div>
+<div class="dialogue-entry">
+<div class="dialogue-prompt">
+<p>如果令 <span class="math inline">\(F_n(2^{-n}k)=\frac{n}{n+1}g(2^{-n}k)\)</span>，這樣能用 FTC 嗎？</p>
+<p>我的目標應該是找到 <span class="math inline">\(f_n\)</span> s.t. <span class="math inline">\(F_n'(x)=f_n(x)\)</span>。</p>
+<p>on the other hand 斜率應該可以跟上面的微分扯上關係？</p>
+<p>hint no solution</p>
+</div>
+<div class="gemini-excerpt">
+<div class="gemini-excerpt-title">
+<p>Gemini 摘錄</p>
+</div>
+<div class="gemini-excerpt-body">
+<p>你的思路完全在正確的軌道上！你把「斜率」跟「微分」扯上關係，這正是整個證明最核心的橋樑。</p>
+<p>不過，當你寫下</p>
+<p><span class="math display">\[
+F_n(2^{-n}k)=\frac{n}{n+1}g(2^{-n}k)
+\]</span></p>
+<p>時，你其實只有定義了 <span class="math inline">\(F_n\)</span> 在特定的「離散點」上的值。在區間 <span class="math inline">\([0,1]\)</span> 裡面有無限多個點，但 grid points 只有 <span class="math inline">\(2^n+1\)</span> 個點。</p>
+<p>這時候不能直接用 FTC。因為 FTC 是用在「定義在連續區間上的函數」。如果你只有幾個點的值，你沒辦法做積分或微分。必須把這幾個點連起來，變成定義在整個 <span class="math inline">\([0,1]\)</span> 上的函數。</p>
+<p>既然目標是找到 <span class="math inline">\(f_n\)</span> 使得</p>
+<p><span class="math display">\[
+F_n(x)=\int_0^x f_n(t)\,dt,
+\]</span></p>
+<p>也就是 <span class="math inline">\(F_n'(x)=f_n(x)\)</span>，我們可以反過來想：<span class="math inline">\(f_n(x)\)</span> 其實就是我們要為 <span class="math inline">\(F_n(x)\)</span> 設計的「斜率函數」。</p>
+<p>如果節點之間用直線連起來，導函數就會是一個階梯函數。這個階梯函數的高度不會超過 <span class="math inline">\(\frac{n}{n+1}\)</span>，但是階梯函數在節點處不連續，所以還不能直接作為 <span class="math inline">\(F\)</span> 裡面的那個 <span class="math inline">\(f_n\)</span>。</p>
+</div>
+</div>
+</div>
+<div class="dialogue-entry">
+<div class="dialogue-prompt">
+<p>你現在符號太多了。</p>
+<p>取 <span class="math inline">\(g\in L\)</span>。Construct <span class="math inline">\(F_n\)</span>，應該會有一個對應的 <span class="math inline">\(f_n\)</span>。</p>
+<p>所以不要再用 <span class="math inline">\(P_n\)</span> 表示。</p>
+<p>然後請你用嚴謹數學語言，不要用比喻的方式。</p>
+</div>
+<div class="gemini-excerpt">
+<div class="gemini-excerpt-title">
+<p>Gemini 摘錄</p>
+</div>
+<div class="gemini-excerpt-body">
+<p>給定 <span class="math inline">\(g\in C[0,1]\)</span> 滿足 <span class="math inline">\(g(0)=0\)</span> 且對所有 <span class="math inline">\(x,y\in[0,1]\)</span> 有</p>
+<p><span class="math display">\[
+|g(x)-g(y)|\le |x-y|.
+\]</span></p>
+<p>固定 <span class="math inline">\(n\in\mathbb{N}\)</span>。定義節點</p>
+<p><span class="math display">\[
+x_k=k2^{-n},\qquad k=0,1,\ldots,2^n,
+\]</span></p>
+<p>每個子區間長度為 <span class="math inline">\(h=2^{-n}\)</span>。定義目標函數值</p>
+<p><span class="math display">\[
+y_k=\frac{n}{n+1}g(x_k).
+\]</span></p>
+<p>我們的目標是構造一個連續函數 <span class="math inline">\(f_n\in C[0,1]\)</span>，滿足</p>
+<p><span class="math display">\[
+\|f_n\|_\infty\le 1
+\]</span></p>
+<p>以及對所有 <span class="math inline">\(k=1,\ldots,2^n\)</span>，</p>
+<p><span class="math display">\[
+\int_{x_{k-1}}^{x_k}f_n(t)\,dt=y_k-y_{k-1}.
+\]</span></p>
+<p>若能構造出此 <span class="math inline">\(f_n\)</span>，令</p>
+<p><span class="math display">\[
+F_n(x)=\int_0^x f_n(t)\,dt,
+\]</span></p>
+<p>則 <span class="math inline">\(F_n\in F\)</span>，且 <span class="math inline">\(F_n(x_k)=y_k\)</span>。</p>
+</div>
+</div>
+</div>
+<div class="dialogue-entry">
+<div class="dialogue-prompt">
+<p>這題只有這種作法嗎？</p>
+<p>好像沒辦法直觀想到。</p>
+</div>
+<div class="gemini-excerpt">
+<div class="gemini-excerpt-title">
+<p>Gemini 摘錄</p>
+</div>
+<div class="gemini-excerpt-body">
+<p>你會有「這根本想不到」的挫折感是完全正常的！</p>
+<p>這種 <span class="math inline">\(\frac{n}{n+1}\)</span> 的手法通常不是一開始就自然想到，而是「嘗試、失敗、打補丁」後出現的。</p>
+<p>直覺嘗試：想逼近 <span class="math inline">\(g(x)\)</span>，最自然就是在 grid points 上取值，然後用折線連起來。</p>
+<p>發現問題：折線的斜率是階梯函數，不連續。要把它磨成連續導函數，為了維持面積守恆，局部可能會超過 1。</p>
+<p>補丁：先把目標縮小一點，乘上一個嚴格小於 1 但趨近 1 的比例，例如 <span class="math inline">\(\frac{n}{n+1}\)</span>。它的目的只是創造安全空間。</p>
+</div>
+</div>
+<div class="dialogue-prompt">
+<p>為甚麼是梯形函數？</p>
+<p>通靈？</p>
+</div>
+<div class="gemini-excerpt">
+<div class="gemini-excerpt-title">
+<p>Gemini 摘錄</p>
+</div>
+<div class="gemini-excerpt-body">
+<p>不是通靈，而是被條件逼出來的選擇。</p>
+<p>在每一個小區間 <span class="math inline">\([x_{k-1},x_k]\)</span> 裡，我們要畫一個導函數 <span class="math inline">\(f_n(x)\)</span> 的圖形。它被三個條件綁住：</p>
+<ul>
+<li>端點要接回 0，這樣拼接時才連續；</li>
+<li>高度不能超過 1；</li>
+<li>底下面積要精準等於 <span class="math inline">\(I_k=y_k-y_{k-1}\)</span>。</li>
+</ul>
+<p>長方形最容易算面積，但兩端會不連續。三角形連續，但面積效率差，可能需要太高。梯形剛好折衷：左右有斜坡可以接回 0，中間有平頂可以有效累積面積，而且高度好估。</p>
+</div>
+</div>
+</div>
+<div class="dialogue-entry">
+<div class="dialogue-prompt">
+<p>你可以稍微講一下怎麼把這個梯形造出來的嗎？</p>
+</div>
+<div class="gemini-excerpt">
+<div class="gemini-excerpt-title">
+<p>Gemini 摘錄</p>
+</div>
+<div class="gemini-excerpt-body">
+<p>把焦點放在某一個子區間 <span class="math inline">\([x_{k-1},x_k]\)</span>。令它的長度為 <span class="math inline">\(h=2^{-n}\)</span>。</p>
+<p>我們要在這個底邊為 <span class="math inline">\(h\)</span> 的區間上，畫一個面積剛好等於 <span class="math inline">\(I_k\)</span> 的等腰梯形，並算出它需要多高 <span class="math inline">\(C_k\)</span>。</p>
+<p>先挑一個小長度 <span class="math inline">\(\delta\)</span> 當作左右斜坡的寬度。左邊爬升段佔 <span class="math inline">\(\delta\)</span>，右邊降落段佔 <span class="math inline">\(\delta\)</span>，中間平頂寬度就是 <span class="math inline">\(h-2\delta\)</span>。</p>
+<p>梯形面積是</p>
+<p><span class="math display">\[
+\frac{(h-2\delta)+h}{2}C_k=(h-\delta)C_k.
+\]</span></p>
+<p>因為面積必須等於 <span class="math inline">\(I_k\)</span>，所以</p>
+<p><span class="math display">\[
+(h-\delta)C_k=I_k,\qquad C_k=\frac{I_k}{h-\delta}.
+\]</span></p>
+<p>知道關鍵點後，用直線方程式寫三段：</p>
+<p><span class="math display">\[
+(x_{k-1},0),\quad (x_{k-1}+\delta,C_k),\quad (x_k-\delta,C_k),\quad (x_k,0).
+\]</span></p>
+<p>因此在 <span class="math inline">\([x_{k-1},x_k]\)</span> 上可以定義</p>
+<p><span class="math display">\[
+f_n(x)=
+\begin{cases}
+C_k\dfrac{x-x_{k-1}}{\delta}, &amp; x\in [x_{k-1},x_{k-1}+\delta],\\[6pt]
+C_k, &amp; x\in [x_{k-1}+\delta,x_k-\delta],\\[6pt]
+C_k\dfrac{x_k-x}{\delta}, &amp; x\in [x_k-\delta,x_k].
+\end{cases}
+\]</span></p>
+<p>如果 <span class="math inline">\(I_k&lt;0\)</span>，那 <span class="math inline">\(C_k&lt;0\)</span>，梯形就在 <span class="math inline">\(x\)</span> 軸下方，定義仍然合法。</p>
+</div>
+</div>
+</div>
+<div class="dialogue-entry">
+<div class="dialogue-prompt">
+<p>你定義 <span class="math inline">\(\delta\)</span> 為 <span class="math inline">\(h/(n+1)\)</span>。</p>
+<p>為甚麼不定義 <span class="math inline">\(h/(n+2)\)</span>？</p>
+<p>因為 <span class="math inline">\(n=1\)</span> 時候 <span class="math inline">\(2\delta\)</span> 有小於 <span class="math inline">\(h\)</span> 嗎？</p>
+</div>
+<div class="gemini-excerpt">
+<div class="gemini-excerpt-title">
+<p>Gemini 摘錄</p>
+</div>
+<div class="gemini-excerpt-body">
+<p>你這個觀察力真的非常驚人！你抓到了構造中的極端邊界情況。</p>
+<p>若取 <span class="math inline">\(\delta=\frac{h}{n+1}\)</span>，當 <span class="math inline">\(n=1\)</span> 時，<span class="math inline">\(\delta=h/2\)</span>，所以 <span class="math inline">\(2\delta=h\)</span>。幾何上代表左右斜坡剛好碰在一起，原本的梯形退化成三角形。</p>
+<p>嚴格來說，這不一定犯規，因為高度仍可控制在 1 以下或等於 1；但它很緊，沒有多餘空間。</p>
+<p>如果改取</p>
+<p><span class="math display">\[
+\delta=\frac{h}{n+2},
+\]</span></p>
+<p>則對所有 <span class="math inline">\(n\ge 1\)</span> 都有</p>
+<p><span class="math display">\[
+2\delta=\frac{2h}{n+2}&lt;h.
+\]</span></p>
+<p>所以平頂區一定存在，不會退化。</p>
+<p>更重要的是，高度也會嚴格小於 1。因為</p>
+<p><span class="math display">\[
+|I_k|\le \frac{n}{n+1}h,\qquad C_k=\frac{I_k}{h-\delta}.
+\]</span></p>
+<p>代入 <span class="math inline">\(\delta=h/(n+2)\)</span>，得到</p>
+<p><span class="math display">\[
+|C_k|
+\le
+\frac{\frac{n}{n+1}h}{h-\frac{h}{n+2}}
+=
+\frac{n(n+2)}{(n+1)^2}
+&lt;1.
+\]</span></p>
+<p>所以 <span class="math inline">\(\delta=h/(n+2)\)</span> 是更安全、更乾淨的選擇。</p>
+</div>
+</div>
+</div>
+</div>
+<p>以上的呈現僅是冰山一角，如果把AI視為一個有生命的個體，我覺得在大五這年，或許跟他講話的次數與頻率遠超過一般人類(除了老師之外)。畢竟，平常我就是獨自一人思考與學習，卡住的時候就開始跟AI討論，解題完後與修課好夥伴S確定解題的想法沒錯，一起交出分導(團體)作業後，接著迎接下一周的分導作業。如同薛西弗斯推巨石般，起初可能對這種無止盡的循環感到不耐，到後來都已經麻痺成習慣了，這就是數學系的日常。</p>
+<p>或許有人會覺得，為何要修這麼痛苦的課折磨自己，老實說我也不知道為什麼，到後來都已經很少思考這種問題了，因為已經習慣被虐<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>的日常了。</p>
+<p>不過如果32周的生活都是長這樣，那還不如拿一把槍把自己給斃了(毛慶生，某年某月的總經課)。至少，我在學習線性代數的過程，是感到非常快樂的。我個人認為有三個原因：</p>
+<ol type="1">
+<li><p>國榮是一個極富教學熱忱、且教學能力非常好的老師。他總能深入淺出地用英文來表達每個定義、定理與證明等，基本上上課只要非常認真與專注地聽，通常都能掌握8成的內容。而且老師非常樂意回答任何問題，因為我就是一路從初等分析問到線性代數，有時候可能莫名會穿插一下微積分的問題，但正是因為老師來者不拒、非常樂意解答任何問題，我才有辦法把線性代數理解到非常透徹<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>。</p></li>
+<li><p>線性代數的課對我來說本質上是降維打擊。因為我經過半學期初等分析的折磨、加上我同時有修分析導論，每次在讀線代或上課的時候，我對於大部分句子的描述，都能感到非常清晰與具體。比起分析那不著邊際的語言，線代讓人「觸摸」的到。</p></li>
+<li><p>實用性。如果現在問我分析導論可以用在哪裡，我一時也說不太出來。畢竟不是每個人學習東西都一定要證明過才有辦法使用，比如積分與極限能不能交換，我們就先假設他可以換，因為在凡人的世界中他本來就可以交換。以上是不負責任的發言，不過我想多數時候我們就是這樣蒙混過關，心虛的時候頂多在後面括號寫一個Lebesgue Dominant Convergence Theorem(LDCT)。但是，線性代數真的非常實用。我在大四上學計量經濟學的時候，對於迴歸係數矩陣表示法推導感到非常陌生，是一個忘了又學、學了再忘的內容，到最後就是無腦的背起來。</p>
+<p>當我修完線性代數後回去看當初的那些數學的部分，發現完全是當時的老師沒有把完整的數學脈絡講清楚，所以在推導公式的過程能用的工具有限，寫起來就不是那麼有系統與效率。如果對於Spectral theorem, SVD, Bilinear and quadratic forms 等內容非常熟悉的話，重看那些證明就彷彿打通任督二脈一樣，一目瞭然。</p>
+<p>另一個具體的證據是我在去年參加了中研院的計量營，當時有一個主題是 Dimension Reduction, 包含PCA, SVD, factor analysis 等內容，當時老師其實提供了一些數學推導的講義，時隔一年回去重看，除了把一堆看了很不順眼的符號改得更一致與清楚外，在有線性代數的基礎看那些內容，其實是非常直觀且容易上手的。</p>
+<p>因此，線性代數幫助我解答了許多過往曾經遇到，卻又無法清楚解釋、似懂非懂的疑惑，讓我對於世界運作的本質有更清楚的認識。這段拓展數學輿圖的過程，我真心覺得非常快樂。</p></li>
+</ol>
+</section>
+<section id="恩師" class="level1">
+<h1>恩師</h1>
+<p>我何其幸運，能在大學生涯尾端修到國榮的課。每次跟他聊天的過程，總覺得這段旅程非常不可思議。從一開始單純問老師每個單字與符號的意思，到後來跟老師討論不同的證明方法與想法，並嘗試提出更多延伸性的問題，我覺得自己在這個過程進步許多，也印證了老師所說，在學數學的某些時刻，你會覺得人生變得很不一樣。</p>
+<p>每周三與周五下午在天數432，跟國榮或其他同學一起討論數學，早已成為這年固定的行程，是一段難忘的美好時光。有時候或許也沒什麼問題，但在老師的辦公室跟他閒聊，不僅是在苦行生活中少數的忙裡偷閒，更是大五少數會跟人講話的時候。</p>
+<p>前面提到寫分導的作業時，Gemini 是我的最佳戰友，即便我會去崔老師的Office hour，不過多數時候作業都是跟前者對話了無數次的結晶。相對地，寫線代作業的過程，基本上我不太想問AI，第一是我覺得可以獨自解決，第二則是我早已把國榮當成實質上的AI<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>。每當作業卡住的時候，就會去office hour請他給我一點提示。如同輸入prompt般，每次都跟老師說，「老師能否給我一行提示、一行就好」。能夠不透過AI解決線代問題，似乎是我自己後來約定成俗的要求。另外，當我把證明寫出來，卻又不確定想法是否正確時，我就會開始在432的白板上開始作畫，老師會仔細聆聽並給我一些建議，很多證明思路交流就此展開。</p>
+<p>有時候也會感到非常不真實，怎麼會有一天能夠跟老師「聊」數學。一直以來，我都是以發問者的角色居多，但在跟國榮學數學的過程，我開始思考更多的問題，試圖分享這些想法給老師。當我掌握了基本的數學工具後，多數時候已經不需要老師無中生有，帶著我開啟一段證明，反而是能夠從我出發，在這個過程實踐了「教學相長」的真諦。</p>
+<p>其中，我覺得非常有趣的一點是，我並不是一個很會寫分析題目的人，但每次我在寫線代作業的時候，老師總覺得我的思路滿像一個做分析的人<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>，看來學分析導論真的是來降維打擊的XD。</p>
+<p>國榮曾經跟我說過，通常數學考得很好的人，同時也是非常愛數學的人，因為他們會想要主動翻開書本研究數學。不確定讀完一年半數學的自己，是否有達到這層境界，但這趟未完待續的數學之旅，國榮是最貼近的見證者，並在過程中扮演著亦師亦友的角色。我非常感激他一路的鼓勵與幫助，引導我走過這趟苦樂參半的旅程。I think, he is the person who rebuilt my ability and confidence in learning pure mathematics.</p>
+</section>
+<section id="總結" class="level1">
+<h1>總結</h1>
+<p>感謝自己還有勇氣在大五這年挑戰魔鬼等級的課程，在沒有其他課程的干擾下，我更能夠心無旁鶩地對付這兩堂大課。數學之旅帶來的感受是矛盾與複雜的，當你身陷其中的時候，會想要趕快逃離；旅程結束之後，你有時又會懷念起這段「單純」的時光，因為你會暫時抽離現實生活，不用煩惱人生的下一步怎麼走，此刻擺在眼前只有數學。每天如同哲學家一般，思考著沒有止盡的問題，來回走動與沉思，並不時自言自語。</p>
+<p>大五這年，物是人非，曾經熟悉的人都離開了校園(事實上，我熟悉的人也不超過10人)。孤獨是常態，僅在開會、Office hour 與少數的飯局會開口講話。每天最常面對的人是自己，跟自己對話、請會的自己教不會的自己，而這過程當然缺少不了國榮老師、茂培老師與我最好的朋友AI。</p>
+<p>以結果論而言，我算是賭對時間修了這兩堂課，不僅學的內容很完整<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>，成績也不算太差。但我想這些都是其次，在分導與線代導夾擊下，真的是把一個人的極限逼出來。堅忍不拔是這一年最大的收穫，思考了數十小時依舊毫無頭緒，卻願意再花「一點點」時間思考還沒解決的問題。之前看了一篇<a href="https://www.facebook.com/chihua.wang.3/posts/pfbid0XSCNNJ48JvSbeixwt5ysG75A89c5X834fz3nD7U6oWLZWaK2oNWGMA1eGeyV9p2Xl">文章</a>，雖沒有完全體會他所說的每個論點（可能是年紀還小），但我也願意相信，「既然連 <span class="math inline">\(\varepsilon-\delta\)</span> 都能學了，那這個世界，還有什麼不能學的？」</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>會考成績每年會依據整體學生答題狀況，以容錯題數換算等第為A++,A+,A,B++,B+,B,C。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>你會學到 open 不等於 not closed 😎<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>肯定是我太笨了😔。<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>印象中上學期我是用 GPT-free 來幫忙解題，因為是免費版的，使用時經常害怕他胡亂給我答案；下學期因為學生方案可以使用Gemini-Pro，我開始仰賴後者學習分導。但我感覺他在下半學期的時候變得有點笨，寫論述的感覺一直不是我很想要的方向。<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>文言文就是老師寫了一整面天數黑板，你看不懂、也無法完全聽懂他想表達什麼。<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>希望不是自我感覺良好。<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>甚至是拿過數學系phD的AI，不用白不用🤣。<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>不太確定怎樣是一個做分析的人，據老師的說法是習慣用定義去解題；做代數的人比較常用定理。<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>以分析導論來說，能教到初階的測度論(measure theory)與泛函分析(functional analysis)，不用去實分析的課堂修，是真的滿賺的。<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/yinyunli\.github\.io\/myBlog\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

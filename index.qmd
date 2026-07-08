@@ -2,6 +2,7 @@
 title: "該寫些什麼呢？"
 listing:
   contents: posts
+  feed: true
   sort: "date desc"
   type: default
   categories: true     
@@ -12,4 +13,3 @@ listing:
     categories: "分類"
 page-layout: article      
 ---
-

@@ -13,6 +13,9 @@ website:
         text: 首頁
       - href: about.qmd
         text: 關於
+      - icon: rss-fill
+        text: RSS
+        href: index.xml
 
 
 
