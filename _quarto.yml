@@ -28,6 +28,9 @@ format:
     color-scheme: auto
     include-in-header: header.html
     css: styles.css
+    lightbox:
+      effect: zoom
+      desc-position: bottom
     toc: true
     html-math-method: mathjax
     theme-color: "#1a1a1a"

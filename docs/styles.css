@@ -374,3 +374,7 @@ body.quarto-dark .gemini-excerpt-body {
     max-width: 100%;
   }
 }
+
+#fig-academic-summary > figcaption.quarto-float-caption:not(.quarto-subfloat-caption) {
+  display: none;
+}
