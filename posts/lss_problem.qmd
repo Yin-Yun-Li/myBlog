@@ -1,7 +1,7 @@
 ---
 title: "Linear State Space Model"
 subtitle: "Answers to the Exercises in the QuantEcon Lecture"
-author: "Yin-Yun Li"
+draft: true
 page-layout: full 
 format:
   html:
@@ -410,6 +410,4 @@ end
 display(p1)
 display(p2)
 ```
-
-
 

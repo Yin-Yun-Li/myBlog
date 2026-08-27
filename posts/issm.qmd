@@ -1,6 +1,6 @@
 ---
 title: "ISSM Reflection"
-author: "YinYun Li"
+description: "在三週社會科學計量方法研習營裡，回顧課程、方法與意外帶走的收穫。"
 date: "2025-12-23"
 categories: ["學習"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "聯準會與通膨"
-author: "YinYun Li"
+description: "從大通膨到伏克爾時代，整理聯準會如何重新建立貨幣政策的可信度。"
 date: "2026-01-05"
 categories: ["貨幣政策", "經濟學"]
 ---
@@ -15,7 +15,7 @@ categories: ["貨幣政策", "經濟學"]
 
 # Great Inflation
 
-![PCE物價指數與聯邦基金利率時間序列](pce_interest_rate_fed.png){width=120% fig-align="center" #fig-pce}
+![PCE物價指數與聯邦基金利率時間序列](../figures/pce_interest_rate_fed.png){width=120% fig-align="center" #fig-pce}
 
 @fig-pce 是Federal Reserve Economic Data(FRED)提供的通膨與利率季資料，藍色實線為核心[個人消費支出物價指數](#pce) (排除食物與能源等價格易受季節波動的項目) 的每年變化，綠色虛線則為聯邦基金利率。我認為這張圖勾勒了本書前兩章的內容，並對現代央行樹立了重要的典範。
 

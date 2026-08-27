@@ -1,6 +1,6 @@
 ---
 title: "聯準會與金融危機"
-author: "YinYun Li"
+description: "從葛林斯潘到金融危機，回顧金融穩定如何成為聯準會的艱難課題。"
 date: "2026-01-09"
 categories: ["貨幣政策", "經濟學"]
 ---
@@ -50,7 +50,7 @@ categories: ["貨幣政策", "經濟學"]
 
 ## 通貨緊縮危機
 
-![PCE物價指數與聯邦基金利率時間序列](pce_interest_rate_fed.png){width=120% fig-align="center" #fig-pce}
+![PCE物價指數與聯邦基金利率時間序列](../figures/pce_interest_rate_fed.png){width=120% fig-align="center" #fig-pce}
 
 我們重新看回 @fig-pce 。在2000初期，通貨膨脹率異常的低，雖然網路泡沫破裂對經濟衰退的影響有限，只是復甦過程變得很緩慢，主要包含幾個因素^[安隆案等企業醜聞、沙賓法案、恐攻與恐怖主義等。]導致企業不熱絡，而央行的降息政策使得低通膨與低利率的現象並存。
 

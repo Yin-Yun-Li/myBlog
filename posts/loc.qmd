@@ -1,6 +1,6 @@
 ---
 title: "語資"
-author: "YinYun Li"
+description: "拼回高中語資班的記憶，也追問語文、研究與自我認同留下了什麼。"
 date: "2026-02-21"
 categories: ["高中", "人生"]
 ---

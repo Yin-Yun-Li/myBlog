@@ -378,3 +378,620 @@ body.quarto-dark .gemini-excerpt-body {
 #fig-academic-summary > figcaption.quarto-float-caption:not(.quarto-subfloat-caption) {
   display: none;
 }
+
+/* =========================================================
+   8. 吟耘札記：現代書齋視覺系統
+   ========================================================= */
+
+:root {
+  --yy-paper: #f7f3e9;
+  --yy-paper-deep: #eee7d8;
+  --yy-surface: rgba(255, 253, 248, 0.9);
+  --yy-surface-solid: #fffdf8;
+  --yy-ink: #26332f;
+  --yy-ink-soft: #58635e;
+  --yy-muted: #7a7d75;
+  --yy-pine: #3f5b52;
+  --yy-pine-soft: #e2e9e4;
+  --yy-cinnabar: #a75645;
+  --yy-cinnabar-soft: #f2e2dc;
+  --yy-line: #ded4c3;
+  --yy-nav: rgba(247, 243, 233, 0.9);
+  --yy-shadow: 0 18px 50px rgba(55, 48, 37, 0.08);
+  --yy-shadow-hover: 0 24px 55px rgba(55, 48, 37, 0.14);
+  --yy-radius: 3px;
+}
+
+body.quarto-dark {
+  --yy-paper: #171d1b;
+  --yy-paper-deep: #202825;
+  --yy-surface: rgba(31, 40, 37, 0.9);
+  --yy-surface-solid: #1f2825;
+  --yy-ink: #e6e1d5;
+  --yy-ink-soft: #bdc3bc;
+  --yy-muted: #949d96;
+  --yy-pine: #9bb5aa;
+  --yy-pine-soft: #293a34;
+  --yy-cinnabar: #d58a76;
+  --yy-cinnabar-soft: #452f2a;
+  --yy-line: #3b4843;
+  --yy-nav: rgba(23, 29, 27, 0.9);
+  --yy-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  --yy-shadow-hover: 0 24px 55px rgba(0, 0, 0, 0.32);
+}
+
+html {
+  background: var(--yy-paper) !important;
+}
+
+body,
+body.quarto-light,
+body.quarto-dark {
+  background-color: var(--yy-paper) !important;
+  background-image:
+    radial-gradient(circle at 90% 4%, rgba(167, 86, 69, 0.08), transparent 26rem),
+    radial-gradient(circle at 4% 45%, rgba(63, 91, 82, 0.06), transparent 34rem);
+  color: var(--yy-ink) !important;
+  font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.012em;
+}
+
+#quarto-content {
+  width: min(calc(100% - 2rem), 1180px);
+  max-width: 1180px;
+  margin-inline: auto;
+}
+
+#quarto-document-content {
+  padding-bottom: 2.5rem;
+}
+
+#quarto-document-content p,
+#quarto-document-content li {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--yy-cinnabar-soft);
+  color: var(--yy-ink);
+}
+
+a,
+body.quarto-dark a {
+  color: var(--yy-pine);
+  text-decoration-color: color-mix(in srgb, var(--yy-pine) 45%, transparent);
+  text-underline-offset: 0.2em;
+}
+
+a:hover,
+body.quarto-dark a:hover {
+  color: var(--yy-cinnabar);
+  opacity: 1;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--yy-cinnabar) !important;
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+body.quarto-dark h1,
+body.quarto-dark h2,
+body.quarto-dark h3 {
+  color: var(--yy-ink) !important;
+  font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+}
+
+h2 {
+  margin-top: 2.6rem;
+}
+
+h2::after {
+  display: block;
+  width: 2.25rem;
+  height: 2px;
+  margin-top: 0.55rem;
+  background: var(--yy-cinnabar);
+  content: "";
+}
+
+hr {
+  margin: 3.25rem 0;
+  border: 0;
+  border-top: 1px solid var(--yy-line);
+  opacity: 1;
+}
+
+blockquote {
+  margin: 1.75rem 0;
+  padding: 0.2rem 0 0.2rem 1.25rem;
+  border-left: 3px solid var(--yy-cinnabar);
+  color: var(--yy-ink-soft);
+}
+
+/* 導覽列：薄、透、像書頁上緣，而不是厚重色塊。 */
+.navbar,
+body.quarto-light .navbar,
+body.quarto-dark .navbar {
+  min-height: 72px !important;
+  padding: 0.65rem max(1rem, calc((100vw - 1180px) / 2)) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--yy-line) 78%, transparent) !important;
+  background: var(--yy-nav) !important;
+  box-shadow: 0 5px 20px rgba(45, 42, 35, 0.035);
+  backdrop-filter: blur(18px) saturate(130%);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
+}
+
+.navbar-brand,
+.navbar-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--yy-ink) !important;
+  font-family: "Noto Serif TC", "Songti TC", serif !important;
+  font-size: 1.34rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+}
+
+body.quarto-light .navbar .navbar-brand,
+body.quarto-light .navbar .navbar-title,
+body.quarto-dark .navbar .navbar-brand,
+body.quarto-dark .navbar .navbar-title {
+  color: var(--yy-ink) !important;
+}
+
+.navbar .navbar-nav {
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.navbar .nav-link,
+body.quarto-light .navbar .nav-link,
+body.quarto-dark .navbar .nav-link,
+body.quarto-light .navbar .bi,
+body.quarto-dark .navbar .bi,
+.navbar .quarto-color-scheme-toggle,
+.navbar .quarto-search-toggle {
+  position: relative;
+  color: var(--yy-ink-soft) !important;
+  font-family: "Noto Sans TC", system-ui, sans-serif;
+  font-size: 0.94rem !important;
+  font-weight: 500;
+  opacity: 1 !important;
+}
+
+.navbar .nav-link::after {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.25rem;
+  left: 0.8rem;
+  height: 1px;
+  background: var(--yy-cinnabar);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.3);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-title:hover,
+.navbar .nav-link:hover {
+  color: var(--yy-ink) !important;
+  text-decoration: none !important;
+}
+
+.navbar-toggler {
+  border-color: var(--yy-line) !important;
+  color: var(--yy-ink) !important;
+}
+
+/* 標題區與長文閱讀。 */
+#title-block-header {
+  margin-block: 2.75rem 3rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--yy-line);
+}
+
+.quarto-title .title,
+header .title,
+h1.title {
+  color: var(--yy-ink) !important;
+  font-size: clamp(2.25rem, 5vw, 3.55rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.045em;
+}
+
+.quarto-title .subtitle {
+  margin-top: 0.75rem;
+  color: var(--yy-muted);
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+}
+
+.quarto-title-meta,
+.quarto-title-meta-heading,
+.quarto-title-meta-contents,
+.listing-date,
+.card-attribution {
+  color: var(--yy-muted) !important;
+  font-family: "Noto Sans TC", system-ui, sans-serif;
+}
+
+.quarto-title-meta-heading {
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+#quarto-toc-column .nav-link,
+body.quarto-dark #quarto-toc-column .nav-link {
+  color: var(--yy-muted) !important;
+  border-left-color: var(--yy-line);
+}
+
+#quarto-toc-column .nav-link:hover,
+#quarto-toc-column .nav-link.active,
+body.quarto-dark #quarto-toc-column .nav-link:hover,
+body.quarto-dark #quarto-toc-column .nav-link.active {
+  color: var(--yy-cinnabar) !important;
+  border-left-color: var(--yy-cinnabar) !important;
+}
+
+.callout {
+  border-color: var(--yy-line) !important;
+  background: color-mix(in srgb, var(--yy-surface-solid) 82%, transparent);
+}
+
+pre,
+code,
+.sourceCode {
+  border-color: var(--yy-line) !important;
+}
+
+/* 文章彙整：短引與卡片。 */
+body:has(.archive-intro) #title-block-header {
+  margin-block: 2.5rem 1rem;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+body:has(.archive-intro) h1.title {
+  font-size: clamp(2.2rem, 4vw, 3rem) !important;
+}
+
+.archive-intro {
+  margin: 0 0 2rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--yy-line);
+}
+
+.archive-kicker {
+  margin: 0 0 0.35rem;
+  color: var(--yy-cinnabar);
+  font-family: "Noto Sans TC", system-ui, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+}
+
+.archive-intro > p:last-child {
+  margin: 0;
+  color: var(--yy-muted);
+  font-size: 0.92rem;
+}
+
+#listing-listing {
+  margin-top: 1rem;
+}
+
+.quarto-listing-container-grid .list.grid {
+  gap: 1.15rem;
+}
+
+.quarto-grid-item.card {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--yy-line);
+  border-radius: var(--yy-radius);
+  background: var(--yy-surface);
+  box-shadow: 0 10px 32px rgba(55, 48, 37, 0.055);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.quarto-grid-item.card::before {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: var(--yy-pine);
+  content: "";
+}
+
+.quarto-listing-container-grid .g-col-1:nth-child(3n + 2) .quarto-grid-item.card::before {
+  background: var(--yy-cinnabar);
+}
+
+.quarto-listing-container-grid .g-col-1:nth-child(3n) .quarto-grid-item.card::before {
+  background: color-mix(in srgb, var(--yy-pine) 55%, var(--yy-cinnabar));
+}
+
+.quarto-grid-item.card:hover {
+  border-color: color-mix(in srgb, var(--yy-pine) 55%, var(--yy-line));
+  box-shadow: var(--yy-shadow-hover);
+  transform: translateY(-4px);
+}
+
+.quarto-grid-item .card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.45rem 1.5rem 1.2rem;
+}
+
+.quarto-grid-item .card-title,
+.quarto-grid-item .listing-title {
+  margin-bottom: 0.8rem;
+  color: var(--yy-ink) !important;
+  font-size: 1.22rem;
+  line-height: 1.5;
+}
+
+.quarto-grid-item .card-title a,
+.quarto-grid-item .listing-title a {
+  color: var(--yy-ink) !important;
+  text-decoration: none !important;
+}
+
+.quarto-grid-item.card:hover .card-title a,
+.quarto-grid-item.card:hover .listing-title a {
+  color: var(--yy-cinnabar) !important;
+}
+
+.listing-description,
+.quarto-grid-item .listing-description {
+  display: block !important;
+  margin-bottom: 1.1rem;
+  color: var(--yy-ink-soft) !important;
+  font-size: 0.93rem;
+  line-height: 1.75;
+}
+
+.quarto-grid-item .card-attribution {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid color-mix(in srgb, var(--yy-line) 72%, transparent);
+  font-size: 0.78rem;
+}
+
+.listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.listing-category,
+body.quarto-light .listing-category,
+body.quarto-dark .listing-category {
+  border: 1px solid color-mix(in srgb, var(--yy-pine) 24%, transparent) !important;
+  border-radius: 999px !important;
+  background: var(--yy-pine-soft) !important;
+  color: var(--yy-pine) !important;
+  font-family: "Noto Sans TC", system-ui, sans-serif;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.035em;
+}
+
+.quarto-listing-category.category-default {
+  padding-left: 1rem;
+  border: 0 !important;
+  border-left: 1px solid var(--yy-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  font-family: "Noto Sans TC", system-ui, sans-serif;
+}
+
+.quarto-listing-category-title {
+  color: transparent !important;
+  font-size: 0 !important;
+}
+
+.quarto-listing-category-title::before {
+  color: var(--yy-cinnabar);
+  content: "分類索引";
+  font-family: "Noto Serif TC", "Songti TC", serif;
+  font-size: 1rem !important;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.quarto-listing-category.category-default .category {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-block: 0.55rem;
+  border-bottom-color: var(--yy-line);
+  color: var(--yy-ink-soft);
+  font-size: 0.84rem;
+}
+
+.quarto-listing-category.category-default .category[data-category=""] {
+  font-size: 0;
+}
+
+.quarto-listing-category.category-default .category[data-category=""]::before {
+  color: inherit;
+  content: "全部";
+  font-size: 0.84rem;
+}
+
+.quarto-listing-category.category-default .category[data-category=""] .quarto-category-count {
+  font-size: 0.84rem;
+}
+
+.quarto-listing-category.category-default .category.active,
+.quarto-listing-category.category-default .category:hover {
+  color: var(--yy-cinnabar);
+}
+
+/* About：序像一張獨立手稿；白話說明保持乾淨。 */
+body:has(.about-manifesto) #quarto-document-content {
+  max-width: 820px;
+  margin-inline: auto;
+}
+
+.about-manifesto {
+  position: relative;
+  margin-top: 1rem;
+  padding: clamp(2rem, 6vw, 4.25rem);
+  border: 1px solid var(--yy-line);
+  border-radius: var(--yy-radius);
+  background: var(--yy-surface);
+  box-shadow: var(--yy-shadow);
+}
+
+.about-manifesto p {
+  color: var(--yy-ink-soft);
+  font-size: 1.04rem;
+  line-height: 2.15;
+}
+
+.about-manifesto > p:first-of-type::first-letter {
+  float: left;
+  margin: 0.12em 0.14em 0 0;
+  color: var(--yy-cinnabar);
+  font-size: 3.6em;
+  font-weight: 700;
+  line-height: 0.82;
+}
+
+.about-signoff {
+  margin-top: 1.4rem !important;
+  color: var(--yy-ink) !important;
+  letter-spacing: 0.16em;
+  text-align: right;
+}
+
+.about-plain {
+  margin: 0 auto 3rem;
+  padding: 0 clamp(0rem, 3vw, 2rem);
+}
+
+.about-plain p {
+  color: var(--yy-ink-soft);
+  line-height: 2;
+}
+
+/* 頁尾亦是題記的一部分。 */
+.nav-footer {
+  min-height: 92px;
+  margin-top: 4rem;
+  border-top: 1px solid var(--yy-line);
+  background: color-mix(in srgb, var(--yy-paper-deep) 65%, transparent);
+  color: var(--yy-muted);
+  font-family: "Noto Sans TC", system-ui, sans-serif;
+  font-size: 0.82rem;
+}
+
+.nav-footer-center {
+  color: var(--yy-pine);
+  font-family: "Noto Serif TC", serif;
+  letter-spacing: 0.08em;
+}
+
+.nav-footer a {
+  color: var(--yy-pine) !important;
+}
+
+body.quarto-dark .quarto-grid-item.card,
+body.quarto-dark .about-manifesto {
+  box-shadow: var(--yy-shadow);
+}
+
+body.quarto-dark .dialogue-user .dialogue-bubble,
+body.quarto-dark .dialogue-ai .dialogue-bubble,
+body.quarto-dark .dialogue-prompt,
+body.quarto-dark .gemini-excerpt-body {
+  color: var(--yy-ink);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    margin-top: 0.6rem;
+    padding: 0.75rem;
+    border: 1px solid var(--yy-line);
+    border-radius: var(--yy-radius);
+    background: var(--yy-surface-solid);
+  }
+
+  .navbar .navbar-nav {
+    align-items: stretch;
+  }
+
+  .navbar .nav-link::after {
+    right: auto;
+    width: 2rem;
+  }
+
+}
+
+@media (max-width: 767.98px) {
+  #quarto-content {
+    width: min(calc(100% - 1.25rem), 1180px);
+  }
+
+  .about-manifesto {
+    padding: 2rem 1.35rem;
+  }
+
+  .nav-footer-center {
+    margin-block: 0.6rem;
+  }
+}
+
+@media (max-width: 520px) {
+  body,
+  body.quarto-light,
+  body.quarto-dark {
+    font-size: 15px;
+  }
+
+  .navbar,
+  body.quarto-light .navbar,
+  body.quarto-dark .navbar {
+    min-height: 64px !important;
+    padding-block: 0.45rem !important;
+  }
+
+  .about-manifesto p {
+    font-size: 1rem;
+    line-height: 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

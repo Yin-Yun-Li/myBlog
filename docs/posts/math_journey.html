@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW" xml:lang="zh-TW"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="YinYun Li">
-<meta name="dcterms.date" content="2026-07-08">
+<meta name="description" content="從升學考試一路走到初等分析，記錄一段若即若離、仍在繼續的數學旅程。">
 
-<title>數學之旅 – YinYun’s Blog</title>
+<title>數學之旅 – 吟耘札記</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -26,27 +31,26 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7f4fc51365849c94d6a3311bd11959ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-76401e46e817165556279cf8b0bdca6f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-7f4fc51365849c94d6a3311bd11959ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d433c88c64910f457007e0bbbf7baea5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9a76ebdd1c87f5b16f66eb6b86aee9fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d433c88c64910f457007e0bbbf7baea5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,61 +65,41 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "沒有結果",
+    "search-matching-documents-text": "符合的文件",
+    "search-copy-link-title": "複製搜尋連結",
+    "search-hide-matches-text": "隱藏其他符合的結果",
+    "search-more-match-text": "更多符合結果",
+    "search-more-matches-text": "更多符合結果",
+    "search-clear-button-title": "清除",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "送出",
+    "search-label": "搜尋"
   }
 }</script>
 <script>
-
   (function() {
-
     const savedTheme = localStorage.getItem("quarto-color-scheme");
+    const isDark = savedTheme === "alternate";
 
-    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    // 先鋪上與網站一致的夜讀／紙張底色，避免主題切換時閃白。
+    document.documentElement.style.backgroundColor = isDark ? "#171d1b" : "#f7f3e9";
 
-    const isDark = savedTheme === "dark" || (!savedTheme && systemDark);
-
-
-
-    // 1. 立即把 html 底漆漆黑/白 (這發生在 body 出現前)
-
-    document.documentElement.style.backgroundColor = isDark ? "#1a1a1a" : "#ffffff";
-
-    
-
-    // 2. 注入一段臨時 CSS 鎖定初期顏色，不等 styles.css 下載完就生效
-
+    // 注入臨時 CSS 鎖定初期顏色，不等 styles.css 下載完就生效。
     const style = document.createElement('style');
-
     style.innerHTML = `
-
-      html, body { 
-
-        background-color: ${isDark ? "#1a1a1a" : "#ffffff"} !important; 
-
-        transition: none !important; 
-
+      html, body {
+        background-color: ${isDark ? "#171d1b" : "#f7f3e9"} !important;
+        transition: none !important;
       }
-
     `;
-
     document.head.appendChild(style);
-
   })();
-
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -145,6 +129,11 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="數學之旅 – 吟耘札記">
+<meta property="og:description" content="從升學考試一路走到初等分析，記錄一段若即若離、仍在繼續的數學旅程。">
+<meta property="og:image" content="https://yinyunli.github.io/myBlog/figures/常見證明方法.jpg">
+<meta property="og:site_name" content="吟耘札記">
+<meta property="og:image:alt" content="常見證明方法">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -317,32 +306,37 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">YinYun’s Blog</span>
+    <span class="navbar-title">吟耘札記</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="搜尋"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="切換導航列" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">首頁</span></a>
+<span class="menu-text">文章</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
-<span class="menu-text">關於</span></a>
+<span class="menu-text">關於此間</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://yin-yun-li.github.io/"> <i class="bi bi-mortarboard" role="img">
+</i> 
+<span class="menu-text">學術頁</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../index.xml"> <i class="bi bi-rss-fill" role="img">
 </i> 
-<span class="menu-text">RSS</span></a>
+<span class="menu-text">訂閱</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="切換深色模式"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -353,7 +347,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">本頁目錄</h2>
    
   <ul>
   <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言">前言</a></li>
@@ -377,21 +371,20 @@ window.Quarto = {
   </div>
   </div>
 
+<div>
+  <div class="description">
+    從升學考試一路走到初等分析，記錄一段若即若離、仍在繼續的數學旅程。
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>YinYun Li </p>
-          </div>
-  </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">發佈於</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 8, 2026</p>
+      <p class="date">2026年7月8日</p>
     </div>
   </div>
   
@@ -426,14 +419,14 @@ window.Quarto = {
 <p><img src="../figures/常見證明方法.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:55.0%" alt="常見證明方法"></p>
 </figure>
 </div>
-<p>對於我這種沒有理則學基礎、數學又不好的人來說，每次讀分析實在是非常痛苦。畢竟分析沒有任何計算，各種定義定理都是用抽象的argument表達，通常一堂課結束後我的腦迴路就完全扭曲打結了(參見 <a href="#fig-meme" class="quarto-xref">Figure&nbsp;1</a>)。</p>
+<p>對於我這種沒有理則學基礎、數學又不好的人來說，每次讀分析實在是非常痛苦。畢竟分析沒有任何計算，各種定義定理都是用抽象的argument表達，通常一堂課結束後我的腦迴路就完全扭曲打結了(參見 <a href="#fig-meme" class="quarto-xref">圖&nbsp;1</a>)。</p>
 <div id="fig-meme" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="topology_meme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+<img src="../figures/topology_meme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Topology Meme (Source: <a href="https://www.reddit.com/r/mathmemes/comments/1jhyrs1/from_euclidean_precision_to_topological_chaos/">r/mathmemes</a>)
+圖&nbsp;1: Topology Meme (Source: <a href="https://www.reddit.com/r/mathmemes/comments/1jhyrs1/from_euclidean_precision_to_topological_chaos/">r/mathmemes</a>)
 </figcaption>
 </figure>
 </div>
@@ -797,22 +790,22 @@ C_k\dfrac{x_k-x}{\delta}, &amp; x\in [x_k-\delta,x_k].
 <p>每周三與周五下午在天數432，跟國榮或其他同學一起討論數學，早已成為這年固定的行程，是一段難忘的美好時光。有時候或許也沒什麼問題，但在老師的辦公室跟他閒聊，不僅是在苦行生活中少數的忙裡偷閒，更是大五少數會跟人講話的時候。</p>
 <p>前面提到寫分導的作業時，Gemini 是我的最佳戰友，即便我會去崔老師的Office hour，不過多數時候作業都是跟前者對話了無數次的結晶。相對地，寫線代作業的過程，基本上我不太想問AI，第一是我覺得可以獨自解決，第二則是我早已把國榮當成實質上的AI<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>。每當作業卡住的時候，就會去office hour請他給我一點提示。如同輸入prompt般，每次都跟老師說，「老師能否給我一行提示、一行就好」。能夠不透過AI解決線代問題，似乎是我自己後來約定成俗的要求。另外，當我把證明寫出來，卻又不確定想法是否正確時，我就會開始在432的白板上開始作畫，老師會仔細聆聽並給我一些建議，很多證明思路交流就此展開。</p>
 <p>有時候也會感到非常不真實，怎麼會有一天能夠跟老師「聊」數學。一直以來，我都是以發問者的角色居多，但在跟國榮學數學的過程，我開始思考更多的問題，試圖分享這些想法給老師。當我掌握了基本的數學工具後，很多時候已經不需要老師無中生有，帶著我開啟一段證明，反而是能夠從我出發，在這個過程實踐了「教學相長」的真諦。</p>
-<p>在線代導的課堂，我時常感受到所謂的「自豪時刻」，比如無心插柳貢獻了作業的題目、或者寫出老師沒有想過，卻非常漂亮的證明，甚至是老師接受我的許願，在最後一周教學矩陣微積分<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>(matrix calculus)。</p>
-<p>此外，我覺得非常有趣的一點是，我並不是一個很會寫分析題目的人，但每次我在寫線代作業的時候，老師總覺得我的思路滿像一個做分析的人<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>，看來學分析導論真的是來降維打擊的XD。</p>
+<p>在線代導的課堂，我時常感受到所謂的「自豪時刻」，比如無心插柳貢獻了作業的題目、或者寫出老師沒有想過，卻非常漂亮的證明，甚至是老師接受我的許願，在最後一周教學矩陣微積分^<a href="matrix calculus">這個主題是小時候沒有人會教，但長大後的某天，當你需要用到的時候，授課老師會覺得你已經擁有這方面的先備知識🤡。</a>。</p>
+<p>此外，我覺得非常有趣的一點是，我並不是一個很會寫分析題目的人，但每次我在寫線代作業的時候，老師總覺得我的思路滿像一個做分析的人<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>，看來學分析導論真的是來降維打擊的XD。</p>
 <p>國榮曾經跟我說過，通常數學考得很好的人，同時也是非常愛數學的人，因為他們會想要主動翻開書本研究數學。不確定讀完一年半數學的自己，是否有達到這層境界，但這趟未完待續的數學之旅，國榮是最貼近的見證者，並在過程中扮演著亦師亦友的角色。我非常感激他一路的鼓勵與幫助，引導我走過這趟苦樂參半的旅程。I think, he is the person who rebuilt my ability and confidence in learning pure mathematics.</p>
 </section>
 <section id="總結" class="level1">
 <h1>總結</h1>
 <p>感謝自己還有勇氣在大五這年挑戰魔鬼等級的課程，在沒有其他課程的干擾下，我更能夠心無旁鶩地對付這兩堂大課。數學之旅帶來的感受是矛盾與複雜的，當你身陷其中的時候，會想要趕快逃離；旅程結束之後，你有時又會懷念起這段「單純」的時光，因為你會暫時抽離現實生活，不用煩惱人生的下一步怎麼走，此刻擺在眼前只有數學。每天如同哲學家一般，思考著沒有止盡的問題，來回走動與沉思，並不時自言自語。</p>
 <p>大五這年，物是人非，曾經熟悉的人都離開了校園(事實上，我熟悉的人也不超過10人)。孤獨是常態，僅在開會、Office hour 與少數的飯局會開口講話。每天最常面對的人是自己，跟自己對話、請會的自己教不會的自己，而這過程當然缺少不了國榮老師、茂培老師與我最好的朋友AI。</p>
-<p>以結果論而言，我算是賭對時間修了這兩堂課，不僅學的內容很完整<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>，成績也不算太差<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a>。但我想這些都是其次，在分導與線代導夾擊下，真的是把一個人的極限逼出來。堅忍不拔是這一年最大的收穫，思考了數十小時依舊毫無頭緒，卻願意再花「一點點」時間思考還沒解決的問題。之前看了一篇<a href="https://www.facebook.com/chihua.wang.3/posts/pfbid0XSCNNJ48JvSbeixwt5ysG75A89c5X834fz3nD7U6oWLZWaK2oNWGMA1eGeyV9p2Xl">文章</a>，雖沒有完全體會他所說的每個論點（可能是年紀還小），但我也願意相信，「既然連 <span class="math inline">\(\varepsilon-\delta\)</span> 都能學了，那這個世界，還有什麼不能學的？」</p>
+<p>以結果論而言，我算是賭對時間修了這兩堂課，不僅學的內容很完整<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>，成績也不算太差<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>。但我想這些都是其次，在分導與線代導夾擊下，真的是把一個人的極限逼出來。堅忍不拔是這一年最大的收穫，思考了數十小時依舊毫無頭緒，卻願意再花「一點點」時間思考還沒解決的問題。之前看了一篇<a href="https://www.facebook.com/chihua.wang.3/posts/pfbid0XSCNNJ48JvSbeixwt5ysG75A89c5X834fz3nD7U6oWLZWaK2oNWGMA1eGeyV9p2Xl">文章</a>，雖沒有完全體會他所說的每個論點（可能是年紀還小），但我也願意相信，「既然連 <span class="math inline">\(\varepsilon-\delta\)</span> 都能學了，那這個世界，還有什麼不能學的？」</p>
 <p>經研所的考驗在前頭等著，等過完大學最後一個暑假，也是時候出山還俗了。</p>
 
 
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> 回到頂端</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">腳註</h2>
 
 <ol>
 <li id="fn1"><p>會考成績每年會依據整體學生答題狀況，以容錯題數換算等第為A++,A+,A,B++,B+,B,C。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -822,10 +815,9 @@ C_k\dfrac{x_k-x}{\delta}, &amp; x\in [x_k-\delta,x_k].
 <li id="fn5"><p>文言文就是老師寫了一整面天數黑板，你看不懂、也無法完全聽懂他想表達什麼。<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>希望不是自我感覺良好。<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>甚至是拿過數學系phD的AI，不用白不用🤣。<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>這個主題是小時候沒有人會教，但長大後的某天，當你需要用到的時候，授課老師會覺得你已經擁有這方面的先備知識🤡。<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>不太確定怎樣是一個做分析的人，據老師的說法是習慣用定義去解題；做代數的人比較常用定理。<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>以分導來說，能教到初階的測度論(measure theory)與泛函分析(functional analysis)，不用去實分析的課堂修，是真的滿賺的。<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn11"><p>分導考試有60分是來自於作業，老師都告訴你考哪一題了，考前就是進行多次的默寫練習。<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>不太確定怎樣是一個做分析的人，據老師的說法是習慣用定義去解題；做代數的人比較常用定理。<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>以分導來說，能教到初階的測度論(measure theory)與泛函分析(functional analysis)，不用去實分析的課堂修，是真的滿賺的。<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>分導考試有60分是來自於作業，老師都告訴你考哪一題了，考前就是進行多次的默寫練習。<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -866,12 +858,12 @@ C_k\dfrac{x_k-x}{\delta}, &amp; x\in [x_k-\delta,x_k].
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "已複製");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "已複製");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -1242,6 +1234,26 @@ C_k\dfrac{x_k-x}{\delta}, &amp; x\in [x_k-\delta,x_k].
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 YinYun Li</p>
+</div>   
+    <div class="nav-footer-center">
+<p>常著文章自娛，頗示己志。</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="../index.xml">
+      <i class="bi bi-rss-fill" role="img" aria-label="RSS">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 

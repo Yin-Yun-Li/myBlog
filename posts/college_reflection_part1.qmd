@@ -1,6 +1,6 @@
 ---
 title: "大學回顧(一)"
-author: "YinYun Li"
+description: "從畢業典禮回望大學幾個轉折，重看科系選擇、學習與命運的交會。"
 date: "2026-07-15"
 categories: ["人生", "大學", "學習"]
 ---

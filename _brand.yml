@@ -1,14 +1,23 @@
 meta:
-  name: "YinYun's Blog"
+  name: "吟耘札記"
 
 color:
   palette:
-    primary: "#7e909a"
-    accent: "#7e909a" 
+    ink: "#26332f"
+    pine: "#3f5b52"
+    cinnabar: "#a75645"
+    paper: "#f7f3e9"
+    sand: "#ded4c3"
+  foreground: ink
+  background: paper
+  primary: pine
+  secondary: cinnabar
 
 typography:
   fonts:
     - family: "Noto Serif TC"
+      source: google
+    - family: "Noto Sans TC"
       source: google
   base: "Noto Serif TC"
   headings: "Noto Serif TC"

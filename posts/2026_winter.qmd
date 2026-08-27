@@ -1,6 +1,6 @@
 ---
 title: "2026寒假"
-author: "YinYun Li"
+description: "在延畢生自動生成的寒假裡，追劇、讀書、研究，也出門走走。"
 date: "2026-02-24"
 categories: ["大學"]
 ---

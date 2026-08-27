@@ -1,6 +1,6 @@
 ---
 title: "《一把青》觀後"
-author: "YinYun Li"
+description: "十周年重看《一把青》，在小說與戲劇之間，細看人物與時代留下的餘韻。"
 date: "2026-02-28"
 categories: ["隨筆"]
 ---
@@ -186,7 +186,7 @@ categories: ["隨筆"]
 :::
 :::
 
-![Sources: 一把青粉專](../figures/7a961bd8-12ab-4234-a8c8-f075b19d60b7.jpg)
+![Sources: 一把青粉專](../figures/a-touch-of-green-guo-zhen-letter.jpg)
 
 
 2. 江偉成晚年淒涼、自殺後師娘的放聲痛哭。
@@ -212,7 +212,7 @@ categories: ["隨筆"]
 
 4. 1981年，朱青看著曾經三人合影的野馬機，墨婷叫了她，最後的回眸。
 
-![Sources: 一把青粉專](../figures/5e4a0b66-2e05-42fb-b6ee-ecf693ffe667.jpg)
+![Sources: 一把青粉專](../figures/a-touch-of-green-zhu-qing-look-back.jpg)
 
 
 全劇終。
@@ -235,8 +235,6 @@ categories: ["隨筆"]
 :::
 
 
-![天上的男人(Sources: 一把青粉專)](../figures/20fa42d1-0589-4408-9866-1d1c7096a02e.jpg)
+![天上的男人(Sources: 一把青粉專)](../figures/a-touch-of-green-men-in-the-sky.jpg)
 
-![地上的女人(Sources: 一把青粉專)](../figures/4b888fc7-a76f-49c0-8b93-9e391ba5bda6.jpg)
-
-
+![地上的女人(Sources: 一把青粉專)](../figures/a-touch-of-green-women-on-the-ground.jpg)

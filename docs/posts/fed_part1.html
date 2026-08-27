@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-TW" xml:lang="zh-TW"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="YinYun Li">
-<meta name="dcterms.date" content="2026-01-05">
+<meta name="description" content="從大通膨到伏克爾時代，整理聯準會如何重新建立貨幣政策的可信度。">
 
-<title>聯準會與通膨 – YinYun’s Blog</title>
+<title>聯準會與通膨 – 吟耘札記</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -26,27 +31,26 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../favicon.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7f4fc51365849c94d6a3311bd11959ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-76401e46e817165556279cf8b0bdca6f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-7f4fc51365849c94d6a3311bd11959ed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d433c88c64910f457007e0bbbf7baea5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9a76ebdd1c87f5b16f66eb6b86aee9fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d433c88c64910f457007e0bbbf7baea5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,65 +65,41 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "沒有結果",
+    "search-matching-documents-text": "符合的文件",
+    "search-copy-link-title": "複製搜尋連結",
+    "search-hide-matches-text": "隱藏其他符合的結果",
+    "search-more-match-text": "更多符合結果",
+    "search-more-matches-text": "更多符合結果",
+    "search-clear-button-title": "清除",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "送出",
+    "search-label": "搜尋"
   }
 }</script>
 <script>
-
   (function() {
-
     const savedTheme = localStorage.getItem("quarto-color-scheme");
+    const isDark = savedTheme === "alternate";
 
-    const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    // 先鋪上與網站一致的夜讀／紙張底色，避免主題切換時閃白。
+    document.documentElement.style.backgroundColor = isDark ? "#171d1b" : "#f7f3e9";
 
-    const isDark = savedTheme === "dark" || (!savedTheme && systemDark);
-
-
-
-    // 1. 立即把 html 底漆漆黑/白 (這發生在 body 出現前)
-
-    document.documentElement.style.backgroundColor = isDark ? "#1a1a1a" : "#ffffff";
-
-    
-
-    // 2. 注入一段臨時 CSS 鎖定初期顏色，不等 styles.css 下載完就生效
-
+    // 注入臨時 CSS 鎖定初期顏色，不等 styles.css 下載完就生效。
     const style = document.createElement('style');
-
     style.innerHTML = `
-
-      html, body { 
-
-        background-color: ${isDark ? "#1a1a1a" : "#ffffff"} !important; 
-
-        transition: none !important; 
-
+      html, body {
+        background-color: ${isDark ? "#171d1b" : "#f7f3e9"} !important;
+        transition: none !important;
       }
-
     `;
-
     document.head.appendChild(style);
-
   })();
-
 </script>
-<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
-
-<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -149,6 +129,12 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="聯準會與通膨 – 吟耘札記">
+<meta property="og:description" content="從大通膨到伏克爾時代，整理聯準會如何重新建立貨幣政策的可信度。">
+<meta property="og:image" content="https://yinyunli.github.io/myBlog/figures/pce_interest_rate_fed.png">
+<meta property="og:site_name" content="吟耘札記">
+<meta property="og:image:height" content="450">
+<meta property="og:image:width" content="1320">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -321,32 +307,37 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">YinYun’s Blog</span>
+    <span class="navbar-title">吟耘札記</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="搜尋"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="切換導航列" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">首頁</span></a>
+<span class="menu-text">文章</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../about.html"> 
-<span class="menu-text">關於</span></a>
+<span class="menu-text">關於此間</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://yin-yun-li.github.io/"> <i class="bi bi-mortarboard" role="img">
+</i> 
+<span class="menu-text">學術頁</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../index.xml"> <i class="bi bi-rss-fill" role="img">
 </i> 
-<span class="menu-text">RSS</span></a>
+<span class="menu-text">訂閱</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="切換深色模式"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -357,7 +348,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">本頁目錄</h2>
    
   <ul>
   <li><a href="#great-inflation" id="toc-great-inflation" class="nav-link active" data-scroll-target="#great-inflation">Great Inflation</a></li>
@@ -387,21 +378,20 @@ window.Quarto = {
   </div>
   </div>
 
+<div>
+  <div class="description">
+    從大通膨到伏克爾時代，整理聯準會如何重新建立貨幣政策的可信度。
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>YinYun Li </p>
-          </div>
-  </div>
     
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">發佈於</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 5, 2026</p>
+      <p class="date">2026年1月5日</p>
     </div>
   </div>
   
@@ -429,14 +419,14 @@ window.Quarto = {
 <div id="fig-pce" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%">
+<img src="../figures/pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: PCE物價指數與聯邦基金利率時間序列
+圖&nbsp;1: PCE物價指數與聯邦基金利率時間序列
 </figcaption>
 </figure>
 </div>
-<p><a href="#fig-pce" class="quarto-xref">Figure&nbsp;1</a> 是Federal Reserve Economic Data(FRED)提供的通膨與利率季資料，藍色實線為核心<a href="#pce">個人消費支出物價指數</a> (排除食物與能源等價格易受季節波動的項目) 的每年變化，綠色虛線則為聯邦基金利率。我認為這張圖勾勒了本書前兩章的內容，並對現代央行樹立了重要的典範。</p>
+<p><a href="#fig-pce" class="quarto-xref">圖&nbsp;1</a> 是Federal Reserve Economic Data(FRED)提供的通膨與利率季資料，藍色實線為核心<a href="#pce">個人消費支出物價指數</a> (排除食物與能源等價格易受季節波動的項目) 的每年變化，綠色虛線則為聯邦基金利率。我認為這張圖勾勒了本書前兩章的內容，並對現代央行樹立了重要的典範。</p>
 <p>1965年左右，通膨開始持續上升，當時解釋這個現象的重要學說為菲利浦曲線。其核心觀點為，當勞動市場存在超額需求時，將推動工資的上升，也就是說勞動市場的閒置數量(失業率)與薪資成長為反向關係(薪資菲利浦)曲線。相同地，當商品市場需求強勁時，物價將會上升，進而對勞動市場有更多的需求，使得物價與失業率亦呈現反向的實證關係。</p>
 <p>在1960年總統大選適逢景氣衰退，甫選上美國總統的甘迺迪以擴張性財政政策解決失業問題，由於「短期」而言，物價與失業率存在抵換關係，執政者透過刺激總合需求帶動經濟成長，卻使得通膨變得日益嚴重，從甘迺迪、詹森，直至尼克森。為了抑制通膨且不讓經濟減緩，尼克森竟然推行薪資與物價控管的措施。然而，管制抹煞了價格傳達的市場資訊與協調機制，讓勞工、企業與家戶無法正確決策。不過，尼克森在選舉年前後沒有採用任何緊縮性政策來抑制總體需求，他在1972年連任成功。</p>
 <p>當價格控管結束後，通膨開始反彈上升，再加上石油危機與通膨心理，通膨率將持續飆升。前者作為短期供給面的外生衝擊並非最大的問題，反而是大眾對於持續上升的通膨視為常態的心理預期，將導致通膨更難管理。比如，勞工考慮到未來通膨繼續升高，於是在薪資協商時要求通膨補貼(非正式調整或是COLA<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>)，雇主沒有辦法抵抗加薪，於是將上漲成本轉移給消費者，進一步提高通膨壓力，造成工資物價雙雙上升的惡性循環(wage-price spiral)。因此，石油危機與通膨預期推翻了傳統菲利浦曲線的抵換關係，總體經濟呈現停滯性通膨(stagflation)<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>。</p>
@@ -527,83 +517,12 @@ dP = -D\frac{dr}{1+r}P.
 <p>若採用連鎖法，首先計算2到3的Fisher Link(約 1.260)，可得 <span class="math display">\[
     P^C_3 = 1.373 \times 1.260 \approx 1.730.
 \]</span></p>
-<table class="table table-striped table-hover caption-top">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-<col style="width: 11%">
-</colgroup>
-<thead>
-<tr class="header">
-<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
-<th colspan="3" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-實質 GDP
-</div></th>
-<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; empty-cells: hide; border-bottom: hidden;"></th>
-<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
-連鎖價格指數
-</div></th>
-</tr>
-<tr class="even">
-<th style="text-align: center;" data-quarto-table-cell-role="th">期數</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">名目 GDP</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">基期=1</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">基期=2</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">基期=3</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">GDP Deflator</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">CPI</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">Fisher Index</th>
-<th style="text-align: center;" data-quarto-table-cell-role="th">PCE Price Index</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">$200</td>
-<td style="text-align: center;">$200</td>
-<td style="text-align: center;">$280</td>
-<td style="text-align: center;">$360</td>
-<td style="text-align: center;">1.000</td>
-<td style="text-align: center;">1.000</td>
-<td style="text-align: center;">-</td>
-<td style="text-align: center;">1.000</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">$350</td>
-<td style="text-align: center;">$260</td>
-<td style="text-align: center;">$350</td>
-<td style="text-align: center;">$440</td>
-<td style="text-align: center;">1.346</td>
-<td style="text-align: center;">1.400</td>
-<td style="text-align: center;">1.373</td>
-<td style="text-align: center;">1.373</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">$480</td>
-<td style="text-align: center;">$280</td>
-<td style="text-align: center;">$380</td>
-<td style="text-align: center;">$480</td>
-<td style="text-align: center;">1.714</td>
-<td style="text-align: center;">1.800</td>
-<td style="text-align: center;">1.260</td>
-<td style="text-align: center;">1.730</td>
-</tr>
-</tbody>
-</table>
 
 
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> 回到頂端</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">腳註</h2>
 
 <ol>
 <li id="fn1"><p>Cost of Living Adjustment (COLA): 我們前面提到用直接法計算CPI，COLA這是從連鎖的角度來思考薪資調整。</p>
@@ -657,12 +576,12 @@ dP = -D\frac{dr}{1+r}P.
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "已複製");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "已複製");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -1033,6 +952,26 @@ dP = -D\frac{dr}{1+r}P.
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 YinYun Li</p>
+</div>   
+    <div class="nav-footer-center">
+<p>常著文章自娛，頗示己志。</p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="../index.xml">
+      <i class="bi bi-rss-fill" role="img" aria-label="RSS">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 

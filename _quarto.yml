@@ -1,25 +1,42 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "posts/*.qmd"
+    - "!posts/lss_problem.qmd"
+
+lang: zh-TW
 
 website:
-  title: YinYun's Blog
+  title: "吟耘札記"
+  description: "YinYun 的生活隨筆、人生雜想與學習札記。"
+  favicon: favicon.svg
   site-url: "https://yinyunli.github.io/myBlog/"
-  search: true 
+  search: true
+  open-graph: true
+  back-to-top-navigation: true
   navbar:
     background: none
-    left:
+    pinned: true
+    right:
       - href: index.qmd
-        text: 首頁
+        text: 文章
       - href: about.qmd
-        text: 關於
+        text: 關於此間
+      - href: https://yin-yun-li.github.io/
+        text: 學術頁
+        icon: mortarboard
       - icon: rss-fill
-        text: RSS
+        text: 訂閱
         href: index.xml
-
-
-
-
+  page-footer:
+    left: "© 2026 YinYun Li"
+    center: "常著文章自娛，頗示己志。"
+    right:
+      - icon: rss-fill
+        href: index.xml
+        aria-label: RSS
 format:
   html:
     theme:
@@ -33,7 +50,7 @@ format:
       desc-position: bottom
     toc: true
     html-math-method: mathjax
-    theme-color: "#1a1a1a"
+    theme-color: "#3f5b52"
 
 execute:
   freeze: auto

@@ -1,15 +1,31 @@
 ---
-title: "該寫些什麼呢？"
+title: "文章"
 listing:
-  contents: posts
+  contents:
+    - posts
+    - "!posts/lss_problem.qmd"
   feed: true
   sort: "date desc"
-  type: default
-  categories: true     
-  fields: [date, title, categories] 
+  type: grid
+  grid-columns: 2
+  page-size: 15
+  categories: true
+  filter-ui: false
+  fields: [date, title, description, categories]
+  date-format: "YYYY 年 M 月 D 日"
   field-display-names:
     title: "標題"
     date: "日期"
+    description: "短記"
     categories: "分類"
-page-layout: article      
+page-layout: article
+toc: false
 ---
+
+::: {.archive-intro}
+<p class="archive-kicker">MISCELLANEA · 雜記</p>
+<p>不拘題材，依落筆之日次第陳列；可由分類翻閱。</p>
+:::
+
+::: {#listing}
+:::

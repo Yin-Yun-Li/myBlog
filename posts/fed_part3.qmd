@@ -1,6 +1,6 @@
 ---
 title: "21世紀後的聯準會"
-author: "YinYun Li"
+description: "從葉倫到鮑爾，梳理低通膨、疫情衝擊與新時代貨幣政策的兩難。"
 date: "2026-01-29"
 categories: ["貨幣政策", "經濟學"]
 ---

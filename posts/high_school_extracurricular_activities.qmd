@@ -1,6 +1,6 @@
 ---
 title: "吉他社與科志"
-author: "YinYun Li"
+description: "回看高中社團與志工經驗：那些投入、抽離，以及多年後才懂的得失。"
 date: "2026-02-01"
 categories: ["高中", "人生"]
 ---
