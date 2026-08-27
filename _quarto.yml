@@ -19,10 +19,10 @@ website:
     background: none
     pinned: true
     right:
-      - href: index.qmd
-        text: 文章
       - href: about.qmd
         text: 關於此間
+      - href: index.qmd
+        text: 文章
       - href: https://yin-yun-li.github.io/
         text: 學術頁
         icon: mortarboard
