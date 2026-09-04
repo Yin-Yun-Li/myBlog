@@ -3,17 +3,45 @@
     const savedTheme = localStorage.getItem("quarto-color-scheme");
     const isDark = savedTheme === "alternate";
 
-    // 先鋪上與網站一致的夜讀／紙張底色，避免主題切換時閃白。
-    document.documentElement.style.backgroundColor = isDark ? "#171d1b" : "#f7f3e9";
+    // 先鋪上與網站一致的天青石底色，避免主題切換時閃白。
+    document.documentElement.style.backgroundColor = isDark ? "#111c22" : "#f2f8fa";
 
     // 注入臨時 CSS 鎖定初期顏色，不等 styles.css 下載完就生效。
     const style = document.createElement('style');
     style.innerHTML = `
       html, body {
-        background-color: ${isDark ? "#171d1b" : "#f7f3e9"} !important;
+        background-color: ${isDark ? "#111c22" : "#f2f8fa"} !important;
         transition: none !important;
       }
     `;
     document.head.appendChild(style);
   })();
+
+  // Quarto 會在 Safari 切換配色時暫時捲到頁首；攔下該動作並保留閱讀位置。
+  window.addEventListener("DOMContentLoaded", () => {
+    const quartoToggle = window.quartoToggleColorScheme;
+    if (typeof quartoToggle !== "function") return;
+
+    const nativeScrollTo = window.scrollTo;
+    let restoreTimer;
+
+    window.quartoToggleColorScheme = (...args) => {
+      const left = window.scrollX;
+      const top = window.scrollY;
+      window.scrollTo = () => {};
+
+      let result;
+      try {
+        result = quartoToggle(...args);
+      } finally {
+        window.clearTimeout(restoreTimer);
+        restoreTimer = window.setTimeout(() => {
+          window.scrollTo = nativeScrollTo;
+          nativeScrollTo.call(window, left, top);
+        }, 80);
+      }
+
+      return result;
+    };
+  });
 </script>

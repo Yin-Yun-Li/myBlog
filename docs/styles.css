@@ -180,6 +180,28 @@ h1:not(.title) {
   line-height: 1;
 }
 
+/* --- 男三宿舍照片牆 --- */
+.dorm-gallery .dorm-landscape-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.dorm-gallery .dorm-landscape-stack p {
+  margin: 0;
+}
+
+.dorm-gallery .dorm-landscape-stack .lightbox {
+  display: block;
+}
+
+.dorm-gallery .dorm-landscape-stack img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
 /* --- 7. AI 對話摘錄 --- */
 .ai-dialogue {
   margin: 1.5rem 0 1.75rem;
@@ -191,7 +213,7 @@ h1:not(.title) {
 
 .dialogue-section-title {
   margin: 0 0 0.45rem;
-  color: #7e909a;
+  color: var(--yy-pine);
   font-size: 0.95rem;
   font-weight: 700;
   line-height: 1.45;
@@ -204,10 +226,10 @@ h1:not(.title) {
 .dialogue-prompt {
   margin: 1rem 0 0.35rem;
   padding: 0.9rem 1.1rem;
-  border: 1px solid #d0d0d0;
+  border: 1px solid var(--yy-line);
   border-radius: 6px;
-  background: #f4f4f4;
-  color: #202020;
+  background: var(--yy-surface-solid);
+  color: var(--yy-ink);
 }
 
 .dialogue-prompt p {
@@ -220,14 +242,14 @@ h1:not(.title) {
 
 .gemini-excerpt {
   margin: 0 0 1.15rem;
-  border: 1px solid #0b0b72;
+  border: 1px solid var(--yy-pine);
   border-radius: 7px;
   overflow: hidden;
 }
 
 .gemini-excerpt-title {
   padding: 0.35rem 0.85rem;
-  background: #0b0b72;
+  background: var(--yy-pine);
   color: #ffffff;
   font-weight: 700;
   line-height: 1.35;
@@ -272,7 +294,7 @@ h1:not(.title) {
 .dialogue-bubble {
   max-width: 86%;
   padding: 0.85rem 1rem;
-  border: 1px solid rgba(126, 144, 154, 0.32);
+  border: 1px solid color-mix(in srgb, var(--yy-pine) 28%, var(--yy-line));
   border-radius: 8px;
   line-height: 1.75;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
@@ -280,7 +302,7 @@ h1:not(.title) {
 
 .dialogue-name {
   margin-bottom: 0.35rem;
-  color: #7e909a;
+  color: var(--yy-pine);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0;
@@ -322,51 +344,51 @@ h1:not(.title) {
 }
 
 body.quarto-light .dialogue-user .dialogue-bubble {
-  background: #eef3f5;
-  border-color: #c8d4da;
-  color: #344047;
+  background: var(--yy-pine-soft);
+  border-color: var(--yy-line);
+  color: var(--yy-ink);
 }
 
 body.quarto-light .dialogue-ai .dialogue-bubble {
-  background: #ffffff;
-  border-color: #d9dfe3;
-  color: #424242;
+  background: var(--yy-surface-solid);
+  border-color: var(--yy-line);
+  color: var(--yy-ink);
 }
 
 body.quarto-light .gemini-excerpt-body {
-  background: #f6f7ff;
-  color: #242424;
+  background: color-mix(in srgb, var(--yy-surface-solid) 76%, var(--yy-pine-soft));
+  color: var(--yy-ink);
 }
 
 body.quarto-dark .dialogue-user .dialogue-bubble {
-  background: rgba(126, 144, 154, 0.22);
-  border-color: rgba(160, 172, 181, 0.38);
-  color: #e7ecef;
+  background: var(--yy-pine-soft);
+  border-color: color-mix(in srgb, var(--yy-pine) 38%, var(--yy-line));
+  color: var(--yy-ink);
 }
 
 body.quarto-dark .dialogue-ai .dialogue-bubble {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
-  color: #d8d8d8;
+  background: var(--yy-surface-solid);
+  border-color: var(--yy-line);
+  color: var(--yy-ink);
 }
 
 body.quarto-dark .dialogue-prompt {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.18);
-  color: #ececec;
+  background: var(--yy-surface-solid);
+  border-color: var(--yy-line);
+  color: var(--yy-ink);
 }
 
 body.quarto-dark .gemini-excerpt {
-  border-color: #4f67d7;
+  border-color: var(--yy-pine);
 }
 
 body.quarto-dark .gemini-excerpt-title {
-  background: #26337f;
+  background: color-mix(in srgb, var(--yy-pine) 48%, var(--yy-paper));
 }
 
 body.quarto-dark .gemini-excerpt-body {
-  background: rgba(255, 255, 255, 0.05);
-  color: #d8d8d8;
+  background: var(--yy-surface-solid);
+  color: var(--yy-ink);
 }
 
 @media (max-width: 640px) {
@@ -380,42 +402,42 @@ body.quarto-dark .gemini-excerpt-body {
 }
 
 /* =========================================================
-   8. 吟耘札記：現代書齋視覺系統
+   8. 吟耘札記：天青石書齋視覺系統
    ========================================================= */
 
 :root {
-  --yy-paper: #f7f3e9;
-  --yy-paper-deep: #eee7d8;
-  --yy-surface: rgba(255, 253, 248, 0.9);
-  --yy-surface-solid: #fffdf8;
-  --yy-ink: #26332f;
-  --yy-ink-soft: #58635e;
-  --yy-muted: #7a7d75;
-  --yy-pine: #3f5b52;
-  --yy-pine-soft: #e2e9e4;
-  --yy-cinnabar: #a75645;
-  --yy-cinnabar-soft: #f2e2dc;
-  --yy-line: #ded4c3;
-  --yy-nav: rgba(247, 243, 233, 0.9);
-  --yy-shadow: 0 18px 50px rgba(55, 48, 37, 0.08);
-  --yy-shadow-hover: 0 24px 55px rgba(55, 48, 37, 0.14);
+  --yy-paper: #f2f8fa;
+  --yy-paper-deep: #e2eff3;
+  --yy-surface: rgba(250, 253, 254, 0.9);
+  --yy-surface-solid: #fbfeff;
+  --yy-ink: #22373f;
+  --yy-ink-soft: #506871;
+  --yy-muted: #5d757e;
+  --yy-pine: #326a7e;
+  --yy-pine-soft: #dcecf2;
+  --yy-cinnabar: #457688;
+  --yy-cinnabar-soft: #d3e8ef;
+  --yy-line: #c7dce4;
+  --yy-nav: rgba(242, 248, 250, 0.9);
+  --yy-shadow: 0 18px 50px rgba(41, 78, 91, 0.09);
+  --yy-shadow-hover: 0 24px 55px rgba(41, 78, 91, 0.15);
   --yy-radius: 3px;
 }
 
 body.quarto-dark {
-  --yy-paper: #171d1b;
-  --yy-paper-deep: #202825;
-  --yy-surface: rgba(31, 40, 37, 0.9);
-  --yy-surface-solid: #1f2825;
-  --yy-ink: #e6e1d5;
-  --yy-ink-soft: #bdc3bc;
-  --yy-muted: #949d96;
-  --yy-pine: #9bb5aa;
-  --yy-pine-soft: #293a34;
-  --yy-cinnabar: #d58a76;
-  --yy-cinnabar-soft: #452f2a;
-  --yy-line: #3b4843;
-  --yy-nav: rgba(23, 29, 27, 0.9);
+  --yy-paper: #111c22;
+  --yy-paper-deep: #17262d;
+  --yy-surface: rgba(24, 40, 47, 0.9);
+  --yy-surface-solid: #192a31;
+  --yy-ink: #e4eff2;
+  --yy-ink-soft: #b7cbd1;
+  --yy-muted: #91a8b0;
+  --yy-pine: #8fc7d7;
+  --yy-pine-soft: #203a45;
+  --yy-cinnabar: #b5dce6;
+  --yy-cinnabar-soft: #294b57;
+  --yy-line: #36515c;
+  --yy-nav: rgba(17, 28, 34, 0.9);
   --yy-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
   --yy-shadow-hover: 0 24px 55px rgba(0, 0, 0, 0.32);
 }
@@ -429,8 +451,9 @@ body.quarto-light,
 body.quarto-dark {
   background-color: var(--yy-paper) !important;
   background-image:
-    radial-gradient(circle at 90% 4%, rgba(167, 86, 69, 0.08), transparent 26rem),
-    radial-gradient(circle at 4% 45%, rgba(63, 91, 82, 0.06), transparent 34rem);
+    radial-gradient(circle at 90% 4%, color-mix(in srgb, var(--yy-cinnabar) 13%, transparent), transparent 28rem),
+    radial-gradient(circle at 4% 45%, color-mix(in srgb, var(--yy-pine) 9%, transparent), transparent 36rem),
+    linear-gradient(180deg, color-mix(in srgb, var(--yy-paper-deep) 34%, transparent), transparent 24rem);
   color: var(--yy-ink) !important;
   font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
   font-size: 16px;
@@ -529,7 +552,7 @@ body.quarto-dark .navbar {
   padding: 0.65rem max(1rem, calc((100vw - 1180px) / 2)) !important;
   border-bottom: 1px solid color-mix(in srgb, var(--yy-line) 78%, transparent) !important;
   background: var(--yy-nav) !important;
-  box-shadow: 0 5px 20px rgba(45, 42, 35, 0.035);
+  box-shadow: 0 5px 20px rgba(41, 78, 91, 0.055);
   backdrop-filter: blur(18px) saturate(130%);
   -webkit-backdrop-filter: blur(18px) saturate(130%);
 }
@@ -657,13 +680,79 @@ body.quarto-dark #quarto-toc-column .nav-link.active {
 
 .callout {
   border-color: var(--yy-line) !important;
-  background: color-mix(in srgb, var(--yy-surface-solid) 82%, transparent);
+  background-color: color-mix(in srgb, var(--yy-paper-deep) 62%, transparent) !important;
+  color: var(--yy-ink) !important;
+  box-shadow: inset 3px 0 0 color-mix(in srgb, var(--yy-pine) 55%, transparent);
+}
+
+.callout .callout-title-container,
+.callout .callout-body-container,
+.callout .callout-body-container p,
+.callout .callout-body-container li {
+  color: var(--yy-ink) !important;
 }
 
 pre,
 code,
 .sourceCode {
   border-color: var(--yy-line) !important;
+}
+
+/* 讓行內程式碼、程式區塊與註腳浮窗沿用天青石底色。 */
+:not(pre) > code {
+  border: 1px solid color-mix(in srgb, var(--yy-pine) 18%, var(--yy-line));
+  border-radius: 3px;
+  background-color: color-mix(in srgb, var(--yy-pine-soft) 72%, transparent) !important;
+  color: var(--yy-pine) !important;
+}
+
+pre,
+div.sourceCode,
+pre.sourceCode {
+  border-color: var(--yy-line) !important;
+  background-color: color-mix(in srgb, var(--yy-surface-solid) 72%, var(--yy-paper)) !important;
+  color: var(--yy-ink) !important;
+}
+
+pre code {
+  border: 0 !important;
+  background: transparent !important;
+  color: inherit;
+}
+
+mark,
+.mark {
+  background-color: var(--yy-cinnabar-soft) !important;
+  color: var(--yy-ink) !important;
+}
+
+#quarto-appendix .footnotes {
+  margin-top: 2rem;
+  padding: 1.15rem 1.35rem;
+  border: 1px solid color-mix(in srgb, var(--yy-line) 72%, transparent);
+  border-radius: var(--yy-radius);
+  background-color: color-mix(in srgb, var(--yy-paper-deep) 38%, transparent);
+}
+
+.footnote-ref,
+.footnote-back {
+  color: var(--yy-pine) !important;
+  text-decoration: none !important;
+}
+
+.tippy-box {
+  border: 1px solid var(--yy-line);
+  background-color: color-mix(in srgb, var(--yy-surface-solid) 92%, var(--yy-paper)) !important;
+  box-shadow: var(--yy-shadow);
+  color: var(--yy-ink) !important;
+}
+
+.tippy-box .tippy-content {
+  padding: 0.7rem 0.85rem;
+}
+
+.tippy-box .tippy-arrow {
+  color: var(--yy-surface-solid) !important;
 }
 
 /* 文章彙整：短引與卡片。 */
@@ -713,7 +802,7 @@ body:has(.archive-intro) h1.title {
   border: 1px solid var(--yy-line);
   border-radius: var(--yy-radius);
   background: var(--yy-surface);
-  box-shadow: 0 10px 32px rgba(55, 48, 37, 0.055);
+  box-shadow: 0 10px 32px rgba(41, 78, 91, 0.07);
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="從升學考試一路走到初等分析，記錄一段若即若離、仍在繼續的數學旅程。">
+<meta name="description" content="從升學考試一路走到大學數學，記錄一段若即若離、仍在繼續的數學旅程。">
 
 <title>數學之旅 – 吟耘札記</title>
 <style>
@@ -47,9 +47,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d433c88c64910f457007e0bbbf7baea5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-9a76ebdd1c87f5b16f66eb6b86aee9fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-d433c88c64910f457007e0bbbf7baea5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-7fab981e3aa4802f39138f3e92a125bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-3d74a298555efe0bf36840a24d8cb1cb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-7fab981e3aa4802f39138f3e92a125bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,19 +82,47 @@ ul.task-list li input[type="checkbox"] {
     const savedTheme = localStorage.getItem("quarto-color-scheme");
     const isDark = savedTheme === "alternate";
 
-    // 先鋪上與網站一致的夜讀／紙張底色，避免主題切換時閃白。
-    document.documentElement.style.backgroundColor = isDark ? "#171d1b" : "#f7f3e9";
+    // 先鋪上與網站一致的天青石底色，避免主題切換時閃白。
+    document.documentElement.style.backgroundColor = isDark ? "#111c22" : "#f2f8fa";
 
     // 注入臨時 CSS 鎖定初期顏色，不等 styles.css 下載完就生效。
     const style = document.createElement('style');
     style.innerHTML = `
       html, body {
-        background-color: ${isDark ? "#171d1b" : "#f7f3e9"} !important;
+        background-color: ${isDark ? "#111c22" : "#f2f8fa"} !important;
         transition: none !important;
       }
     `;
     document.head.appendChild(style);
   })();
+
+  // Quarto 會在 Safari 切換配色時暫時捲到頁首；攔下該動作並保留閱讀位置。
+  window.addEventListener("DOMContentLoaded", () => {
+    const quartoToggle = window.quartoToggleColorScheme;
+    if (typeof quartoToggle !== "function") return;
+
+    const nativeScrollTo = window.scrollTo;
+    let restoreTimer;
+
+    window.quartoToggleColorScheme = (...args) => {
+      const left = window.scrollX;
+      const top = window.scrollY;
+      window.scrollTo = () => {};
+
+      let result;
+      try {
+        result = quartoToggle(...args);
+      } finally {
+        window.clearTimeout(restoreTimer);
+        restoreTimer = window.setTimeout(() => {
+          window.scrollTo = nativeScrollTo;
+          nativeScrollTo.call(window, left, top);
+        }, 80);
+      }
+
+      return result;
+    };
+  });
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -129,8 +157,8 @@ window.Quarto = {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="數學之旅 – 吟耘札記">
-<meta property="og:description" content="從升學考試一路走到初等分析，記錄一段若即若離、仍在繼續的數學旅程。">
-<meta property="og:image" content="https://yinyunli.github.io/myBlog/figures/常見證明方法.jpg">
+<meta property="og:description" content="從升學考試一路走到大學數學，記錄一段若即若離、仍在繼續的數學旅程。">
+<meta property="og:image" content="https://yin-yun-li.github.io/myBlog/figures/常見證明方法.jpg">
 <meta property="og:site_name" content="吟耘札記">
 <meta property="og:image:alt" content="常見證明方法">
 </head>
@@ -304,7 +332,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg border-bottom" data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../about.html">
     <span class="navbar-title">吟耘札記</span>
     </a>
   </div>
@@ -314,10 +342,6 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">關於此間</span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">文章</span></a>
@@ -372,7 +396,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    從升學考試一路走到初等分析，記錄一段若即若離、仍在繼續的數學旅程。
+    從升學考試一路走到大學數學，記錄一段若即若離、仍在繼續的數學旅程。
   </div>
 </div>
 
@@ -905,7 +929,7 @@ C_k\dfrac{x_k-x}{\delta}, &amp; x\in [x_k-\delta,x_k].
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/yinyunli\.github\.io\/myBlog\/");
+        var filterRegex = new RegExp("https:\/\/yin-yun-li\.github\.io\/myBlog\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

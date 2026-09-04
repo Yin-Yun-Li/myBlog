@@ -3,15 +3,15 @@ meta:
 
 color:
   palette:
-    ink: "#26332f"
-    pine: "#3f5b52"
-    cinnabar: "#a75645"
-    paper: "#f7f3e9"
-    sand: "#ded4c3"
+    ink: "#22373f"
+    celestite: "#326a7e"
+    sky: "#457688"
+    mist: "#f2f8fa"
+    vein: "#c7dce4"
   foreground: ink
-  background: paper
-  primary: pine
-  secondary: cinnabar
+  background: mist
+  primary: celestite
+  secondary: sky
 
 typography:
   fonts:

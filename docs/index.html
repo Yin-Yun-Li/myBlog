@@ -48,9 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d433c88c64910f457007e0bbbf7baea5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9a76ebdd1c87f5b16f66eb6b86aee9fd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d433c88c64910f457007e0bbbf7baea5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7fab981e3aa4802f39138f3e92a125bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-3d74a298555efe0bf36840a24d8cb1cb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-7fab981e3aa4802f39138f3e92a125bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,19 +112,47 @@ ul.task-list li input[type="checkbox"] {
     const savedTheme = localStorage.getItem("quarto-color-scheme");
     const isDark = savedTheme === "alternate";
 
-    // 先鋪上與網站一致的夜讀／紙張底色，避免主題切換時閃白。
-    document.documentElement.style.backgroundColor = isDark ? "#171d1b" : "#f7f3e9";
+    // 先鋪上與網站一致的天青石底色，避免主題切換時閃白。
+    document.documentElement.style.backgroundColor = isDark ? "#111c22" : "#f2f8fa";
 
     // 注入臨時 CSS 鎖定初期顏色，不等 styles.css 下載完就生效。
     const style = document.createElement('style');
     style.innerHTML = `
       html, body {
-        background-color: ${isDark ? "#171d1b" : "#f7f3e9"} !important;
+        background-color: ${isDark ? "#111c22" : "#f2f8fa"} !important;
         transition: none !important;
       }
     `;
     document.head.appendChild(style);
   })();
+
+  // Quarto 會在 Safari 切換配色時暫時捲到頁首；攔下該動作並保留閱讀位置。
+  window.addEventListener("DOMContentLoaded", () => {
+    const quartoToggle = window.quartoToggleColorScheme;
+    if (typeof quartoToggle !== "function") return;
+
+    const nativeScrollTo = window.scrollTo;
+    let restoreTimer;
+
+    window.quartoToggleColorScheme = (...args) => {
+      const left = window.scrollX;
+      const top = window.scrollY;
+      window.scrollTo = () => {};
+
+      let result;
+      try {
+        result = quartoToggle(...args);
+      } finally {
+        window.clearTimeout(restoreTimer);
+        restoreTimer = window.setTimeout(() => {
+          window.scrollTo = nativeScrollTo;
+          nativeScrollTo.call(window, left, top);
+        }, 80);
+      }
+
+      return result;
+    };
+  });
 </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -331,7 +359,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg border-bottom" data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="./about.html">
     <span class="navbar-title">吟耘札記</span>
     </a>
   </div>
@@ -341,10 +369,6 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">關於此間</span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">文章</span></a>
@@ -372,7 +396,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">類別</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">全部 <span class="quarto-category-count">(13)</span></div><div class="category" data-category="JUU0JUJBJUJBJUU3JTk0JTlG">人生 <span class="quarto-category-count">(4)</span></div><div class="category" data-category="JUU1JUE0JUE3JUU1JUFEJUI4">大學 <span class="quarto-category-count">(3)</span></div><div class="category" data-category="JUU1JUFEJUI4JUU3JUJGJTky">學習 <span class="quarto-category-count">(4)</span></div><div class="category" data-category="JUU2JTk1JUI4JUU1JUFEJUI4">數學 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU3JUI2JTkzJUU2JUJGJTlGJUU1JUFEJUI4">經濟學 <span class="quarto-category-count">(3)</span></div><div class="category" data-category="JUU4JUIyJUE4JUU1JUI5JUEzJUU2JTk0JUJGJUU3JUFEJTk2">貨幣政策 <span class="quarto-category-count">(3)</span></div><div class="category" data-category="JUU5JTlBJUE4JUU3JUFEJTg2">隨筆 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="JUU5JUFCJTk4JUU0JUI4JUFE">高中 <span class="quarto-category-count">(3)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">類別</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">全部 <span class="quarto-category-count">(14)</span></div><div class="category" data-category="JUU0JUJBJUJBJUU3JTk0JTlG">人生 <span class="quarto-category-count">(4)</span></div><div class="category" data-category="JUU1JUE0JUE3JUU1JUFEJUI4">大學 <span class="quarto-category-count">(4)</span></div><div class="category" data-category="JUU1JUFEJUI4JUU3JUJGJTky">學習 <span class="quarto-category-count">(4)</span></div><div class="category" data-category="JUU2JTk1JUI4JUU1JUFEJUI4">數學 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="JUU3JUI2JTkzJUU2JUJGJTlGJUU1JUFEJUI4">經濟學 <span class="quarto-category-count">(3)</span></div><div class="category" data-category="JUU4JUIyJUE4JUU1JUI5JUEzJUU2JTk0JUJGJUU3JUFEJTk2">貨幣政策 <span class="quarto-category-count">(3)</span></div><div class="category" data-category="JUU5JTlBJUE4JUU3JUFEJTg2">隨筆 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="JUU5JUFCJTk4JUU0JUI4JUFE">高中 <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -406,7 +430,30 @@ MISCELLANEA · 雜記
 </div>
 <div id="listing-listing" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="JUU0JUJBJUJBJUU3JTk0JTlGJTJDJUU1JUE0JUE3JUU1JUFEJUI4JTJDJUU1JUFEJUI4JUU3JUJGJTky" data-listing-date-sort="1784044800000" data-listing-file-modified-sort="1787843517964" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
+<div class="g-col-1" data-index="0" data-categories="JUU1JUE0JUE3JUU1JUFEJUI4" data-listing-date-sort="1788364800000" data-listing-file-modified-sort="1788520045118" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<a href="./posts/college_dorm.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+告別男三
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('JUU1JUE0JUE3JUU1JUFEJUI4'); return false;">大學</div>
+
+</div>
+<div class="card-text listing-description delink">
+<p>搬離住了四年的男三，記下五味雜陳的宿舍生活。</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+2026 年 9 月 3 日
+</div>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="JUU0JUJBJUJBJUU3JTk0JTlGJTJDJUU1JUE0JUE3JUU1JUFEJUI4JTJDJUU1JUFEJUI4JUU3JUJGJTky" data-listing-date-sort="1784044800000" data-listing-file-modified-sort="1787978508379" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
 <a href="./posts/college_reflection_part1.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -423,7 +470,7 @@ MISCELLANEA · 雜記
 
 </div>
 <div class="card-text listing-description delink">
-<p>從畢業典禮回望大學幾個轉折，重看科系選擇、學習與命運的交會。</p>
+<p>回望大學幾個轉折，重看科系選擇、學習與命運的交會。</p>
 </div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
@@ -433,7 +480,7 @@ MISCELLANEA · 雜記
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="JUU1JUFEJUI4JUU3JUJGJTkyJTJDJUU2JTk1JUI4JUU1JUFEJUI4" data-listing-date-sort="1783440000000" data-listing-file-modified-sort="1787843518340" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
+<div class="g-col-1" data-index="2" data-categories="JUU1JUFEJUI4JUU3JUJGJTkyJTJDJUU2JTk1JUI4JUU1JUFEJUI4" data-listing-date-sort="1783440000000" data-listing-file-modified-sort="1787978627441" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="456">
 <a href="./posts/math_journey.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -448,7 +495,7 @@ MISCELLANEA · 雜記
 
 </div>
 <div class="card-text listing-description delink">
-<p>從升學考試一路走到初等分析，記錄一段若即若離、仍在繼續的數學旅程。</p>
+<p>從升學考試一路走到大學數學，記錄一段若即若離、仍在繼續的數學旅程。</p>
 </div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
@@ -458,7 +505,7 @@ MISCELLANEA · 雜記
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="JUU5JTlBJUE4JUU3JUFEJTg2" data-listing-date-sort="1772208000000" data-listing-file-modified-sort="1787843517926" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="170">
+<div class="g-col-1" data-index="3" data-categories="JUU5JTlBJUE4JUU3JUFEJTg2" data-listing-date-sort="1772208000000" data-listing-file-modified-sort="1788518567534" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="154">
 <a href="./posts/a_touch_of_green.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -471,7 +518,7 @@ MISCELLANEA · 雜記
 
 </div>
 <div class="card-text listing-description delink">
-<p>十周年重看《一把青》，在小說與戲劇之間，細看人物與時代留下的餘韻。</p>
+<p>相隔十周年才看《一把青》，在小說與戲劇之間，細看人物與時代留下的餘韻。</p>
 </div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
@@ -481,7 +528,7 @@ MISCELLANEA · 雜記
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="JUU1JUE0JUE3JUU1JUFEJUI4" data-listing-date-sort="1771862400000" data-listing-file-modified-sort="1787843517887" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="g-col-1" data-index="4" data-categories="JUU1JUE0JUE3JUU1JUFEJUI4" data-listing-date-sort="1771862400000" data-listing-file-modified-sort="1787978764623" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
 <a href="./posts/2026_winter.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -504,7 +551,7 @@ MISCELLANEA · 雜記
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="JUU5JUFCJTk4JUU0JUI4JUFEJTJDJUU0JUJBJUJBJUU3JTk0JTlG" data-listing-date-sort="1771603200000" data-listing-file-modified-sort="1787843518265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="g-col-1" data-index="5" data-categories="JUU5JUFCJTk4JUU0JUI4JUFEJTJDJUU0JUJBJUJBJUU3JTk0JTlG" data-listing-date-sort="1771603200000" data-listing-file-modified-sort="1787843518265" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <a href="./posts/loc.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -529,7 +576,7 @@ MISCELLANEA · 雜記
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="JUU5JUFCJTk4JUU0JUI4JUFEJTJDJUU0JUJBJUJBJUU3JTk0JTlG" data-listing-date-sort="1769875200000" data-listing-file-modified-sort="1787843518153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
+<div class="g-col-1" data-index="6" data-categories="JUU5JUFCJTk4JUU0JUI4JUFEJTJDJUU0JUJBJUJBJUU3JTk0JTlG" data-listing-date-sort="1769875200000" data-listing-file-modified-sort="1787843518153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="6">
 <a href="./posts/high_school_extracurricular_activities.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -554,7 +601,7 @@ MISCELLANEA · 雜記
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="JUU4JUIyJUE4JUU1JUI5JUEzJUU2JTk0JUJGJUU3JUFEJTk2JTJDJUU3JUI2JTkzJUU2JUJGJTlGJUU1JUFEJUI4" data-listing-date-sort="1769616000000" data-listing-file-modified-sort="1787843518116" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="52">
+<div class="g-col-1" data-index="7" data-categories="JUU4JUIyJUE4JUU1JUI5JUEzJUU2JTk0JUJGJUU3JUFEJTk2JTJDJUU3JUI2JTkzJUU2JUJGJTlGJUU1JUFEJUI4" data-listing-date-sort="1769616000000" data-listing-file-modified-sort="1787843518116" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="52">
 <a href="./posts/fed_part3.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -579,7 +626,7 @@ MISCELLANEA · 雜記
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="JUU5JUFCJTk4JUU0JUI4JUFEJTJDJUU0JUJBJUJBJUU3JTk0JTlG" data-listing-date-sort="1768752000000" data-listing-file-modified-sort="1787843518191" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="94">
+<div class="g-col-1" data-index="8" data-categories="JUU5JUFCJTk4JUU0JUI4JUFEJTJDJUU0JUJBJUJBJUU3JTk0JTlG" data-listing-date-sort="1768752000000" data-listing-file-modified-sort="1787843518191" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="94">
 <a href="./posts/high_school_study.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -604,7 +651,7 @@ MISCELLANEA · 雜記
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="JUU1JUE0JUE3JUU1JUFEJUI4JTJDJUU1JUFEJUI4JUU3JUJGJTky" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1787843518002" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
+<div class="g-col-1" data-index="9" data-categories="JUU1JUE0JUE3JUU1JUFEJUI4JTJDJUU1JUFEJUI4JUU3JUJGJTky" data-listing-date-sort="1768665600000" data-listing-file-modified-sort="1787843518002" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
 <a href="./posts/course_review.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -629,7 +676,7 @@ MISCELLANEA · 雜記
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="JUU4JUIyJUE4JUU1JUI5JUEzJUU2JTk0JUJGJUU3JUFEJTk2JTJDJUU3JUI2JTkzJUU2JUJGJTlGJUU1JUFEJUI4" data-listing-date-sort="1767888000000" data-listing-file-modified-sort="1787843518079" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="165">
+<div class="g-col-1" data-index="10" data-categories="JUU4JUIyJUE4JUU1JUI5JUEzJUU2JTk0JUJGJUU3JUFEJTk2JTJDJUU3JUI2JTkzJUU2JUJGJTlGJUU1JUFEJUI4" data-listing-date-sort="1767888000000" data-listing-file-modified-sort="1787843518079" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="165">
 <a href="./posts/fed_part2.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -654,7 +701,7 @@ MISCELLANEA · 雜記
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="JUU4JUIyJUE4JUU1JUI5JUEzJUU2JTk0JUJGJUU3JUFEJTk2JTJDJUU3JUI2JTkzJUU2JUJGJTlGJUU1JUFEJUI4" data-listing-date-sort="1767542400000" data-listing-file-modified-sort="1787843518042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="530">
+<div class="g-col-1" data-index="11" data-categories="JUU4JUIyJUE4JUU1JUI5JUEzJUU2JTk0JUJGJUU3JUFEJTk2JTJDJUU3JUI2JTkzJUU2JUJGJTlGJUU1JUFEJUI4" data-listing-date-sort="1767542400000" data-listing-file-modified-sort="1787843518042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="530">
 <a href="./posts/fed_part1.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -679,7 +726,7 @@ MISCELLANEA · 雜記
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="11" data-categories="JUU1JUFEJUI4JUU3JUJGJTky" data-listing-date-sort="1766419200000" data-listing-file-modified-sort="1787843518228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="168">
+<div class="g-col-1" data-index="12" data-categories="JUU1JUFEJUI4JUU3JUJGJTky" data-listing-date-sort="1766419200000" data-listing-file-modified-sort="1787843518228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="168">
 <a href="./posts/issm.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -702,7 +749,7 @@ ISSM Reflection
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="12" data-categories="JUU5JTlBJUE4JUU3JUFEJTg2" data-listing-date-sort="1766419200000" data-listing-file-modified-sort="1787843518378" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="g-col-1" data-index="13" data-categories="JUU5JTlBJUE4JUU3JUFEJTg2" data-listing-date-sort="1766419200000" data-listing-file-modified-sort="1787843518378" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 <a href="./posts/openning.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -819,7 +866,7 @@ Openning
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/yinyunli\.github\.io\/myBlog\/");
+        var filterRegex = new RegExp("https:\/\/yin-yun-li\.github\.io\/myBlog\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

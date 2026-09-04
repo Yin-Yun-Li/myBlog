@@ -1,6 +1,6 @@
 ---
 title: "《一把青》觀後"
-description: "十周年重看《一把青》，在小說與戲劇之間，細看人物與時代留下的餘韻。"
+description: "相隔十周年才看《一把青》，在小說與戲劇之間，細看人物與時代留下的餘韻。"
 date: "2026-02-28"
 categories: ["隨筆"]
 ---
@@ -33,7 +33,7 @@ categories: ["隨筆"]
 
 # 朱青
 
-::: {.callout-note appearance="simple" icon=false style="border-left-color: #b36a8d; background-color: #fbf6f8;"}
+::: {.callout-note appearance="simple" icon=false}
 | 從天空墜落的猛雷聲
 | 打亂 了人生
 | 打碎 花樣的青春
@@ -103,7 +103,7 @@ categories: ["隨筆"]
 
 然而最後等到的不是丈夫的降落，而是另一場戰事的開打。一向情緒內斂的她，也很難不到達崩潰的臨界點。我認為片尾曲的一段歌詞，正是那個時代的寫照：
 
-::: {.callout-note appearance="simple" icon=false style="border-left-color: #b36a8d; background-color: #fbf6f8;"}
+::: {.callout-note appearance="simple" icon=false}
 | 時代一旦瘋狂到面目猙獰
 | 生不逢時也只能身不由己
 | 人被命運連根拔起
@@ -155,7 +155,7 @@ categories: ["隨筆"]
 
 看完這部，心情需要一段時間沉澱，才有辦法抽離。很喜歡墨婷敘事的口吻，她把這段淒美的愛情、時代的悲劇，如實的呈現在我們面前，沉重，卻又意義；而田馥甄的〈看淡〉，則把這段故事唱得完整，真切刻劃出這些人物的心境。
 
-::: {.callout-note appearance="simple" icon=false style="border-left-color: #b36a8d; background-color: #fbf6f8;"}
+::: {.callout-note appearance="simple" icon=false}
 | 看淡了絕望才不濃 無奈才不痛
 | 敢親吻 下一陣風起和雲湧
 | 能幸福一分鐘 甚至一秒鐘
@@ -219,7 +219,7 @@ categories: ["隨筆"]
 
 ---
 
-::: {.callout-note appearance="simple" icon=false style="border-left-color: #b36a8d; background-color: #fbf6f8;"}
+::: {.callout-note appearance="simple" icon=false}
 | 在天上的男人 借來了翅膀飛
 | 可惜不像候鳥去有回
 | 當羽翼驀然被天收回那一瞬間
