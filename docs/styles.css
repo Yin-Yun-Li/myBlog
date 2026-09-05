@@ -462,26 +462,46 @@ body.quarto-dark {
 }
 
 #quarto-content {
-  width: min(calc(100% - 2rem), 1280px);
-  max-width: 1280px;
+  width: min(calc(100% - 2rem), 1400px);
+  max-width: 1400px;
   margin-inline: auto;
 }
 
 /* 桌面長文：放寬 Quarto 的正文欄，同時保留右側目錄。 */
 @media (min-width: 992px) {
-  body:not(.floating):not(.docked) #quarto-content.page-columns {
+  body:has(#quarto-margin-sidebar nav):not(.floating):not(.docked) #quarto-content.page-columns {
     grid-template-columns:
       [screen-start] 1.5em
       [screen-start-inset] 5fr
       [page-start page-start-inset] 35px
       [body-start-outset] 35px
       [body-start] 1.5em
-      [body-content-start] minmax(500px, calc(950px - 3em))
+      [body-content-start] minmax(500px, calc(850px - 3em))
       [body-content-end] 1.5em
       [body-end] 35px
       [body-end-outset] minmax(75px, 145px)
       [page-end-inset] 35px
       [page-end] 5fr
+      [screen-end-inset] 1.5em
+      [screen-end];
+  }
+
+  body:has(.archive-intro) #quarto-content.page-columns {
+    grid-template-columns:
+      [screen-start] 1.5em
+      [screen-start-inset] 1fr
+      [page-start page-start-inset body-start-outset body-start body-content-start] minmax(0, 800px)
+      [body-content-end body-end body-end-outset page-end-inset page-end] 1fr
+      [screen-end-inset] 1.5em
+      [screen-end];
+  }
+
+  body:has(.about-manifesto) #quarto-content.page-columns {
+    grid-template-columns:
+      [screen-start] 1.5em
+      [screen-start-inset] 1fr
+      [page-start page-start-inset body-start-outset body-start body-content-start] minmax(0, 1000px)
+      [body-content-end body-end body-end-outset page-end-inset page-end] 1fr
       [screen-end-inset] 1.5em
       [screen-end];
   }
@@ -1091,7 +1111,7 @@ body.quarto-dark .listing-category {
 
 /* About：序像一張獨立手稿；白話說明保持乾淨。 */
 body:has(.about-manifesto) #quarto-document-content {
-  max-width: 820px;
+  max-width: 1000px;
   margin-inline: auto;
 }
 
@@ -1192,7 +1212,7 @@ body.quarto-dark .gemini-excerpt-body {
 
 @media (max-width: 767.98px) {
   #quarto-content {
-    width: min(calc(100% - 1.25rem), 1280px);
+    width: min(calc(100% - 1.25rem), 1400px);
   }
 
   .reflection-photo-wall {
@@ -1239,4 +1259,9 @@ body.quarto-dark .gemini-excerpt-body {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* 點開圖片時保留純圖片檢視，不顯示重複的圖說。 */
+.glightbox-container .gslide-description {
+  display: none;
 }

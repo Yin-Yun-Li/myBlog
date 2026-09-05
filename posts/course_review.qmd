@@ -50,7 +50,7 @@ KM第一年的教材是Angrist和Pischke的[Mostly Harmless Econometrics](https:
 
 對於我這種沒有理則學基礎、數學又不好的人來說，每次讀分析實在是非常痛苦。畢竟分析沒有任何計算，各種定義定理都是用抽象的argument表達，通常一堂課結束後我的腦迴路就完全扭曲打結了(參見 @fig-meme)。
 
-![Topology Meme (Source: [r/mathmemes](https://www.reddit.com/r/mathmemes/comments/1jhyrs1/from_euclidean_precision_to_topological_chaos/))](../figures/topology_meme.png){width=60% fig-align="center" #fig-meme}
+![Topology Meme (Source: [r/mathmemes](https://www.reddit.com/r/mathmemes/comments/1jhyrs1/from_euclidean_precision_to_topological_chaos/))](../figures/topology_meme.png){#fig-meme .lightbox group="course-review" width=60% fig-align="center"}
 
 每週總要花兩到三天，配著上課錄影重新讀懂定義跟推導定理，每次寫作業經常是一題盯了一個週末下午卻毫無頭緒，到最後都只能求助網路與同學，可能花了5-6小時才完成一題[^8]。
 

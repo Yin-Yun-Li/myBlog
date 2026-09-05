@@ -50,6 +50,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-7fab981e3aa4802f39138f3e92a125bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-3d74a298555efe0bf36840a24d8cb1cb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-7fab981e3aa4802f39138f3e92a125bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -440,14 +443,14 @@ window.Quarto = {
 <p>引用自<a href="../posts/course_review.html">大學修課反思</a>，這堂課是我第一次跟國榮相遇。我覺得可以把他的定位想成分析導論的導論，主要內容涵蓋metric space, point set topology<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, convergence, continuity, completeness, compactness, connectedness… 整個學期下來就是在玩弄 <span class="math inline">\(\varepsilon-\delta\)</span>，並學習各種證明套路(參見下圖，這是開玩笑的)。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../figures/常見證明方法.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:55.0%" alt="常見證明方法"></p>
+<p><a href="../figures/常見證明方法.jpg" class="lightbox" data-gallery="math-journey"><img src="../figures/常見證明方法.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:55.0%" alt="常見證明方法"></a></p>
 </figure>
 </div>
 <p>對於我這種沒有理則學基礎、數學又不好的人來說，每次讀分析實在是非常痛苦。畢竟分析沒有任何計算，各種定義定理都是用抽象的argument表達，通常一堂課結束後我的腦迴路就完全扭曲打結了(參見 <a href="#fig-meme" class="quarto-xref">圖&nbsp;1</a>)。</p>
-<div id="fig-meme" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-meme" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="math-journey">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../figures/topology_meme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+<a href="../figures/topology_meme.png" class="lightbox" data-gallery="math-journey" title="圖&nbsp;1: Topology Meme (Source: r/mathmemes)"><img src="../figures/topology_meme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 圖&nbsp;1: Topology Meme (Source: <a href="https://www.reddit.com/r/mathmemes/comments/1jhyrs1/from_euclidean_precision_to_topological_chaos/">r/mathmemes</a>)
@@ -1278,6 +1281,38 @@ C_k\dfrac{x_k-x}{\delta}, &amp; x\in [x_k-\delta,x_k].
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

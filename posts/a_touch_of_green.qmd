@@ -186,7 +186,7 @@ categories: ["隨筆"]
 :::
 :::
 
-![Sources: 一把青粉專](../figures/a-touch-of-green-guo-zhen-letter.jpg)
+![Sources: 一把青粉專](../figures/a-touch-of-green-guo-zhen-letter.jpg){.lightbox group="a-touch-of-green"}
 
 
 2. 江偉成晚年淒涼、自殺後師娘的放聲痛哭。
@@ -212,7 +212,7 @@ categories: ["隨筆"]
 
 4. 1981年，朱青看著曾經三人合影的野馬機，墨婷叫了她，最後的回眸。
 
-![Sources: 一把青粉專](../figures/a-touch-of-green-zhu-qing-look-back.jpg)
+![Sources: 一把青粉專](../figures/a-touch-of-green-zhu-qing-look-back.jpg){.lightbox group="a-touch-of-green"}
 
 
 全劇終。
@@ -235,6 +235,6 @@ categories: ["隨筆"]
 :::
 
 
-![天上的男人(Sources: 一把青粉專)](../figures/a-touch-of-green-men-in-the-sky.jpg)
+![天上的男人(Sources: 一把青粉專)](../figures/a-touch-of-green-men-in-the-sky.jpg){.lightbox group="a-touch-of-green"}
 
-![地上的女人(Sources: 一把青粉專)](../figures/a-touch-of-green-women-on-the-ground.jpg)
+![地上的女人(Sources: 一把青粉專)](../figures/a-touch-of-green-women-on-the-ground.jpg){.lightbox group="a-touch-of-green"}

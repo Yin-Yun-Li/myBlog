@@ -45,6 +45,7 @@ format:
     include-in-header: header.html
     css: styles.css
     lightbox:
+      match: auto
       effect: zoom
       desc-position: bottom
     toc: true

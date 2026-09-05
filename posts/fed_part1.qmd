@@ -15,7 +15,7 @@ categories: ["貨幣政策", "經濟學"]
 
 # Great Inflation
 
-![PCE物價指數與聯邦基金利率時間序列](../figures/pce_interest_rate_fed.png){width=120% fig-align="center" #fig-pce}
+![PCE物價指數與聯邦基金利率時間序列](../figures/pce_interest_rate_fed.png){#fig-pce .lightbox group="fed-part1" width=120% fig-align="center"}
 
 @fig-pce 是Federal Reserve Economic Data(FRED)提供的通膨與利率季資料，藍色實線為核心[個人消費支出物價指數](#pce) (排除食物與能源等價格易受季節波動的項目) 的每年變化，綠色虛線則為聯邦基金利率。我認為這張圖勾勒了本書前兩章的內容，並對現代央行樹立了重要的典範。
 
@@ -167,7 +167,6 @@ $$
 #| results: asis
     
 library(knitr)
-library(kableExtra)
     
 dt <- data.frame(
     period = 1:3,
@@ -187,11 +186,25 @@ colnames(dt) <- c(
     "Fisher Index", "PCE Price Index"
     )
     
-kbl(dt, align = "c") %>%
-        kable_styling(bootstrap_options = c("striped", "hover"), full_width = F) %>%
+if (requireNamespace("kableExtra", quietly = TRUE)) {
+    kableExtra::kbl(dt, align = "c") |>
+        kableExtra::kable_styling(
+            bootstrap_options = c("striped", "hover"),
+            full_width = FALSE
+        ) |>
         # 設定跨欄標題 (header_above)
         # 數字代表跨越的欄位數：2欄空白 + 3欄固定價格 + 2欄空白 + 2欄連鎖
-        add_header_above(c(" " = 2, "實質 GDP" = 3, " " = 2, "連鎖價格指數" = 2)) 
+        kableExtra::add_header_above(
+            c(" " = 2, "實質 GDP" = 3, " " = 2, "連鎖價格指數" = 2)
+        )
+} else {
+    knitr::kable(
+        dt,
+        format = "html",
+        align = rep("c", ncol(dt)),
+        table.attr = 'class="table table-striped table-hover"'
+    )
+}
 ```
 
     

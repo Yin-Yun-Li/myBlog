@@ -50,6 +50,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-7fab981e3aa4802f39138f3e92a125bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-3d74a298555efe0bf36840a24d8cb1cb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-7fab981e3aa4802f39138f3e92a125bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -481,10 +484,10 @@ window.Quarto = {
 </section>
 <section id="通貨緊縮危機" class="level2">
 <h2 class="anchored" data-anchor-id="通貨緊縮危機">通貨緊縮危機</h2>
-<div id="fig-pce" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-pce" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-group="fed-part2" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../figures/pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%">
+<a href="../figures/pce_interest_rate_fed.png" class="lightbox" data-gallery="fed-part2" title="圖&nbsp;1: PCE物價指數與聯邦基金利率時間序列"><img src="../figures/pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 圖&nbsp;1: PCE物價指數與聯邦基金利率時間序列
@@ -1061,6 +1064,38 @@ window.Quarto = {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

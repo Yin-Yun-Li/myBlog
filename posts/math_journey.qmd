@@ -35,12 +35,12 @@ categories: ["學習", "數學"]
 
 引用自[大學修課反思](course_review.qmd)，這堂課是我第一次跟國榮相遇。我覺得可以把他的定位想成分析導論的導論，主要內容涵蓋metric space, point set topology^[你會學到 open 不等於 not closed 😎。], convergence, continuity, completeness, compactness, connectedness... 整個學期下來就是在玩弄 $\varepsilon-\delta$，並學習各種證明套路(參見下圖，這是開玩笑的)。
 
-![](../figures/常見證明方法.jpg){width="55%" fig-align="center" fig-alt="常見證明方法"}
+![](../figures/常見證明方法.jpg){.lightbox group="math-journey" width="55%" fig-align="center" fig-alt="常見證明方法"}
 
 
 對於我這種沒有理則學基礎、數學又不好的人來說，每次讀分析實在是非常痛苦。畢竟分析沒有任何計算，各種定義定理都是用抽象的argument表達，通常一堂課結束後我的腦迴路就完全扭曲打結了(參見 @fig-meme)。
 
-![Topology Meme (Source: [r/mathmemes](https://www.reddit.com/r/mathmemes/comments/1jhyrs1/from_euclidean_precision_to_topological_chaos/))](../figures/topology_meme.png){width=60% fig-align="center" #fig-meme}
+![Topology Meme (Source: [r/mathmemes](https://www.reddit.com/r/mathmemes/comments/1jhyrs1/from_euclidean_precision_to_topological_chaos/))](../figures/topology_meme.png){#fig-meme .lightbox group="math-journey" width=60% fig-align="center"}
 
 每週總要花兩到三天，配著上課錄影重新讀懂定義跟推導定理，每次寫作業經常是一題盯了一個週末下午卻毫無頭緒，到最後都只能求助網路與同學，可能花了5-6小時才完成一題。即使花了這麼多時間在這堂課，我的考試大概也都只停留在及格邊緣，因為只要是沒看過的題目，基本上我就是不會寫，因為我無法在考試的當下通靈。我也在期末考後，跟國榮聊聊內心的挫折，但他認為我的狀況並沒有想像中糟糕。
 

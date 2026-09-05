@@ -374,14 +374,14 @@
 <p>引用自<a href="../posts/course_review.html">大學修課反思</a>，這堂課是我第一次跟國榮相遇。我覺得可以把他的定位想成分析導論的導論，主要內容涵蓋metric space, point set topology<sup>2</sup>, convergence, continuity, completeness, compactness, connectedness… 整個學期下來就是在玩弄 <img src="https://latex.codecogs.com/png.latex?%5Cvarepsilon-%5Cdelta">，並學習各種證明套路(參見下圖，這是開玩笑的)。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://yin-yun-li.github.io/myBlog/figures/常見證明方法.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:55.0%" alt="常見證明方法"></p>
+<p><a href="../figures/常見證明方法.jpg" class="lightbox" data-gallery="math-journey"><img src="https://yin-yun-li.github.io/myBlog/figures/常見證明方法.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:55.0%" alt="常見證明方法"></a></p>
 </figure>
 </div>
 <p>對於我這種沒有理則學基礎、數學又不好的人來說，每次讀分析實在是非常痛苦。畢竟分析沒有任何計算，各種定義定理都是用抽象的argument表達，通常一堂課結束後我的腦迴路就完全扭曲打結了(參見 圖&nbsp;1)。</p>
-<div id="fig-meme" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-meme" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="math-journey">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://yin-yun-li.github.io/myBlog/figures/topology_meme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+<a href="../figures/topology_meme.png" class="lightbox" data-gallery="math-journey" title="圖&nbsp;1: Topology Meme (Source: r/mathmemes)"><img src="https://yin-yun-li.github.io/myBlog/figures/topology_meme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 圖&nbsp;1: Topology Meme (Source: <a href="https://www.reddit.com/r/mathmemes/comments/1jhyrs1/from_euclidean_precision_to_topological_chaos/">r/mathmemes</a>)
@@ -929,7 +929,7 @@
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://yin-yun-li.github.io/myBlog/figures/a-touch-of-green-guo-zhen-letter.jpg" class="img-fluid figure-img"></p>
+<p><a href="../figures/a-touch-of-green-guo-zhen-letter.jpg" class="lightbox" data-gallery="a-touch-of-green" title="Sources: 一把青粉專"><img src="https://yin-yun-li.github.io/myBlog/figures/a-touch-of-green-guo-zhen-letter.jpg" class="img-fluid figure-img" alt="Sources: 一把青粉專"></a></p>
 <figcaption>Sources: 一把青粉專</figcaption>
 </figure>
 </div>
@@ -965,7 +965,7 @@
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://yin-yun-li.github.io/myBlog/figures/a-touch-of-green-zhu-qing-look-back.jpg" class="img-fluid figure-img"></p>
+<p><a href="../figures/a-touch-of-green-zhu-qing-look-back.jpg" class="lightbox" data-gallery="a-touch-of-green" title="Sources: 一把青粉專"><img src="https://yin-yun-li.github.io/myBlog/figures/a-touch-of-green-zhu-qing-look-back.jpg" class="img-fluid figure-img" alt="Sources: 一把青粉專"></a></p>
 <figcaption>Sources: 一把青粉專</figcaption>
 </figure>
 </div>
@@ -994,13 +994,13 @@
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://yin-yun-li.github.io/myBlog/figures/a-touch-of-green-men-in-the-sky.jpg" class="img-fluid figure-img"></p>
+<p><a href="../figures/a-touch-of-green-men-in-the-sky.jpg" class="lightbox" data-gallery="a-touch-of-green" title="天上的男人(Sources: 一把青粉專)"><img src="https://yin-yun-li.github.io/myBlog/figures/a-touch-of-green-men-in-the-sky.jpg" class="img-fluid figure-img" alt="天上的男人(Sources: 一把青粉專)"></a></p>
 <figcaption>天上的男人(Sources: 一把青粉專)</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://yin-yun-li.github.io/myBlog/figures/a-touch-of-green-women-on-the-ground.jpg" class="img-fluid figure-img"></p>
+<p><a href="../figures/a-touch-of-green-women-on-the-ground.jpg" class="lightbox" data-gallery="a-touch-of-green" title="地上的女人(Sources: 一把青粉專)"><img src="https://yin-yun-li.github.io/myBlog/figures/a-touch-of-green-women-on-the-ground.jpg" class="img-fluid figure-img" alt="地上的女人(Sources: 一把青粉專)"></a></p>
 <figcaption>地上的女人(Sources: 一把青粉專)</figcaption>
 </figure>
 </div>
@@ -1395,10 +1395,10 @@
 <h2 class="anchored" data-anchor-id="初等分析">初等分析</h2>
 <p>這堂課是我第一次跟國榮相遇。大一的微積分不是數學，是算數。直到大四下，我才修了人生第一堂純數學課——初等分析。我覺得可以把他的定位想成分析導論的導論，主要內容涵蓋metric space, point set topology<sup>7</sup>, convergence, continuity, completeness, compactness, connectedness… 整個學期下來就是不斷在玩弄 <img src="https://latex.codecogs.com/png.latex?%5Cvarepsilon-%5Cdelta">，學習證明的套路，動不動就來個反證法(prove by contradiction)。</p>
 <p>對於我這種沒有理則學基礎、數學又不好的人來說，每次讀分析實在是非常痛苦。畢竟分析沒有任何計算，各種定義定理都是用抽象的argument表達，通常一堂課結束後我的腦迴路就完全扭曲打結了(參見 圖&nbsp;1)。</p>
-<div id="fig-meme" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-meme" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-group="course-review" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://yin-yun-li.github.io/myBlog/figures/topology_meme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%">
+<a href="../figures/topology_meme.png" class="lightbox" data-gallery="course-review" title="圖&nbsp;1: Topology Meme (Source: r/mathmemes)"><img src="https://yin-yun-li.github.io/myBlog/figures/topology_meme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 圖&nbsp;1: Topology Meme (Source: <a href="https://www.reddit.com/r/mathmemes/comments/1jhyrs1/from_euclidean_precision_to_topological_chaos/">r/mathmemes</a>)
@@ -1541,10 +1541,10 @@
 </section>
 <section id="通貨緊縮危機" class="level2">
 <h2 class="anchored" data-anchor-id="通貨緊縮危機">通貨緊縮危機</h2>
-<div id="fig-pce" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-pce" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-group="fed-part2" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://yin-yun-li.github.io/myBlog/figures/pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%">
+<a href="../figures/pce_interest_rate_fed.png" class="lightbox" data-gallery="fed-part2" title="圖&nbsp;1: PCE物價指數與聯邦基金利率時間序列"><img src="https://yin-yun-li.github.io/myBlog/figures/pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 圖&nbsp;1: PCE物價指數與聯邦基金利率時間序列
@@ -1707,10 +1707,10 @@
 <p>最近在讀<a href="https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq_PafAnTFt5lVkKygk0uEBPW6ULgit8RD2U883zRdk8wc3EINV">柏南克談聯準會</a>這本書，主要是在講20世紀以來貨幣政策的行動與目標為何，從柏南克的觀點出發，再結合過往貨銀所學，故寫了一些筆記幫助自己理解聯準會的貨幣政策。</p>
 <section id="great-inflation" class="level1">
 <h1>Great Inflation</h1>
-<div id="fig-pce" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-pce" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="fed-part1">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://yin-yun-li.github.io/myBlog/figures/pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%">
+<a href="../figures/pce_interest_rate_fed.png" class="lightbox" data-gallery="fed-part1" title="圖&nbsp;1: PCE物價指數與聯邦基金利率時間序列"><img src="https://yin-yun-li.github.io/myBlog/figures/pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 圖&nbsp;1: PCE物價指數與聯邦基金利率時間序列
@@ -1781,6 +1781,56 @@
 <p>接著我們計算chained-type price index為： <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20P%5EC_t%20=%20%5Cprod%5E%7Bt%7D_%7B%5Ctau%20=%201%7DF_%5Ctau.%0A"></p>
 <p>以下表為例，在第3期若用直接法計算PCE物價指數，可得 <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20%5Csqrt%7B1.800%20%5Ctimes%201.714%7D%20%5Capprox%201.756.%0A"></p>
 <p>若採用連鎖法，首先計算2到3的Fisher Link(約 1.260)，可得 <img src="https://latex.codecogs.com/png.latex?%0A%20%20%20%20P%5EC_3%20=%201.373%20%5Ctimes%201.260%20%5Capprox%201.730.%0A"></p>
+<table class="table table-striped table-hover caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">期數</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">名目 GDP</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">基期=1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">基期=2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">基期=3</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">GDP Deflator</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">CPI</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Fisher Index</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">PCE Price Index</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$200</td>
+<td style="text-align: center;">$200</td>
+<td style="text-align: center;">$280</td>
+<td style="text-align: center;">$360</td>
+<td style="text-align: center;">1.000</td>
+<td style="text-align: center;">1.000</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">1.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">$350</td>
+<td style="text-align: center;">$260</td>
+<td style="text-align: center;">$350</td>
+<td style="text-align: center;">$440</td>
+<td style="text-align: center;">1.346</td>
+<td style="text-align: center;">1.400</td>
+<td style="text-align: center;">1.373</td>
+<td style="text-align: center;">1.373</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">$480</td>
+<td style="text-align: center;">$280</td>
+<td style="text-align: center;">$380</td>
+<td style="text-align: center;">$480</td>
+<td style="text-align: center;">1.714</td>
+<td style="text-align: center;">1.800</td>
+<td style="text-align: center;">1.260</td>
+<td style="text-align: center;">1.730</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

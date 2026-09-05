@@ -50,6 +50,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-7fab981e3aa4802f39138f3e92a125bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-3d74a298555efe0bf36840a24d8cb1cb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/bootstrap/bootstrap-7fab981e3aa4802f39138f3e92a125bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -440,10 +443,10 @@ window.Quarto = {
 <p>最近在讀<a href="https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq_PafAnTFt5lVkKygk0uEBPW6ULgit8RD2U883zRdk8wc3EINV">柏南克談聯準會</a>這本書，主要是在講20世紀以來貨幣政策的行動與目標為何，從柏南克的觀點出發，再結合過往貨銀所學，故寫了一些筆記幫助自己理解聯準會的貨幣政策。</p>
 <section id="great-inflation" class="level1">
 <h1>Great Inflation</h1>
-<div id="fig-pce" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-pce" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="fed-part1">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../figures/pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%">
+<a href="../figures/pce_interest_rate_fed.png" class="lightbox" data-gallery="fed-part1" title="圖&nbsp;1: PCE物價指數與聯邦基金利率時間序列"><img src="../figures/pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 圖&nbsp;1: PCE物價指數與聯邦基金利率時間序列
@@ -541,6 +544,56 @@ dP = -D\frac{dr}{1+r}P.
 <p>若採用連鎖法，首先計算2到3的Fisher Link(約 1.260)，可得 <span class="math display">\[
     P^C_3 = 1.373 \times 1.260 \approx 1.730.
 \]</span></p>
+<table class="table table-striped table-hover caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">期數</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">名目 GDP</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">基期=1</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">基期=2</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">基期=3</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">GDP Deflator</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">CPI</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Fisher Index</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">PCE Price Index</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">$200</td>
+<td style="text-align: center;">$200</td>
+<td style="text-align: center;">$280</td>
+<td style="text-align: center;">$360</td>
+<td style="text-align: center;">1.000</td>
+<td style="text-align: center;">1.000</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">1.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">$350</td>
+<td style="text-align: center;">$260</td>
+<td style="text-align: center;">$350</td>
+<td style="text-align: center;">$440</td>
+<td style="text-align: center;">1.346</td>
+<td style="text-align: center;">1.400</td>
+<td style="text-align: center;">1.373</td>
+<td style="text-align: center;">1.373</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">$480</td>
+<td style="text-align: center;">$280</td>
+<td style="text-align: center;">$380</td>
+<td style="text-align: center;">$480</td>
+<td style="text-align: center;">1.714</td>
+<td style="text-align: center;">1.800</td>
+<td style="text-align: center;">1.260</td>
+<td style="text-align: center;">1.730</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
@@ -996,6 +1049,38 @@ dP = -D\frac{dr}{1+r}P.
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
