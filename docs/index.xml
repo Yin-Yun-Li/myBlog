@@ -1395,7 +1395,7 @@
 <h2 class="anchored" data-anchor-id="初等分析">初等分析</h2>
 <p>這堂課是我第一次跟國榮相遇。大一的微積分不是數學，是算數。直到大四下，我才修了人生第一堂純數學課——初等分析。我覺得可以把他的定位想成分析導論的導論，主要內容涵蓋metric space, point set topology<sup>7</sup>, convergence, continuity, completeness, compactness, connectedness… 整個學期下來就是不斷在玩弄 <img src="https://latex.codecogs.com/png.latex?%5Cvarepsilon-%5Cdelta">，學習證明的套路，動不動就來個反證法(prove by contradiction)。</p>
 <p>對於我這種沒有理則學基礎、數學又不好的人來說，每次讀分析實在是非常痛苦。畢竟分析沒有任何計算，各種定義定理都是用抽象的argument表達，通常一堂課結束後我的腦迴路就完全扭曲打結了(參見 圖&nbsp;1)。</p>
-<div id="fig-meme" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="course-review">
+<div id="fig-meme" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-group="course-review" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="../figures/topology_meme.png" class="lightbox" data-gallery="course-review" title="圖&nbsp;1: Topology Meme (Source: r/mathmemes)"><img src="https://yin-yun-li.github.io/myBlog/figures/topology_meme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a>

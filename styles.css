@@ -484,7 +484,7 @@ body.quarto-dark {
       [body-content-start] minmax(500px, 950px)
       [body-content-end] 1.5em
       [body-end] 35px
-      [body-end-outset] minmax(75px, 145px)
+      [body-end-outset] minmax(110px, 200px)
       [page-end-inset] 35px
       [page-end] 5fr
       [screen-end-inset] 1.5em
@@ -609,7 +609,7 @@ body.quarto-dark .navbar {
   gap: 0.7rem;
   color: var(--yy-ink) !important;
   font-family: "Noto Serif TC", "Songti TC", serif !important;
-  font-size: 1.34rem !important;
+  font-size: min(calc(1.29rem + 0.48vw), 1.65rem) !important;
   font-weight: 700 !important;
   letter-spacing: 0.12em !important;
 }
@@ -636,7 +636,7 @@ body.quarto-dark .navbar .bi,
   position: relative;
   color: var(--yy-ink-soft) !important;
   font-family: "Noto Sans TC", system-ui, sans-serif;
-  font-size: 0.94rem !important;
+  font-size: min(calc(1.27rem + 0.24vw), 1.45rem) !important;
   font-weight: 500;
   opacity: 1 !important;
 }
@@ -713,6 +713,12 @@ h1.title {
 body.quarto-dark #quarto-toc-column .nav-link {
   color: var(--yy-muted) !important;
   border-left-color: var(--yy-line);
+  font-size: min(calc(1.29rem + 0.48vw), 1.65rem);
+  line-height: 1.45;
+}
+
+#quarto-toc-column #toc-title {
+  font-size: min(calc(1.29rem + 0.48vw), 1.65rem);
 }
 
 #quarto-toc-column .nav-link:hover,
