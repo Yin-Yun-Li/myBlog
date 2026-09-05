@@ -22,6 +22,7 @@ website:
     right:
       - href: index.qmd
         text: 文章
+        icon: book
       - href: https://yin-yun-li.github.io/
         text: 學術頁
         icon: mortarboard
