@@ -56,19 +56,19 @@ body.quarto-dark {
 }
 
 /* --- 2. 修正 TOC 目錄顏色  --- */
-#quarto-toc-column .nav-link {
+#quarto-margin-sidebar .nav-link {
   color: #7e909a !important; /* 莫蘭迪灰藍 */
   transition: color 0.2s ease;
   opacity: 0.8;
 }
 
 /* 深色模式下的目錄顏色優化 */
-body.quarto-dark #quarto-toc-column .nav-link {
+body.quarto-dark #quarto-margin-sidebar .nav-link {
   color: #a0acb5 !important;
 }
 
-#quarto-toc-column .nav-link:hover,
-#quarto-toc-column .nav-link.active {
+#quarto-margin-sidebar .nav-link:hover,
+#quarto-margin-sidebar .nav-link.active {
   color: #ffffff !important;
   opacity: 1;
   border-left-color: #7e909a !important;
@@ -484,7 +484,7 @@ body.quarto-dark {
       [body-content-start] minmax(500px, 950px)
       [body-content-end] 1.5em
       [body-end] 35px
-      [body-end-outset] minmax(110px, 200px)
+      [body-end-outset] minmax(100px, 180px)
       [page-end-inset] 35px
       [page-end] 5fr
       [screen-end-inset] 1.5em
@@ -609,7 +609,7 @@ body.quarto-dark .navbar {
   gap: 0.7rem;
   color: var(--yy-ink) !important;
   font-family: "Noto Serif TC", "Songti TC", serif !important;
-  font-size: min(calc(1.29rem + 0.48vw), 1.65rem) !important;
+  font-size: 1.4rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.12em !important;
 }
@@ -636,7 +636,7 @@ body.quarto-dark .navbar .bi,
   position: relative;
   color: var(--yy-ink-soft) !important;
   font-family: "Noto Sans TC", system-ui, sans-serif;
-  font-size: min(calc(1.27rem + 0.24vw), 1.45rem) !important;
+  font-size: 1.05rem !important;
   font-weight: 500;
   opacity: 1 !important;
 }
@@ -709,22 +709,24 @@ h1.title {
   text-transform: uppercase;
 }
 
-#quarto-toc-column .nav-link,
-body.quarto-dark #quarto-toc-column .nav-link {
+#quarto-margin-sidebar .nav-link,
+body.quarto-dark #quarto-margin-sidebar .nav-link {
   color: var(--yy-muted) !important;
   border-left-color: var(--yy-line);
-  font-size: min(calc(1.29rem + 0.48vw), 1.65rem);
-  line-height: 1.45;
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
-#quarto-toc-column #toc-title {
-  font-size: min(calc(1.29rem + 0.48vw), 1.65rem);
+#quarto-margin-sidebar #toc-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
-#quarto-toc-column .nav-link:hover,
-#quarto-toc-column .nav-link.active,
-body.quarto-dark #quarto-toc-column .nav-link:hover,
-body.quarto-dark #quarto-toc-column .nav-link.active {
+#quarto-margin-sidebar .nav-link:hover,
+#quarto-margin-sidebar .nav-link.active,
+body.quarto-dark #quarto-margin-sidebar .nav-link:hover,
+body.quarto-dark #quarto-margin-sidebar .nav-link.active {
   color: var(--yy-cinnabar) !important;
   border-left-color: var(--yy-cinnabar) !important;
 }
