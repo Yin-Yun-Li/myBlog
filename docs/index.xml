@@ -378,7 +378,7 @@
 </figure>
 </div>
 <p>對於我這種沒有理則學基礎、數學又不好的人來說，每次讀分析實在是非常痛苦。畢竟分析沒有任何計算，各種定義定理都是用抽象的argument表達，通常一堂課結束後我的腦迴路就完全扭曲打結了(參見 圖&nbsp;1)。</p>
-<div id="fig-meme" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-group="math-journey" data-fig-align="center">
+<div id="fig-meme" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="math-journey">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-meme-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="../figures/topology_meme.png" class="lightbox" data-gallery="math-journey" title="圖&nbsp;1: Topology Meme (Source: r/mathmemes)"><img src="https://yin-yun-li.github.io/myBlog/figures/topology_meme.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a>
@@ -1541,7 +1541,7 @@
 </section>
 <section id="通貨緊縮危機" class="level2">
 <h2 class="anchored" data-anchor-id="通貨緊縮危機">通貨緊縮危機</h2>
-<div id="fig-pce" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-group="fed-part2" data-fig-align="center">
+<div id="fig-pce" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="fed-part2">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="../figures/pce_interest_rate_fed.png" class="lightbox" data-gallery="fed-part2" title="圖&nbsp;1: PCE物價指數與聯邦基金利率時間序列"><img src="https://yin-yun-li.github.io/myBlog/figures/pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a>
@@ -1707,7 +1707,7 @@
 <p>最近在讀<a href="https://www.books.com.tw/products/0010942230?srsltid=AfmBOoq_PafAnTFt5lVkKygk0uEBPW6ULgit8RD2U883zRdk8wc3EINV">柏南克談聯準會</a>這本書，主要是在講20世紀以來貨幣政策的行動與目標為何，從柏南克的觀點出發，再結合過往貨銀所學，故寫了一些筆記幫助自己理解聯準會的貨幣政策。</p>
 <section id="great-inflation" class="level1">
 <h1>Great Inflation</h1>
-<div id="fig-pce" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" data-group="fed-part1">
+<div id="fig-pce" class="lightbox quarto-float quarto-figure quarto-figure-center anchored" data-group="fed-part1" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pce-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="../figures/pce_interest_rate_fed.png" class="lightbox" data-gallery="fed-part1" title="圖&nbsp;1: PCE物價指數與聯邦基金利率時間序列"><img src="https://yin-yun-li.github.io/myBlog/figures/pce_interest_rate_fed.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:120.0%"></a>

@@ -6,10 +6,10 @@ html {
 
 
 body {
-  line-height: 1.8;
+  line-height: 1.65;
   /* 徹底解決字距拉大問題：改用靠左對齊 */
   text-align: left; 
-  font-size: 19px;
+  font-size: 17px;
   background-color: transparent !important;
   color: #d1d1d1;
   transition: none !important; 
@@ -456,8 +456,8 @@ body.quarto-dark {
     linear-gradient(180deg, color-mix(in srgb, var(--yy-paper-deep) 34%, transparent), transparent 24rem);
   color: var(--yy-ink) !important;
   font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
-  font-size: 19px;
-  line-height: 1.9;
+  font-size: 17px;
+  line-height: 1.65;
   letter-spacing: 0.012em;
 }
 
@@ -481,10 +481,10 @@ body.quarto-dark {
       [page-start page-start-inset] 35px
       [body-start-outset] 35px
       [body-start] 1.5em
-      [body-content-start] minmax(500px, 950px)
+      [body-content-start] minmax(500px, calc(850px - 3em))
       [body-content-end] 1.5em
       [body-end] 35px
-      [body-end-outset] minmax(100px, 180px)
+      [body-end-outset] minmax(75px, 145px)
       [page-end-inset] 35px
       [page-end] 5fr
       [screen-end-inset] 1.5em
@@ -1245,7 +1245,7 @@ body.quarto-dark .gemini-excerpt-body {
   body,
   body.quarto-light,
   body.quarto-dark {
-    font-size: 19px;
+    font-size: 17px;
   }
 
   .navbar,
