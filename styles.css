@@ -462,9 +462,29 @@ body.quarto-dark {
 }
 
 #quarto-content {
-  width: min(calc(100% - 2rem), 1180px);
-  max-width: 1180px;
+  width: min(calc(100% - 2rem), 1280px);
+  max-width: 1280px;
   margin-inline: auto;
+}
+
+/* 桌面長文：放寬 Quarto 的正文欄，同時保留右側目錄。 */
+@media (min-width: 992px) {
+  body:not(.floating):not(.docked) #quarto-content.page-columns {
+    grid-template-columns:
+      [screen-start] 1.5em
+      [screen-start-inset] 5fr
+      [page-start page-start-inset] 35px
+      [body-start-outset] 35px
+      [body-start] 1.5em
+      [body-content-start] minmax(500px, calc(950px - 3em))
+      [body-content-end] 1.5em
+      [body-end] 35px
+      [body-end-outset] minmax(75px, 145px)
+      [page-end-inset] 35px
+      [page-end] 5fr
+      [screen-end-inset] 1.5em
+      [screen-end];
+  }
 }
 
 #quarto-document-content {
@@ -549,7 +569,7 @@ blockquote {
 body.quarto-light .navbar,
 body.quarto-dark .navbar {
   min-height: 72px !important;
-  padding: 0.65rem max(1rem, calc((100vw - 1180px) / 2)) !important;
+  padding: 0.65rem max(1rem, calc((100vw - 1280px) / 2)) !important;
   border-bottom: 1px solid color-mix(in srgb, var(--yy-line) 78%, transparent) !important;
   background: var(--yy-nav) !important;
   box-shadow: 0 5px 20px rgba(41, 78, 91, 0.055);
@@ -1172,7 +1192,7 @@ body.quarto-dark .gemini-excerpt-body {
 
 @media (max-width: 767.98px) {
   #quarto-content {
-    width: min(calc(100% - 1.25rem), 1180px);
+    width: min(calc(100% - 1.25rem), 1280px);
   }
 
   .reflection-photo-wall {
@@ -1192,7 +1212,7 @@ body.quarto-dark .gemini-excerpt-body {
   body,
   body.quarto-light,
   body.quarto-dark {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .navbar,
